@@ -1,7 +1,7 @@
 import {
   COOKIE_CATEGORIES,
   getCookie,
-} from "../common/components/CookieConsent/cookieUtils";
+} from "../../common/components/CookieConsent/cookieUtils";
 
 interface StorageOperations {
   get: <T>(key: string) => T | null;

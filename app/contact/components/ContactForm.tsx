@@ -1,30 +1,26 @@
 "use client";
 
 import { sendContactEmail } from "@/app/lib/actions/email.action";
+import { ValidationSchemas, sanitize } from "@/app/lib/utils/validation.utils";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useState } from "react";
 import { z } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 
 const contactSchema = z.object({
-  name: z
-    .string()
-    .min(2, "Name must be at least 2 characters")
-    .max(50, "Name must be less than 50 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z
-    .string()
-    .min(10, "Phone number must be at least 10 digits")
-    .max(15, "Phone number must be less than 15 digits")
-    .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format"),
+  name: ValidationSchemas.name,
+  email: ValidationSchemas.email,
+  phone: ValidationSchemas.phone,
   subject: z
     .string()
     .min(5, "Subject must be at least 5 characters")
-    .max(100, "Subject must be less than 100 characters"),
+    .max(100, "Subject must be less than 100 characters")
+    .transform(sanitize.text),
   message: z
     .string()
     .min(20, "Message must be at least 20 characters")
-    .max(1000, "Message must be less than 1000 characters"),
+    .max(1000, "Message must be less than 1000 characters")
+    .transform(sanitize.text),
 });
 
 type ContactFormValues = z.infer<typeof contactSchema>;

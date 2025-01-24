@@ -1,6 +1,6 @@
 "use client";
 
-import { useSafeStorage } from "@/app/lib/storageUtils";
+import { useSafeStorage } from "@/app/lib/utils/storage.utils";
 import { useEffect, useState } from "react";
 
 interface UserPreferences {

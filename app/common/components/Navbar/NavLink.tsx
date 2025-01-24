@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/app/lib/utils";
+import { cn } from "@/app/lib/utils/utils";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
