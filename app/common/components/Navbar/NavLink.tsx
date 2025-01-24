@@ -11,7 +11,7 @@ interface NavLinkProps {
 }
 
 export const NavLink = ({ item }: NavLinkProps) => {
-  const [isHovered, setIsHovered] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
