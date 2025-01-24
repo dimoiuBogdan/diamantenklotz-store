@@ -12,10 +12,12 @@ import {
 } from "../common/components/CookieConsent/cookieUtils";
 
 export default function CookiePreferencesPage() {
+  const [mounted, setMounted] = useState(false);
   const [preferences, setPreferences] =
     useState<CookiePreferences>(DEFAULT_PREFERENCES);
 
   useEffect(() => {
+    setMounted(true);
     // Load saved preferences
     const savedPreferences = getCookie(COOKIE_PREFERENCES_KEY);
     if (savedPreferences) {
@@ -57,13 +59,22 @@ export default function CookiePreferencesPage() {
     window.location.reload();
   };
 
+  // Don't render until client-side hydration is complete
+  if (!mounted) return null;
+
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <div
+      suppressHydrationWarning
+      className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+    >
       <div className="mb-8">
-        <h1 className="mb-4 text-3xl font-bold text-[var(--main-darker)]">
+        <h1
+          suppressHydrationWarning
+          className="mb-4 text-3xl font-bold text-[var(--main-darker)]"
+        >
           Cookie Preferences
         </h1>
-        <p className="text-[var(--main-dark)]">
+        <p suppressHydrationWarning className="text-[var(--main-dark)]">
           Manage your cookie preferences below. Some cookies are necessary for
           the website to function and cannot be disabled. For more information,
           please read our{" "}

@@ -10,9 +10,11 @@ import {
 } from "./cookieUtils";
 
 export default function CookieConsent() {
+  const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Check if user has already made a choice
     if (!hasUserMadeChoice()) {
       setShowBanner(true);
@@ -49,17 +51,28 @@ export default function CookieConsent() {
     window.location.href = "/cookie-preferences";
   };
 
+  // Don't render anything until client-side hydration is complete
+  if (!mounted) return null;
   if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-[var(--main-dark)] bg-[var(--main-lightest)] p-4 shadow-lg md:p-6">
+    <div
+      suppressHydrationWarning
+      className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-[var(--main-dark)] bg-[var(--main-lightest)] p-4 shadow-lg md:p-6"
+    >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="flex-1">
-            <h2 className="mb-2 text-lg font-semibold text-[var(--main-darker)]">
+            <h2
+              suppressHydrationWarning
+              className="mb-2 text-lg font-semibold text-[var(--main-darker)]"
+            >
               We value your privacy
             </h2>
-            <p className="text-sm text-[var(--main-dark)]">
+            <p
+              suppressHydrationWarning
+              className="text-sm text-[var(--main-dark)]"
+            >
               We use cookies to enhance your browsing experience, serve
               personalized content, and analyze our traffic. By clicking
               "Accept", you consent to our use of cookies. Read our{" "}

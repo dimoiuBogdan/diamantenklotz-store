@@ -27,8 +27,37 @@ function getRateLimitInfo(ip: string): { count: number; timestamp: number } {
 }
 
 export function middleware(request: NextRequest) {
-  // Get the response
-  const response = NextResponse.next();
+  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
+  const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https: 'unsafe-inline';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' blob: data:;
+    font-src 'self';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`;
+  // Replace newline characters and spaces
+  const contentSecurityPolicyHeaderValue = cspHeader
+    .replace(/\s{2,}/g, " ")
+    .trim();
+
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-nonce", nonce);
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+  response.headers.set(
+    "Content-Security-Policy",
+    contentSecurityPolicyHeaderValue
+  );
+
   const headers = response.headers;
 
   // Rate limiting
@@ -63,75 +92,16 @@ export function middleware(request: NextRequest) {
     (MAX_REQUESTS_PER_WINDOW - rateLimitInfo.count - 1).toString()
   );
 
-  // Enhanced Content Security Policy
-  headers.set(
-    "Content-Security-Policy",
-    [
-      // Default restrictive policy
-      "default-src 'self'",
-
-      // Scripts - Allow Umami analytics and other necessary scripts
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cloud.umami.is",
-
-      // Styles - Allow inline styles for dynamic styling
-      "style-src 'self' 'unsafe-inline'",
-
-      // Images - Allow data URIs, blobs, and HTTPS sources
-      "img-src 'self' data: blob: https:",
-
-      // Fonts - Restrict to self-hosted
-      "font-src 'self'",
-
-      // Media - Restrict to self-hosted
-      "media-src 'self'",
-
-      // Object/Embed - Block all
-      "object-src 'none'",
-
-      // Base URI - Restrict to origin
-      "base-uri 'self'",
-
-      // Form actions - Restrict to origin
-      "form-action 'self'",
-
-      // Frame ancestors - Block embedding
-      "frame-ancestors 'none'",
-
-      // Connect sources - Allow API and analytics
-      "connect-src 'self' https://cloud.umami.is",
-
-      // Worker sources - Restrict to origin
-      "worker-src 'self'",
-
-      // Manifest sources - Restrict to origin
-      "manifest-src 'self'",
-
-      // Require HTTPS
-      "block-all-mixed-content",
-      "upgrade-insecure-requests",
-
-      // Trusted Types (if supported)
-      ...(process.env.NODE_ENV === "production"
-        ? ["require-trusted-types-for 'script'"]
-        : []),
-    ].join("; ")
-  );
-
   // Enhanced Permissions Policy
   headers.set(
     "Permissions-Policy",
     [
       "accelerometer=()",
-      "ambient-light-sensor=()",
       "autoplay=()",
-      "battery=()",
       "camera=()",
       "cross-origin-isolated=()",
       "display-capture=()",
-      "document-domain=()",
       "encrypted-media=()",
-      "execution-while-not-rendered=()",
-      "execution-while-out-of-viewport=()",
       "fullscreen=(self)",
       "geolocation=()",
       "gyroscope=()",
@@ -139,7 +109,6 @@ export function middleware(request: NextRequest) {
       "magnetometer=()",
       "microphone=()",
       "midi=()",
-      "navigation-override=()",
       "payment=()",
       "picture-in-picture=()",
       "publickey-credentials-get=()",
