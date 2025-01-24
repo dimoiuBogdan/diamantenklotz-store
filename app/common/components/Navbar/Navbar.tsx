@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/app/lib/utils";
-import { Bell, Menu, Search, ShoppingCart, User, X } from "lucide-react";
+import { Menu, Search, ShoppingCart, User, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { NavLink } from "./NavLink";
@@ -13,22 +13,20 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
     href: "/",
   },
   {
-    name: "About",
-    href: "/about",
+    name: "Products",
+    href: "/products",
     sublinks: [
-      { name: "Our Story", href: "/about/story" },
-      { name: "Team", href: "/about/team" },
-      { name: "Careers", href: "/about/careers" },
+      { name: "Pure Diamonds", href: "/products/pure-diamonds" },
+      { name: "Diamonds", href: "/products/diamonds" },
+      { name: "Gemstones", href: "/products/gemstones" },
+      { name: "Pearls", href: "/products/pearls" },
+      { name: "Precious Metals", href: "/products/precious-metals" },
+      { name: "Jewelry", href: "/products/jewelry" },
     ],
   },
   {
-    name: "Services",
-    href: "/services",
-    sublinks: [
-      { name: "Consulting", href: "/services/consulting" },
-      { name: "Development", href: "/services/development" },
-      { name: "Design", href: "/services/design" },
-    ],
+    name: "About",
+    href: "/about",
   },
   {
     name: "Contact",
@@ -41,11 +39,6 @@ const ICON_BUTTONS: IconButton[] = [
     icon: Search,
     label: "Search",
     action: () => console.log("Search clicked"),
-  },
-  {
-    icon: Bell,
-    label: "Notifications",
-    action: () => console.log("Notifications clicked"),
   },
   {
     icon: ShoppingCart,

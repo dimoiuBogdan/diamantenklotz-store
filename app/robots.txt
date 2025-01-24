@@ -1,0 +1,71 @@
+# Lab-Grown Diamonds GmbH - German Engineered Sustainable Diamonds
+# https://www.lab-grown-diamonds.com
+
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /products
+Allow: /blog
+Allow: /technology
+Allow: /sustainability
+Allow: /engineering
+Allow: /process
+Allow: /guide
+Allow: /certification
+Allow: /compare
+Allow: /care
+Allow: /shipping
+Allow: /faq
+Allow: /images
+Allow: /sitemap.xml
+
+# Protect sensitive areas
+Disallow: /admin
+Disallow: /backend
+Disallow: /api
+Disallow: /internal
+Disallow: /checkout/success
+Disallow: /user/profile
+Disallow: /cart
+Disallow: /account
+Disallow: /login
+Disallow: /register
+Disallow: /reset-password
+Disallow: /*.json$
+Disallow: /*.php$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+Disallow: /*?*query=
+Disallow: /*?*session=
+Disallow: /*?*token=
+
+# Crawl delays to prevent server overload
+Crawl-delay: 10
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 2
+
+# Allow product images for Google Images
+User-agent: Googlebot-Image
+Allow: /images
+Allow: /products
+Disallow: /admin/images
+Disallow: /user/images
+
+# Sitemaps
+Sitemap: https://www.lab-grown-diamonds.com/sitemap.xml
+Sitemap: https://www.lab-grown-diamonds.com/products-sitemap.xml
+
+# Host
+Host: https://www.lab-grown-diamonds.com

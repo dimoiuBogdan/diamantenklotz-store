@@ -1,32 +1,48 @@
-import { Facebook, Instagram, TwitterIcon, Youtube } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 
 const FOOTER_LINKS = {
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    { name: "Our Technology", href: "/technology" },
+    { name: "Sustainability", href: "/sustainability" },
+    { name: "German Engineering", href: "/engineering" },
+  ],
+  diamonds: [
+    { name: "Lab-Grown Process", href: "/process" },
+    { name: "Diamond Guide", href: "/guide" },
+    { name: "Certification", href: "/certification" },
+    { name: "Compare Natural vs Lab", href: "/compare" },
   ],
   support: [
-    { name: "Help Center", href: "/help" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Care Guide", href: "/care" },
+    { name: "Shipping & Returns", href: "/shipping" },
     { name: "FAQ", href: "/faq" },
-  ],
-  services: [
-    { name: "Consulting", href: "/services/consulting" },
-    { name: "Development", href: "/services/development" },
-    { name: "Design", href: "/services/design" },
-    { name: "Training", href: "/services/training" },
   ],
 };
 
 const SOCIAL_LINKS = [
-  { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-  { name: "Twitter", icon: TwitterIcon, href: "https://twitter.com" },
-  { name: "Youtube", icon: Youtube, href: "https://youtube.com" },
+  {
+    name: "Facebook",
+    icon: Facebook,
+    href: "https://facebook.com/labgrowndiamonds",
+  },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://instagram.com/labgrowndiamonds",
+  },
+  {
+    name: "Twitter",
+    icon: Twitter,
+    href: "https://twitter.com/labgrowndiamonds",
+  },
+  {
+    name: "Youtube",
+    icon: Youtube,
+    href: "https://youtube.com/labgrowndiamonds",
+  },
 ];
 
 const Footer = () => {
@@ -40,12 +56,21 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="text-xl font-bold">
-              Logo
+              Lab-Grown Diamonds
             </Link>
             <p className="text-sm text-[var(--main-light)]">
-              Empowering businesses with innovative solutions and cutting-edge
-              technology.
+              Pioneering sustainable luxury with German-engineered lab-grown
+              diamonds. Creating exceptional stones that are both ethical and
+              environmentally conscious.
             </p>
+            <div className="pt-4">
+              <p className="text-sm text-[var(--main-light)]">
+                Made in Germany 🇩🇪
+              </p>
+              <p className="text-sm text-[var(--main-light)]">
+                100% Carbon Neutral ♻️
+              </p>
+            </div>
           </div>
 
           {/* Company Links */}
@@ -65,11 +90,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support Links */}
+          {/* Diamonds Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Support</h3>
+            <h3 className="mb-4 text-lg font-semibold">Our Diamonds</h3>
             <ul className="space-y-2">
-              {FOOTER_LINKS.support.map((link) => (
+              {FOOTER_LINKS.diamonds.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -82,11 +107,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Support Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Services</h3>
+            <h3 className="mb-4 text-lg font-semibold">Customer Care</h3>
             <ul className="space-y-2">
-              {FOOTER_LINKS.services.map((link) => (
+              {FOOTER_LINKS.support.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -105,7 +130,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             {/* Copyright */}
             <p className="text-sm text-[var(--main-light)]">
-              © {currentYear} Your Company. All rights reserved.
+              © {currentYear} Lab-Grown Diamonds GmbH. All rights reserved.
             </p>
 
             {/* Social Links */}
