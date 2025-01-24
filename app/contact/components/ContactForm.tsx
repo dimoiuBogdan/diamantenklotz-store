@@ -1,6 +1,8 @@
 "use client";
 
+import { sendContactEmail } from "@/app/lib/actions/email.action";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 import { z } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 
@@ -28,6 +30,11 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactForm = () => {
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const initialValues: ContactFormValues = {
     name: "",
     email: "",
@@ -41,13 +48,26 @@ const ContactForm = () => {
     { setSubmitting, resetForm }: any
   ) => {
     try {
-      console.log("Form submitted:", values);
+      const result = await sendContactEmail(values);
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      resetForm();
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message. We'll get back to you soon!",
+        });
+        resetForm();
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: result.error || "Failed to send message. Please try again.",
+        });
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "An unexpected error occurred. Please try again.",
+      });
     } finally {
       setSubmitting(false);
     }
@@ -55,6 +75,17 @@ const ContactForm = () => {
 
   return (
     <div className="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-sm">
+      {submitStatus.type && (
+        <div
+          className={`mb-6 rounded-md p-4 ${
+            submitStatus.type === "success"
+              ? "bg-green-50 text-green-800"
+              : "bg-red-50 text-red-800"
+          }`}
+        >
+          {submitStatus.message}
+        </div>
+      )}
       <Formik
         initialValues={initialValues}
         validationSchema={toFormikValidationSchema(contactSchema)}
