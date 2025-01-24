@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import AboveNavbar from "./common/components/AboveNavbar/AboveNavbar";
+import CookieConsent from "./common/components/CookieConsent/CookieConsent";
 import Footer from "./common/components/Footer/Footer";
 import Navbar from "./common/components/Navbar/Navbar";
 import "./globals.css";
@@ -115,8 +116,25 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Trusted Types Policy */}
         <Script
-          defer
+          id="trusted-types-policy"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.trustedTypes && window.trustedTypes.createPolicy) {
+                window.trustedTypes.createPolicy('default', {
+                  createHTML: (string) => string,
+                  createScript: (string) => string,
+                  createScriptURL: (string) => string,
+                });
+              }
+            `,
+          }}
+        />
+        {/* Umami Analytics */}
+        <Script
+          id="umami-analytics"
           src="https://cloud.umami.is/script.js"
           data-website-id="f60ecd4b-dfd0-4464-aabd-8e714561e0c8"
           strategy="afterInteractive"
@@ -129,6 +147,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -16,8 +16,9 @@ const FOOTER_LINKS = {
   ],
   support: [
     { name: "Contact Us", href: "/contact" },
-    { name: "Care Guide", href: "/care" },
     { name: "Shipping & Returns", href: "/shipping" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Cookie Preferences", href: "/cookie-preferences" },
     { name: "FAQ", href: "/faq" },
   ],
 };

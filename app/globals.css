@@ -6,6 +6,7 @@
   --main-normal: #6b8f71;
   --main-light: #aec3b0;
   --main-lighter: #e3efd3;
+  --main-lightest: #f5f9e9;
 }
 
 @layer base {
