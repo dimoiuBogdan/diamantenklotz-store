@@ -35,7 +35,7 @@ const Hero = () => {
               href="/about-lab-diamonds"
               className="bg-[var(--main-lighter)] text-[var(--main-darker)] cursor-pointer px-6 font-semibold text-lg py-2 rounded-md hover:bg-[var(--main-normal)] hover:text-[var(--main-lighter)] transition-colors duration-300"
             >
-              Learn About Lab Diamonds
+              Learn About Diamonds
             </Link>
           </div>
         </div>
