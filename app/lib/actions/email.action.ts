@@ -9,11 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const emailSchema = z.object({
   name: z.string().min(2).max(50),
   email: z.string().email(),
-  phone: z
-    .string()
-    .min(10)
-    .max(15)
-    .regex(/^[0-9+\-\s()]*$/, "Invalid phone number format"),
+  phone: z.string().min(10).max(15),
   subject: z.string().min(5).max(100),
   message: z.string().min(20).max(1000),
 });
@@ -27,7 +23,7 @@ export async function sendContactEmail(formData: EmailFormData) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Email From Diamond Labs",
       to: process.env.CONTACT_EMAIL as string,
       subject: `New Contact Form Submission: ${validatedData.subject}`,
       react: EmailTemplate({
