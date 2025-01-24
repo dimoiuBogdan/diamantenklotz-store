@@ -1,4 +1,4 @@
-import heroImage from "@/public/images/hero.jpg";
+import heroImage from "@/public/images/hero.webp";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { jsonLd } from "./schema";
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/about-hero.jpg",
+        url: "/images/about-hero.webp",
         width: 1200,
         height: 630,
         alt: "Lab-Grown Diamonds Manufacturing Process",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "About Us - Pioneering Lab-Grown Diamonds with German Engineering",
     description:
       "Discover how we're revolutionizing the diamond industry with sustainable, lab-grown diamonds. Learn about our German engineering process.",
-    images: ["/images/about-hero.jpg"],
+    images: ["/images/about-hero.webp"],
   },
 };
 

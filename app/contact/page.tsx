@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/contact-hero.jpg",
+        url: "/images/contact-hero.webp",
         width: 1200,
         height: 630,
         alt: "Lab-Grown Diamonds Consultation Center in Berlin",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Contact Us - Expert Lab-Grown Diamond Consultation",
     description:
       "Get in touch with our diamond experts in Berlin. Expert guidance for your perfect sustainable diamond.",
-    images: ["/images/contact-hero.jpg"],
+    images: ["/images/contact-hero.webp"],
   },
   robots: {
     index: true,

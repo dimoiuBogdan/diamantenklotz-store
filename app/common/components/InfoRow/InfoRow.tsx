@@ -1,4 +1,4 @@
-import infoRowImage from "@/public/images/hero.jpg";
+import infoRowImage from "@/public/images/hero.webp";
 import Image from "next/image";
 
 type Props = {

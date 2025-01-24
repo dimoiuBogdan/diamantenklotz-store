@@ -1,4 +1,4 @@
-import heroImage from "@/public/images/hero.jpg";
+import heroImage from "@/public/images/hero.webp";
 import Image from "next/image";
 import Link from "next/link";
 

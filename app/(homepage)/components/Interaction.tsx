@@ -15,7 +15,7 @@ const Interaction = () => {
           </p>
         </div>
         <div className="w-1/2 flex items-center justify-center gap-x-6">
-          <button className="cursor-pointer bg-[var(--main-light)] border-2 border-[var(--main-light)] text-white hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
+          <button className="cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
             Try it now
           </button>
           <button className="cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
