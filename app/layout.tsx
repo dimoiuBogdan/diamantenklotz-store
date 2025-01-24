@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import AboveNavbar from "./common/components/AboveNavbar/AboveNavbar";
 import Footer from "./common/components/Footer/Footer";
 import Navbar from "./common/components/Navbar/Navbar";
@@ -113,6 +114,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f60ecd4b-dfd0-4464-aabd-8e714561e0c8"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
       >
