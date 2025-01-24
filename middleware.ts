@@ -30,7 +30,7 @@ export function middleware(request: NextRequest) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https: 'unsafe-inline';
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
     font-src 'self';
@@ -46,6 +46,7 @@ export function middleware(request: NextRequest) {
     .trim();
 
   const requestHeaders = new Headers(request.headers);
+  // Set nonce in header for access in layout
   requestHeaders.set("x-nonce", nonce);
 
   const response = NextResponse.next({
@@ -53,6 +54,7 @@ export function middleware(request: NextRequest) {
       headers: requestHeaders,
     },
   });
+
   response.headers.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue

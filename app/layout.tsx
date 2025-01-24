@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
+import { headers } from "next/headers";
 import Script from "next/script";
 import AboveNavbar from "./common/components/AboveNavbar/AboveNavbar";
 import CookieConsent from "./common/components/CookieConsent/CookieConsent";
@@ -109,18 +110,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const nonce = headersList.get("x-nonce") ?? "";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
         <Script
           id="trusted-types-policy"
           strategy="beforeInteractive"
-          nonce="{{nonce}}"
+          nonce={nonce}
           dangerouslySetInnerHTML={{
             __html: `
               if (window.trustedTypes && window.trustedTypes.createPolicy) {
@@ -142,7 +146,7 @@ export default function RootLayout({
           src="https://cloud.umami.is/script.js"
           data-website-id="f60ecd4b-dfd0-4464-aabd-8e714561e0c8"
           strategy="afterInteractive"
-          nonce="{{nonce}}"
+          nonce={nonce}
         />
         <AboveNavbar />
         <Navbar />
