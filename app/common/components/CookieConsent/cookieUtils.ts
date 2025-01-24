@@ -76,7 +76,7 @@ export const COOKIE_CONFIGS: CookieConfig[] = [
     duration: "1 year",
   },
   {
-    name: "posthog.com",
+    name: "Analytics",
     category: COOKIE_CATEGORIES.ANALYTICS,
     description: "Anonymous analytics to improve user experience",
     duration: "1 year",

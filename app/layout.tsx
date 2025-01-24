@@ -8,7 +8,6 @@ import CookieConsent from "./common/components/CookieConsent/CookieConsent";
 import Footer from "./common/components/Footer/Footer";
 import Navbar from "./common/components/Navbar/Navbar";
 import "./globals.css";
-import { CSPostHogProvider } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -139,17 +138,15 @@ export default async function RootLayout({
           }}
         />
       </Head>
-      <CSPostHogProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
-        >
-          <AboveNavbar />
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CookieConsent />
-        </body>
-      </CSPostHogProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
+      >
+        <AboveNavbar />
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <CookieConsent />
+      </body>
     </html>
   );
 }

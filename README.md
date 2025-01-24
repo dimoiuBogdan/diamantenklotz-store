@@ -28,7 +28,6 @@ A modern, secure, and SEO-optimized Next.js 15 application for a lab-grown diamo
 
 - **Image Optimization**: Using Next.js Image component
 - **Font Optimization**: Using next/font with Geist fonts
-- **Analytics**: Privacy-focused PostHog analytics integration
 - **Caching Strategies**: Built-in Next.js caching
 
 ### 🎯 SEO & Marketing
@@ -70,16 +69,6 @@ A modern, secure, and SEO-optimized Next.js 15 application for a lab-grown diamo
 - Social media meta tags
 - Multi-language support
 - Canonical URLs
-
-## 📈 Analytics
-
-Privacy-focused analytics using PostHog:
-
-- Page views tracking
-- Event tracking
-- User behavior analysis
-- Performance monitoring
-- Heatmaps
 
 ## 📄 License
 
