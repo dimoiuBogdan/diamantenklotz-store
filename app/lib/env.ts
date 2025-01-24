@@ -10,9 +10,6 @@ const envSchema = z.object({
   // Site URL
   NEXT_PUBLIC_SITE_URL: z.string().url(),
 
-  // Analytics
-  NEXT_PUBLIC_UMAMI_WEBSITE_ID: z.string(),
-
   // API Keys (if any)
   STRIPE_SECRET_KEY: z.string().optional(),
   STRIPE_WEBHOOK_SECRET: z.string().optional(),
@@ -22,6 +19,10 @@ const envSchema = z.object({
   SMTP_PORT: z.string().optional(),
   SMTP_USER: z.string().optional(),
   SMTP_PASSWORD: z.string().optional(),
+
+  // PostHog
+  NEXT_PUBLIC_POSTHOG_KEY: z.string(),
+  NEXT_PUBLIC_POSTHOG_HOST: z.string().optional(),
 });
 
 // Validate environment variables at startup

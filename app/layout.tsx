@@ -8,6 +8,7 @@ import CookieConsent from "./common/components/CookieConsent/CookieConsent";
 import Footer from "./common/components/Footer/Footer";
 import Navbar from "./common/components/Navbar/Navbar";
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -138,22 +139,17 @@ export default async function RootLayout({
           }}
         />
       </Head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
-      >
-        <Script
-          id="umami-analytics"
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f60ecd4b-dfd0-4464-aabd-8e714561e0c8"
-          strategy="afterInteractive"
-          nonce={nonce}
-        />
-        <AboveNavbar />
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <CookieConsent />
-      </body>
+      <CSPostHogProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
+        >
+          <AboveNavbar />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <CookieConsent />
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
