@@ -282,5 +282,43 @@
         }
       }
     }
+  },
+  "cookies": {
+    "banner": {
+      "title": "We value your privacy",
+      "description": "We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking \"Accept\", you consent to our use of cookies.",
+      "privacyLink": "Privacy Policy",
+      "cookieLink": "Cookie Policy",
+      "customize": "Customize",
+      "rejectAll": "Reject All",
+      "acceptAll": "Accept All"
+    },
+    "preferences": {
+      "title": "Cookie Preferences",
+      "description": "Manage your cookie preferences below. Some cookies are necessary for the website to function and cannot be disabled. For more information, please read our {policy}.",
+      "policyLink": "Cookie Policy",
+      "saveButton": "Save Preferences",
+      "categories": {
+        "necessary": {
+          "title": "Necessary Cookies",
+          "description": "Required for the website to function properly"
+        },
+        "analytics": {
+          "title": "Analytics Cookies",
+          "description": "Help us understand how visitors interact with our website"
+        },
+        "marketing": {
+          "title": "Marketing Cookies",
+          "description": "Used to deliver personalized advertisements"
+        },
+        "preferences": {
+          "title": "Preferences Cookies",
+          "description": "Store your website preferences"
+        }
+      },
+      "cookie": {
+        "duration": "Duration: {value}"
+      }
+    }
   }
 }

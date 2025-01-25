@@ -1,6 +1,7 @@
 "use client";
 
 import { useSafeStorage } from "@/app/lib/utils/storage.utils";
+import { Link } from "@/i18n/routing";
 import { useEffect, useState } from "react";
 
 interface UserPreferences {
@@ -71,9 +72,9 @@ export default function ExampleComponent() {
       <div className="mt-4 text-sm text-gray-600">
         Note: Your preferences will only be saved if you've accepted preferences
         cookies in our{" "}
-        <a href="/cookie-preferences" className="text-blue-600 underline">
+        <Link href="/cookie-preferences" className="text-blue-600 underline">
           cookie settings
-        </a>
+        </Link>
         .
       </div>
     </div>

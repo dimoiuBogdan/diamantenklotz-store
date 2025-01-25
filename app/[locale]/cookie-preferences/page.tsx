@@ -9,9 +9,12 @@ import {
   savePreferences,
   type CookiePreferences,
 } from "@/app/common/components/CookieConsent/cookieUtils";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function CookiePreferencesPage() {
+  const t = useTranslations("cookies.preferences");
   const [mounted, setMounted] = useState(false);
   const [preferences, setPreferences] =
     useState<CookiePreferences>(DEFAULT_PREFERENCES);
@@ -72,19 +75,19 @@ export default function CookiePreferencesPage() {
           suppressHydrationWarning
           className="mb-4 text-3xl font-bold text-[var(--main-darker)]"
         >
-          Cookie Preferences
+          {t("title")}
         </h1>
         <p suppressHydrationWarning className="text-[var(--main-dark)]">
-          Manage your cookie preferences below. Some cookies are necessary for
-          the website to function and cannot be disabled. For more information,
-          please read our{" "}
-          <a
-            href="/cookie-policy"
-            className="text-[var(--main-darker)] underline"
-          >
-            Cookie Policy
-          </a>
-          .
+          {t.rich("description", {
+            policy: (chunks) => (
+              <Link
+                href="/cookie-policy"
+                className="text-[var(--main-darker)] underline"
+              >
+                {t("policyLink")}
+              </Link>
+            ),
+          })}
         </p>
       </div>
 
@@ -105,17 +108,15 @@ export default function CookiePreferencesPage() {
             >
               <div className="mb-4 flex items-center justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold capitalize text-[var(--main-darker)]">
-                    {COOKIE_CATEGORIES[category]} Cookies
+                  <h2 className="text-xl font-semibold text-[var(--main-darker)]">
+                    {t(
+                      `categories.${category.toLowerCase() as "necessary" | "analytics" | "marketing" | "preferences"}.title`
+                    )}
                   </h2>
                   <p className="text-sm text-[var(--main-dark)]">
-                    {category === "NECESSARY"
-                      ? "Required for the website to function properly"
-                      : category === "ANALYTICS"
-                        ? "Help us understand how visitors interact with our website"
-                        : category === "MARKETING"
-                          ? "Used to deliver personalized advertisements"
-                          : "Store your website preferences"}
+                    {t(
+                      `categories.${category.toLowerCase() as "necessary" | "analytics" | "marketing" | "preferences"}.description`
+                    )}
                   </p>
                 </div>
                 <label className="relative inline-flex cursor-pointer items-center">
@@ -144,7 +145,7 @@ export default function CookiePreferencesPage() {
                         {config.description}
                       </p>
                       <p className="mt-1 text-xs text-gray-500">
-                        Duration: {config.duration}
+                        {t("cookie.duration", { value: config.duration })}
                       </p>
                     </div>
                   ))}
@@ -160,7 +161,7 @@ export default function CookiePreferencesPage() {
           onClick={handleSave}
           className="rounded-md cursor-pointer bg-[var(--main-darker)] px-6 py-2 text-white hover:bg-[var(--main-dark)]"
         >
-          Save Preferences
+          {t("saveButton")}
         </button>
       </div>
     </div>

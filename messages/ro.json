@@ -282,5 +282,43 @@
         }
       }
     }
+  },
+  "cookies": {
+    "banner": {
+      "title": "Respectăm confidențialitatea ta",
+      "description": "Folosim cookie-uri pentru a îmbunătăți experiența ta de navigare, pentru a oferi conținut personalizat și pentru a analiza traficul nostru. Făcând clic pe \"Accept\", ești de acord cu utilizarea cookie-urilor.",
+      "privacyLink": "Politica de confidențialitate",
+      "cookieLink": "Politica de cookie-uri",
+      "customize": "Personalizează",
+      "rejectAll": "Respinge tot",
+      "acceptAll": "Acceptă tot"
+    },
+    "preferences": {
+      "title": "Preferințe Cookie",
+      "description": "Gestionează-ți preferințele pentru cookie-uri mai jos. Unele cookie-uri sunt necesare pentru funcționarea site-ului și nu pot fi dezactivate. Pentru mai multe informații, te rugăm să citești {policy}.",
+      "policyLink": "Politica de cookie-uri",
+      "saveButton": "Salvează preferințele",
+      "categories": {
+        "necessary": {
+          "title": "Cookie-uri necesare",
+          "description": "Necesare pentru funcționarea corectă a site-ului"
+        },
+        "analytics": {
+          "title": "Cookie-uri analitice",
+          "description": "Ne ajută să înțelegem cum interacționează vizitatorii cu site-ul nostru"
+        },
+        "marketing": {
+          "title": "Cookie-uri de marketing",
+          "description": "Folosite pentru a livra reclame personalizate"
+        },
+        "preferences": {
+          "title": "Cookie-uri de preferințe",
+          "description": "Stochează preferințele tale pentru site"
+        }
+      },
+      "cookie": {
+        "duration": "Durată: {value}"
+      }
+    }
   }
 }
