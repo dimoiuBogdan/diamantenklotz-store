@@ -1,4 +1,10 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 const Interaction = () => {
+  const t = useTranslations("home.interaction");
+
   return (
     <section
       aria-label="Lab-Grown Diamond Experience"
@@ -6,22 +12,19 @@ const Interaction = () => {
     >
       <div className="w-1/2">
         <p className="uppercase font-bold text-sm text-[var(--main-lighter)] tracking-widest">
-          Try it now
+          {t("subtitle")}
         </p>
         <h3 className="text-4xl font-semibold mt-2 mb-6 tracking-wider">
-          Experience the Difference
+          {t("title")}
         </h3>
-        <p className="text-[var(--main-lighter)]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nihil
-          possimus animi cumque, ex itaque quia! Nulla voluptas aliquid ullam?
-        </p>
+        <p className="text-[var(--main-lighter)]">{t("description")}</p>
       </div>
       <div className="w-1/2 flex items-center justify-center gap-x-6">
         <button className="cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
-          Try it now
+          {t("cta.try")}
         </button>
         <button className="cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
-          Learn more
+          {t("cta.learn")}
         </button>
       </div>
     </section>

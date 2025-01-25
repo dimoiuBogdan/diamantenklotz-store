@@ -47,6 +47,68 @@
       "keywords": "despre noi, companie, misiune, valori, echipă, inovație, calitate, tehnologie",
       "ogTitle": "Despre noi - Project Alpha",
       "ogDescription": "Cunoaște Project Alpha: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
+    },
+    "hero": {
+      "title": "Pionieri în Viitorul Diamantelor",
+      "description": "Revoluționăm industria diamantelor cu diamante create în laborator, sustenabile și produse etic, care se ridică la nivelul frumuseții și calității pietrelor naturale."
+    },
+    "mission": {
+      "title": "Misiunea Noastră",
+      "description": "Ne dedicăm să facem diamantele excepționale accesibile, promovând în același timp sustenabilitatea mediului și practicile etice. Diamantele noastre create în laborator cu inginerie germană reprezintă fuziunea perfectă dintre tehnologie și lux.",
+      "goals": {
+        "1": "Crearea de diamante sustenabile, fără conflicte",
+        "2": "Avansarea tehnologiei diamantelor prin inginerie germană",
+        "3": "Facem luxul accesibil fără a compromite calitatea"
+      }
+    },
+    "values": {
+      "title": "Valorile Noastre",
+      "items": {
+        "sustainability": {
+          "title": "Sustenabilitate",
+          "description": "Creăm diamante frumoase cu impact minim asupra mediului prin procese eco-friendly avansate."
+        },
+        "innovation": {
+          "title": "Inovație",
+          "description": "Împingem limitele tehnologiei diamantelor cu inginerie și cercetare germană de ultimă generație."
+        },
+        "quality": {
+          "title": "Calitate",
+          "description": "Producem diamante care îndeplinesc sau depășesc cele mai înalte standarde de tăiere, claritate, culoare și carate."
+        },
+        "transparency": {
+          "title": "Transparență",
+          "description": "Oferim claritate completă despre procesul nostru de creare și certificarea diamantelor."
+        },
+        "accessibility": {
+          "title": "Accesibilitate",
+          "description": "Facem diamante excepționale disponibile la prețuri corecte fără a compromite calitatea."
+        },
+        "ethics": {
+          "title": "Etică",
+          "description": "Ne asigurăm că diamantele noastre sunt create responsabil, cu respect pentru oameni și planetă."
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "years": {
+          "number": "5+",
+          "label": "Ani de Inovație"
+        },
+        "diamonds": {
+          "number": "10K+",
+          "label": "Diamante Create"
+        },
+        "carbon": {
+          "number": "100%",
+          "label": "Neutru în Carbon"
+        },
+        "experts": {
+          "number": "30+",
+          "label": "Meșteri Experți"
+        }
+      }
     }
   },
   "contact": {
@@ -57,15 +119,68 @@
       "ogDescription": "Ia legătura cu echipa noastră pentru suport profesional și îndrumare personalizată.",
       "keywords": "contact, suport, îndrumare, ajutor, serviciu clienți"
     },
+    "hero": {
+      "title": "Intră în Contact",
+      "description": "Ai întrebări despre diamantele noastre create în laborator? Suntem aici să te ajutăm să găsești piatra perfectă pentru nevoile tale."
+    },
+    "info": {
+      "visit": {
+        "title": "Vizitează-ne",
+        "address": {
+          "street": "123 Diamond Street",
+          "city": "Berlin, Germania 10115"
+        }
+      },
+      "call": {
+        "title": "Sună-ne",
+        "phone": "+49 (30) 1234-5678",
+        "hours": "Luni-Vineri: 9:00 - 18:00"
+      },
+      "email": {
+        "title": "Scrie-ne",
+        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+      }
+    },
     "form": {
-      "name": "Nume",
-      "email": "Email",
-      "phone": "Telefon",
-      "subject": "Subiect",
-      "message": "Mesaj",
-      "submit": "Trimite mesajul",
+      "name": {
+        "label": "Nume",
+        "placeholder": "Numele tău"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "email@exemplu.ro"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+49 123 456 7890"
+      },
+      "subject": {
+        "label": "Subiect",
+        "placeholder": "Cum te putem ajuta?"
+      },
+      "message": {
+        "label": "Mesaj",
+        "placeholder": "Spune-ne mai multe despre solicitarea ta..."
+      },
+      "submit": {
+        "sending": "Se trimite...",
+        "send": "Trimite mesajul"
+      },
       "success": "Îți mulțumim pentru mesaj. Te vom contacta în curând.",
-      "error": "Nu am putut trimite mesajul tău. Te rugăm să încerci din nou mai târziu."
+      "error": {
+        "default": "Nu am putut trimite mesajul. Te rugăm să încerci din nou.",
+        "unexpected": "A apărut o eroare neașteptată. Te rugăm să încerci din nou."
+      },
+      "validation": {
+        "subject": {
+          "min": "Subiectul trebuie să aibă cel puțin 5 caractere",
+          "max": "Subiectul trebuie să aibă mai puțin de 100 de caractere"
+        },
+        "message": {
+          "min": "Mesajul trebuie să aibă cel puțin 20 de caractere",
+          "max": "Mesajul trebuie să aibă mai puțin de 1000 de caractere"
+        }
+      }
     }
   },
   "errors": {
@@ -73,5 +188,99 @@
     "500": "Eroare de server",
     "default": "A apărut o eroare",
     "notFoundMessage": "Pagina pe care o cauți nu există. Te rugăm să verifici URL-ul sau să te întorci la pagina principală."
+  },
+  "home": {
+    "hero": {
+      "title": "Diamante Premium Create în Laborator",
+      "titleHighlight": "Made in Germany",
+      "subtitle": "Diamante sustenabile, etice și accesibile create în laborator",
+      "cta": {
+        "shop": "Cumpără Diamante Lab-Grown",
+        "learn": "Află despre Diamante"
+      }
+    },
+    "discover": {
+      "title": "Explorează Colecțiile Noastre de Diamante Create în Laborator",
+      "description": "Descoperă selecția noastră atent aleasă de diamante sustenabile, produse etic în laborator. Fiecare piesă combină excelența ingineriei germane cu responsabilitatea față de mediu.",
+      "categories": {
+        "engagement": {
+          "title": "Inele de Logodnă",
+          "description": "Inele de logodnă cu surse etice pentru momentul tău special"
+        },
+        "certified": {
+          "title": "Diamante Lab. Certificate",
+          "description": "Diamante create în laborator, certificate IGI"
+        },
+        "jewelry": {
+          "title": "Bijuterii cu Diamante Lab.",
+          "description": "Bijuterii fine sustenabile pentru orice ocazie"
+        },
+        "custom": {
+          "title": "Diamante Lab. Personalizate",
+          "description": "Piese personalizate cu diamante create în laborator"
+        }
+      }
+    },
+    "qualities": {
+      "title": "De ce să Alegi Diamantele Noastre Create în Laborator",
+      "items": {
+        "premium": {
+          "title": "Diamante Premium Create în Laborator",
+          "description": "Proprietăți fizice și chimice identice cu diamantele extrase"
+        },
+        "sustainable": {
+          "title": "Alegere Sustenabilă",
+          "description": "Responsabile față de mediu și fără conflicte"
+        },
+        "engineering": {
+          "title": "Inginerie Germană",
+          "description": "Tehnologie de ultimă generație pentru calitate superioară"
+        },
+        "certified": {
+          "title": "Certificate IGI",
+          "description": "Certificate independent pentru asigurarea calității"
+        }
+      }
+    },
+    "future": {
+      "title": "Viitorul Creării Diamantelor",
+      "description": "Diamantele noastre create în laborator reprezintă fuziunea perfectă dintre excelența ingineriei germane și responsabilitatea față de mediu. Folosind tehnologie de ultimă generație, creăm diamante uimitoare care sunt fizic, chimic și optic identice cu diamantele extrase - dar cu un impact mai mic asupra mediului și o valoare mai bună.",
+      "buttonText": "Află despre procesul nostru"
+    },
+    "sustainable": {
+      "title": "Lux Sustenabil pentru Timpurile Moderne",
+      "description": "Alege diamantele create în laborator pentru calitatea lor excepțională, sursa etică și beneficiile pentru mediu. Diamantele noastre oferă aceeași strălucire și durabilitate ca diamantele extrase, certificate de IGI pentru liniștea ta deplină.",
+      "buttonText": "Descoperă Diamantele Lab-Grown"
+    },
+    "interaction": {
+      "subtitle": "Încearcă acum",
+      "title": "Experimentează Diferența",
+      "description": "Experimentează strălucirea diamantelor noastre create în laborator. Cu tehnologia noastră de probare virtuală, poți vedea cum arată piesele noastre pe tine.",
+      "cta": {
+        "try": "Încearcă acum",
+        "learn": "Află mai multe"
+      }
+    },
+    "faq": {
+      "title": "Întrebări Frecvente despre Diamantele Create în Laborator",
+      "items": {
+        "what": {
+          "question": "Ce sunt diamantele create în laborator?",
+          "answer": "Diamantele create în laborator sunt diamante reale create folosind procese tehnologice avansate care replică procesul natural de creștere a diamantelor. Au proprietăți fizice, chimice și optice identice cu diamantele extrase."
+        },
+        "real": {
+          "question": "Sunt diamantele create în laborator diamante reale?",
+          "answer": "Da, diamantele create în laborator sunt chimic, fizic și optic identice cu diamantele extrase. Sunt certificate de aceleași instituții și evaluate folosind aceleași criterii ca diamantele naturale."
+        },
+        "cost": {
+          "question": "Cât costă diamantele create în laborator?",
+          "answer": "Diamantele create în laborator costă de obicei cu 30-40% mai puțin decât diamantele extrase de calitate echivalentă. Acest lucru le face o alegere excelentă, menținând aceeași frumusețe și calitate."
+        },
+        "certified": {
+          "question": "Sunt certificate diamantele create în laborator?",
+          "answer": "Da, diamantele noastre create în laborator sunt certificate de Institutul Internațional de Gemologie (IGI), asigurând calitatea și autenticitatea lor prin teste și evaluări riguroase."
+        }
+      }
+    }
   }
 }

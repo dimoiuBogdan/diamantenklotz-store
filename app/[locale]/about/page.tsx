@@ -26,7 +26,55 @@ export async function generateMetadata({
   });
 }
 
-const AboutPage = () => {
+const AboutPage = async () => {
+  const t = await getTranslations("about");
+
+  const VALUES = [
+    {
+      title: t("values.items.sustainability.title"),
+      description: t("values.items.sustainability.description"),
+    },
+    {
+      title: t("values.items.innovation.title"),
+      description: t("values.items.innovation.description"),
+    },
+    {
+      title: t("values.items.quality.title"),
+      description: t("values.items.quality.description"),
+    },
+    {
+      title: t("values.items.transparency.title"),
+      description: t("values.items.transparency.description"),
+    },
+    {
+      title: t("values.items.accessibility.title"),
+      description: t("values.items.accessibility.description"),
+    },
+    {
+      title: t("values.items.ethics.title"),
+      description: t("values.items.ethics.description"),
+    },
+  ];
+
+  const STATS = [
+    {
+      number: t("stats.items.years.number"),
+      label: t("stats.items.years.label"),
+    },
+    {
+      number: t("stats.items.diamonds.number"),
+      label: t("stats.items.diamonds.label"),
+    },
+    {
+      number: t("stats.items.carbon.number"),
+      label: t("stats.items.carbon.label"),
+    },
+    {
+      number: t("stats.items.experts.number"),
+      label: t("stats.items.experts.label"),
+    },
+  ];
+
   return (
     <>
       <script
@@ -37,12 +85,10 @@ const AboutPage = () => {
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-[var(--main-darker)] sm:text-5xl">
-            Pioneering the Future of Diamonds
+            {t("hero.title")}
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-[var(--main-dark)]">
-            We're revolutionizing the diamond industry with sustainable,
-            ethically created lab-grown diamonds that match the beauty and
-            quality of natural stones.
+            {t("hero.description")}
           </p>
         </div>
 
@@ -60,32 +106,29 @@ const AboutPage = () => {
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-[var(--main-darker)]">
-                Our Mission
+                {t("mission.title")}
               </h2>
               <p className="text-[var(--main-dark)]">
-                We're dedicated to making exceptional diamonds accessible while
-                promoting environmental sustainability and ethical practices.
-                Our German-engineered lab-grown diamonds represent the perfect
-                fusion of technology and luxury.
+                {t("mission.description")}
               </p>
               <ul className="space-y-4 text-[var(--main-dark)]">
                 <li className="flex items-center">
                   <span className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--main-lighter)] text-[var(--main-darker)]">
                     1
                   </span>
-                  Creating sustainable, conflict-free diamonds
+                  {t("mission.goals.1")}
                 </li>
                 <li className="flex items-center">
                   <span className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--main-lighter)] text-[var(--main-darker)]">
                     2
                   </span>
-                  Advancing diamond technology through German engineering
+                  {t("mission.goals.2")}
                 </li>
                 <li className="flex items-center">
                   <span className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-[var(--main-lighter)] text-[var(--main-darker)]">
                     3
                   </span>
-                  Making luxury accessible without compromising quality
+                  {t("mission.goals.3")}
                 </li>
               </ul>
             </div>
@@ -95,41 +138,10 @@ const AboutPage = () => {
         {/* Values Section */}
         <div className="mb-20">
           <h2 className="mb-12 text-center text-3xl font-bold text-[var(--main-darker)]">
-            Our Values
+            {t("values.title")}
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Sustainability",
-                description:
-                  "Creating beautiful diamonds with minimal environmental impact through advanced eco-friendly processes.",
-              },
-              {
-                title: "Innovation",
-                description:
-                  "Pushing the boundaries of diamond technology with state-of-the-art German engineering and research.",
-              },
-              {
-                title: "Quality",
-                description:
-                  "Producing diamonds that meet or exceed the highest standards of cut, clarity, color, and carat weight.",
-              },
-              {
-                title: "Transparency",
-                description:
-                  "Providing complete clarity about our creation process and diamond certification.",
-              },
-              {
-                title: "Accessibility",
-                description:
-                  "Making exceptional diamonds available at fair prices without compromising on quality.",
-              },
-              {
-                title: "Ethics",
-                description:
-                  "Ensuring our diamonds are created responsibly, with respect for both people and planet.",
-              },
-            ].map((value) => (
+            {VALUES.map((value) => (
               <div
                 key={value.title}
                 className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
@@ -146,12 +158,7 @@ const AboutPage = () => {
         {/* Stats Section */}
         <div className="rounded-lg bg-[var(--main-darker)] px-8 py-12 text-white">
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { number: "5+", label: "Years of Innovation" },
-              { number: "10K+", label: "Diamonds Created" },
-              { number: "100%", label: "Carbon Neutral" },
-              { number: "30+", label: "Expert Craftsmen" },
-            ].map((stat) => (
+            {STATS.map((stat) => (
               <div key={stat.label}>
                 <div className="text-4xl font-bold">{stat.number}</div>
                 <div className="text-[var(--main-lighter)]">{stat.label}</div>

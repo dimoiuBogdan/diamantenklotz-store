@@ -77,7 +77,7 @@ const Navbar = () => {
       ref={navRef}
       className="bg-white shadow-md sticky top-0 w-full  mx-auto z-20"
     >
-      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto container">
         <div className="flex h-14 items-center">
           {/* Left Section - Logo */}
           <div className="hidden md:flex basis-[200px] items-center">
@@ -116,7 +116,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section - Icons */}
-          <div className="hidden md:flex basis-[200px] items-center justify-end space-x-4">
+          <div className="hidden md:flex basis-[200px] items-center justify-end space-x-4 mr-4">
             {ICON_BUTTONS.map((item) => (
               <button
                 key={item.label}

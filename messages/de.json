@@ -47,6 +47,68 @@
       "keywords": "über uns, unternehmen, mission, werte, team, innovation, qualität, technologie",
       "ogTitle": "Über uns - Project Alpha",
       "ogDescription": "Lernen Sie Project Alpha kennen: Unsere Mission, unsere Werte und unser Engagement für Innovation und Qualität."
+    },
+    "hero": {
+      "title": "Wegbereiter für die Zukunft der Diamanten",
+      "description": "Wir revolutionieren die Diamantenindustrie mit nachhaltigen, ethisch hergestellten Labor-Diamanten, die der Schönheit und Qualität natürlicher Steine entsprechen."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir setzen uns dafür ein, außergewöhnliche Diamanten zugänglich zu machen und dabei Umweltschutz und ethische Praktiken zu fördern. Unsere in Deutschland entwickelten Labor-Diamanten repräsentieren die perfekte Fusion von Technologie und Luxus.",
+      "goals": {
+        "1": "Herstellung nachhaltiger, konfliktfreier Diamanten",
+        "2": "Weiterentwicklung der Diamanttechnologie durch deutsche Ingenieurskunst",
+        "3": "Luxus zugänglich machen ohne Qualitätseinbußen"
+      }
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "items": {
+        "sustainability": {
+          "title": "Nachhaltigkeit",
+          "description": "Schöne Diamanten mit minimalem Umwelteinfluss durch fortschrittliche umweltfreundliche Prozesse schaffen."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Die Grenzen der Diamanttechnologie mit modernster deutscher Ingenieurskunst und Forschung erweitern."
+        },
+        "quality": {
+          "title": "Qualität",
+          "description": "Diamanten produzieren, die die höchsten Standards für Schliff, Reinheit, Farbe und Karat erfüllen oder übertreffen."
+        },
+        "transparency": {
+          "title": "Transparenz",
+          "description": "Vollständige Klarheit über unseren Herstellungsprozess und die Diamantzertifizierung bieten."
+        },
+        "accessibility": {
+          "title": "Zugänglichkeit",
+          "description": "Außergewöhnliche Diamanten zu fairen Preisen ohne Qualitätseinbußen anbieten."
+        },
+        "ethics": {
+          "title": "Ethik",
+          "description": "Sicherstellen, dass unsere Diamanten verantwortungsvoll und mit Respekt für Mensch und Umwelt hergestellt werden."
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "years": {
+          "number": "5+",
+          "label": "Jahre Innovation"
+        },
+        "diamonds": {
+          "number": "10K+",
+          "label": "Hergestellte Diamanten"
+        },
+        "carbon": {
+          "number": "100%",
+          "label": "CO2-neutral"
+        },
+        "experts": {
+          "number": "30+",
+          "label": "Experten-Handwerker"
+        }
+      }
     }
   },
   "contact": {
@@ -57,15 +119,68 @@
       "ogDescription": "Erreichen Sie unser Team für professionelle Unterstützung und individuelle Beratung.",
       "keywords": "kontakt, support, beratung, hilfe, kundenservice"
     },
+    "hero": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Haben Sie Fragen zu unseren im Labor gezüchteten Diamanten? Wir helfen Ihnen gerne, den perfekten Stein für Ihre Bedürfnisse zu finden."
+    },
+    "info": {
+      "visit": {
+        "title": "Besuchen Sie uns",
+        "address": {
+          "street": "123 Diamond Street",
+          "city": "Berlin, Deutschland 10115"
+        }
+      },
+      "call": {
+        "title": "Rufen Sie uns an",
+        "phone": "+49 (30) 1234-5678",
+        "hours": "Mo-Fr: 9:00 - 18:00 Uhr"
+      },
+      "email": {
+        "title": "Schreiben Sie uns",
+        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+      }
+    },
     "form": {
-      "name": "Name",
-      "email": "E-Mail",
-      "phone": "Telefon",
-      "subject": "Betreff",
-      "message": "Nachricht",
-      "submit": "Nachricht senden",
+      "name": {
+        "label": "Name",
+        "placeholder": "Ihr Name"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "ihre.email@beispiel.de"
+      },
+      "phone": {
+        "label": "Telefon",
+        "placeholder": "+49 123 456 7890"
+      },
+      "subject": {
+        "label": "Betreff",
+        "placeholder": "Wie können wir Ihnen helfen?"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Erzählen Sie uns mehr über Ihr Anliegen..."
+      },
+      "submit": {
+        "sending": "Wird gesendet...",
+        "send": "Nachricht senden"
+      },
       "success": "Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.",
-      "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+      "error": {
+        "default": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        "unexpected": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+      },
+      "validation": {
+        "subject": {
+          "min": "Der Betreff muss mindestens 5 Zeichen lang sein",
+          "max": "Der Betreff darf maximal 100 Zeichen lang sein"
+        },
+        "message": {
+          "min": "Die Nachricht muss mindestens 20 Zeichen lang sein",
+          "max": "Die Nachricht darf maximal 1000 Zeichen lang sein"
+        }
+      }
     }
   },
   "errors": {
@@ -73,5 +188,99 @@
     "500": "Serverfehler",
     "default": "Ein Fehler ist aufgetreten",
     "notFoundMessage": "Die von Ihnen gesuchte Seite existiert nicht. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück."
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Labor-Diamanten",
+      "titleHighlight": "Made in Germany",
+      "subtitle": "Nachhaltige, ethische und erschwingliche im Labor geschaffene Diamanten",
+      "cta": {
+        "shop": "Labor-Diamanten kaufen",
+        "learn": "Über Diamanten lernen"
+      }
+    },
+    "discover": {
+      "title": "Entdecken Sie unsere Labor-Diamanten Kollektionen",
+      "description": "Entdecken Sie unsere kuratierte Auswahl an nachhaltigen, ethisch produzierten Labor-Diamanten. Jedes Stück vereint deutsche Ingenieurskunst mit Umweltverantwortung.",
+      "categories": {
+        "engagement": {
+          "title": "Verlobungsringe",
+          "description": "Ethisch beschaffte Verlobungsringe für Ihren besonderen Moment"
+        },
+        "certified": {
+          "title": "Zertifizierte Labor-Diamanten",
+          "description": "IGI-zertifizierte, im Labor geschaffene Diamanten"
+        },
+        "jewelry": {
+          "title": "Labor-Diamantschmuck",
+          "description": "Nachhaltiger Schmuck für jeden Anlass"
+        },
+        "custom": {
+          "title": "Individuelle Labor-Diamanten",
+          "description": "Personalisierte Labor-Diamant Stücke"
+        }
+      }
+    },
+    "qualities": {
+      "title": "Warum Sie unsere Labor-Diamanten wählen sollten",
+      "items": {
+        "premium": {
+          "title": "Premium Labor-Diamanten",
+          "description": "Identische physikalische und chemische Eigenschaften wie abgebaute Diamanten"
+        },
+        "sustainable": {
+          "title": "Nachhaltige Wahl",
+          "description": "Umweltverantwortlich und konfliktfrei"
+        },
+        "engineering": {
+          "title": "Deutsche Ingenieurskunst",
+          "description": "Modernste Technologie für überragende Qualität"
+        },
+        "certified": {
+          "title": "IGI Zertifiziert",
+          "description": "Unabhängig zertifiziert für Qualitätssicherung"
+        }
+      }
+    },
+    "future": {
+      "title": "Die Zukunft der Diamantherstellung",
+      "description": "Unsere im Labor gezüchteten Diamanten repräsentieren die perfekte Fusion von deutscher Ingenieurskunst und Umweltverantwortung. Mit modernster Technologie erschaffen wir atemberaubende Diamanten, die physikalisch, chemisch und optisch identisch mit abgebauten Diamanten sind - aber mit einem geringeren ökologischen Fußabdruck und besserem Preis-Leistungs-Verhältnis.",
+      "buttonText": "Erfahren Sie mehr über unseren Prozess"
+    },
+    "sustainable": {
+      "title": "Nachhaltiger Luxus für moderne Zeiten",
+      "description": "Entscheiden Sie sich für im Labor gezüchtete Diamanten aufgrund ihrer außergewöhnlichen Qualität, ethischen Beschaffung und Umweltvorteile. Unsere Diamanten bieten den gleichen Glanz und die gleiche Haltbarkeit wie abgebaute Diamanten, zertifiziert vom IGI für absolute Sicherheit.",
+      "buttonText": "Lab-Grown Diamanten entdecken"
+    },
+    "interaction": {
+      "subtitle": "Jetzt ausprobieren",
+      "title": "Erleben Sie den Unterschied",
+      "description": "Erleben Sie den Glanz unserer Labor-Diamanten hautnah. Mit unserer virtuellen Anprobe-Technologie können Sie sehen, wie unsere Stücke an Ihnen aussehen.",
+      "cta": {
+        "try": "Jetzt ausprobieren",
+        "learn": "Mehr erfahren"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen zu Labor-Diamanten",
+      "items": {
+        "what": {
+          "question": "Was sind Labor-Diamanten?",
+          "answer": "Labor-Diamanten sind echte Diamanten, die mithilfe fortschrittlicher technologischer Prozesse hergestellt werden, die den natürlichen Diamant-Wachstumsprozess nachbilden. Sie haben identische physikalische, chemische und optische Eigenschaften wie abgebaute Diamanten."
+        },
+        "real": {
+          "question": "Sind Labor-Diamanten echte Diamanten?",
+          "answer": "Ja, Labor-Diamanten sind chemisch, physikalisch und optisch identisch mit abgebauten Diamanten. Sie werden von denselben Institutionen zertifiziert und nach denselben Kriterien bewertet wie natürliche Diamanten."
+        },
+        "cost": {
+          "question": "Wie viel kosten Labor-Diamanten?",
+          "answer": "Labor-Diamanten kosten typischerweise 30-40% weniger als abgebaute Diamanten vergleichbarer Qualität. Dies macht sie zu einer ausgezeichneten Wahl bei gleicher Schönheit und Qualität."
+        },
+        "certified": {
+          "question": "Sind Labor-Diamanten zertifiziert?",
+          "answer": "Ja, unsere Labor-Diamanten sind vom International Gemological Institute (IGI) zertifiziert, was ihre Qualität und Authentizität durch strenge Tests und Bewertungen garantiert."
+        }
+      }
+    }
   }
 }

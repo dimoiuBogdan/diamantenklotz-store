@@ -23,12 +23,12 @@ export default function LanguageSwitcher() {
   const { locale, locales, switchLocale } = useLocale();
 
   return (
-    <DropdownMenu>
+    <DropdownMenu modal={false}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="outline"
           size="sm"
-          className="flex items-center gap-2 bg-background"
+          className="flex cursor-pointer items-center gap-2 bg-background"
         >
           <Globe className="h-4 w-4" />
           <span>{localeNames[locale as Locale]}</span>
@@ -38,7 +38,11 @@ export default function LanguageSwitcher() {
         {locales.map((loc) => (
           <DropdownMenuItem
             key={loc}
-            onClick={() => switchLocale(loc)}
+            onClick={() => {
+              console.log("clicked", loc);
+
+              switchLocale(loc);
+            }}
             className={cn(
               "cursor-pointer",
               loc === locale && "font-medium bg-accent"

@@ -1,41 +1,46 @@
+"use client";
+
 import {
   DiamondIcon,
   LeafIcon,
   ShieldCheckIcon,
   SparklesIcon,
 } from "lucide-react";
-
-const DIAMOND_QUALITIES = [
-  {
-    icon: DiamondIcon,
-    title: "Premium Lab-Grown Diamonds",
-    description: "Identical physical and chemical properties to mined diamonds",
-  },
-  {
-    icon: LeafIcon,
-    title: "Sustainable Choice",
-    description: "Environmentally responsible and conflict-free diamonds",
-  },
-  {
-    icon: SparklesIcon,
-    title: "German Engineering",
-    description: "State-of-the-art technology for superior quality",
-  },
-  {
-    icon: ShieldCheckIcon,
-    title: "IGI Certified",
-    description: "Independently certified for quality assurance",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const QualitiesRow = () => {
+  const t = useTranslations("home.qualities");
+
+  const DIAMOND_QUALITIES = [
+    {
+      icon: DiamondIcon,
+      title: t("items.premium.title"),
+      description: t("items.premium.description"),
+    },
+    {
+      icon: LeafIcon,
+      title: t("items.sustainable.title"),
+      description: t("items.sustainable.description"),
+    },
+    {
+      icon: SparklesIcon,
+      title: t("items.engineering.title"),
+      description: t("items.engineering.description"),
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: t("items.certified.title"),
+      description: t("items.certified.description"),
+    },
+  ];
+
   return (
     <section
       aria-label="Lab-Grown Diamond Benefits"
       className="w-full rounded-md bg-[var(--main-dark)] mx-auto px-4 sm:px-6 lg:px-8 py-12"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="sr-only">Why Choose Our Lab-Grown Diamonds</h2>
+        <h2 className="sr-only">{t("title")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {DIAMOND_QUALITIES.map((quality) => (
             <div

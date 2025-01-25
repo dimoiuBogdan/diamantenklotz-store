@@ -1,5 +1,6 @@
 import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Discover from "./components/Discover";
 import FAQ from "./components/FAQ";
 import Hero from "./components/Hero";
@@ -24,7 +25,9 @@ export async function generateMetadata({
   });
 }
 
-const HomePage = () => {
+const HomePage = async () => {
+  const t = await getTranslations("home");
+
   return (
     <>
       <script
@@ -36,14 +39,14 @@ const HomePage = () => {
         <Discover />
         <QualitiesRow />
         <InfoRow
-          title="The Future of Diamond Creation"
-          description="Our lab-grown diamonds represent the perfect fusion of German engineering excellence and environmental responsibility. Using cutting-edge technology, we create stunning diamonds that are physically, chemically, and optically identical to mined diamonds - but with a smaller environmental footprint and better value."
-          buttonText="Learn About Our Process"
+          title={t("future.title")}
+          description={t("future.description")}
+          buttonText={t("future.buttonText")}
         />
         <InfoRow
-          title="Sustainable Luxury for Modern Times"
-          description="Choose lab-grown diamonds for their exceptional quality, ethical sourcing, and environmental benefits. Our diamonds offer the same brilliance and durability as mined diamonds, certified by IGI for absolute peace of mind."
-          buttonText="Shop Lab-Grown Diamonds"
+          title={t("sustainable.title")}
+          description={t("sustainable.description")}
+          buttonText={t("sustainable.buttonText")}
           reverse
         />
         <Interaction />

@@ -12,11 +12,7 @@ export function useLocale() {
     // Get the current path without the locale prefix
     const currentPath = pathname.replace(`/${locale}`, "");
 
-    // Construct the new path with the new locale
-    const newPath =
-      newLocale === "de" ? currentPath : `/${newLocale}${currentPath}`;
-
-    router.push(newPath);
+    router.replace(`/${newLocale}${currentPath}`);
   };
 
   return {

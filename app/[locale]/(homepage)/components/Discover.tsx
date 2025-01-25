@@ -1,39 +1,44 @@
+"use client";
+
 import { Link } from "@/i18n/routing";
 import heroImage from "@/public/images/hero.webp";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const DIAMOND_CATEGORIES = [
-  {
-    title: "Engagement Rings",
-    description: "Ethically sourced engagement rings for your special moment",
-    image: heroImage,
-    href: "/shop/lab-grown-engagement-rings",
-    alt: "Sustainable lab-grown diamond engagement rings collection",
-  },
-  {
-    title: "Certified Lab. Diamonds",
-    description: "IGI-certified laboratory created diamonds",
-    image: heroImage,
-    href: "/shop/certified-lab-diamonds",
-    alt: "IGI-certified lab-grown loose diamonds",
-  },
-  {
-    title: "Lab. Diamond Jewelry",
-    description: "Sustainable fine jewelry for every occasion",
-    image: heroImage,
-    href: "/shop/lab-grown-jewelry",
-    alt: "Sustainable lab-created diamond jewelry collection",
-  },
-  {
-    title: "Custom Lab. Diamonds",
-    description: "Personalized lab-grown diamond pieces",
-    image: heroImage,
-    href: "/shop/custom-lab-diamonds",
-    alt: "Custom-made lab-grown diamond jewelry",
-  },
-];
-
 const Discover = () => {
+  const t = useTranslations("home.discover");
+
+  const DIAMOND_CATEGORIES = [
+    {
+      title: t("categories.engagement.title"),
+      description: t("categories.engagement.description"),
+      image: heroImage,
+      href: "/shop/lab-grown-engagement-rings",
+      alt: "Sustainable lab-grown diamond engagement rings collection",
+    },
+    {
+      title: t("categories.certified.title"),
+      description: t("categories.certified.description"),
+      image: heroImage,
+      href: "/shop/certified-lab-diamonds",
+      alt: "IGI-certified lab-grown loose diamonds",
+    },
+    {
+      title: t("categories.jewelry.title"),
+      description: t("categories.jewelry.description"),
+      image: heroImage,
+      href: "/shop/lab-grown-jewelry",
+      alt: "Sustainable lab-created diamond jewelry collection",
+    },
+    {
+      title: t("categories.custom.title"),
+      description: t("categories.custom.description"),
+      image: heroImage,
+      href: "/shop/custom-lab-diamonds",
+      alt: "Custom-made lab-grown diamond jewelry",
+    },
+  ];
+
   return (
     <section
       aria-label="Diamond Collections"
@@ -41,12 +46,10 @@ const Discover = () => {
     >
       <div className="mb-10">
         <h2 className="text-center text-[var(--main-darker)] text-3xl font-semibold mb-2">
-          Explore Our Lab-Grown Diamond Collections
+          {t("title")}
         </h2>
         <p className="text-center text-lg text-zinc-600 max-w-2xl mx-auto">
-          Discover our curated selection of sustainable, ethically-produced lab
-          diamonds. Each piece combines German engineering excellence with
-          environmental responsibility.
+          {t("description")}
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -25,28 +25,33 @@ export async function generateMetadata({
   });
 }
 
-const CONTACT_INFO = [
-  {
-    icon: MapPin,
-    title: "Visit Us",
-    details: ["123 Diamond Street", "Berlin, Germany 10115"],
-  },
-  {
-    icon: Phone,
-    title: "Call Us",
-    details: ["+49 (30) 1234-5678", "Mon-Fri: 9:00 AM - 6:00 PM"],
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    details: [
-      "info@project-alpha-sable.vercel.app",
-      "support@project-alpha-sable.vercel.app",
-    ],
-  },
-];
+interface ContactInfo {
+  icon: typeof MapPin | typeof Phone | typeof Mail;
+  title: string;
+  details: string[];
+}
 
-export default function ContactPage() {
+const ContactPage = async () => {
+  const t = await getTranslations("contact");
+
+  const CONTACT_INFO: ContactInfo[] = [
+    {
+      icon: MapPin,
+      title: t("info.visit.title"),
+      details: [t("info.visit.address.street"), t("info.visit.address.city")],
+    },
+    {
+      icon: Phone,
+      title: t("info.call.title"),
+      details: [t("info.call.phone"), t("info.call.hours")],
+    },
+    {
+      icon: Mail,
+      title: t("info.email.title"),
+      details: [t("info.email.addresses")],
+    },
+  ];
+
   return (
     <>
       <script
@@ -57,39 +62,42 @@ export default function ContactPage() {
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-[var(--main-darker)] sm:text-5xl">
-            Get in Touch
+            {t("hero.title")}
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-[var(--main-dark)]">
-            Have questions about our lab-grown diamonds? We're here to help you
-            find the perfect stone for your needs.
+            {t("hero.description")}
           </p>
         </div>
 
         {/* Contact Info Section */}
-        <div className="mb-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {CONTACT_INFO.map((info) => (
+        <section className="mb-12 grid gap-8 md:grid-cols-3">
+          {CONTACT_INFO.map((info, index) => (
             <div
-              key={info.title}
-              className="rounded-lg bg-white p-6 text-center shadow-sm"
+              key={index}
+              className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow-sm"
             >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[var(--main-lighter)]">
+              <div className="mb-4 rounded-full bg-[var(--main-lightest)] p-4">
                 <info.icon className="h-6 w-6 text-[var(--main-darker)]" />
               </div>
-              <h3 className="mb-2 text-lg font-semibold text-[var(--main-darker)]">
+              <h2 className="mb-4 text-xl font-semibold text-[var(--main-darker)]">
                 {info.title}
-              </h3>
-              {info.details.map((detail) => (
-                <p key={detail} className="text-[var(--main-dark)]">
-                  {detail}
-                </p>
-              ))}
+              </h2>
+              <div className="space-y-2">
+                {info.details.map((detail: string, idx: number) => (
+                  <p key={idx} className="text-gray-600">
+                    {detail}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
-        </div>
+        </section>
 
         {/* Contact Form */}
         <ContactForm />
       </div>
     </>
   );
-}
+};
+
+export default ContactPage;

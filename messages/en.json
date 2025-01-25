@@ -47,6 +47,68 @@
       "keywords": "about us, company, mission, values, team, innovation, quality, technology",
       "ogTitle": "About Us - Project Alpha",
       "ogDescription": "Get to know Project Alpha: Our mission, our values, and our commitment to innovation and quality."
+    },
+    "hero": {
+      "title": "Pioneering the Future of Diamonds",
+      "description": "We're revolutionizing the diamond industry with sustainable, ethically created lab-grown diamonds that match the beauty and quality of natural stones."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We're dedicated to making exceptional diamonds accessible while promoting environmental sustainability and ethical practices. Our German-engineered lab-grown diamonds represent the perfect fusion of technology and luxury.",
+      "goals": {
+        "1": "Creating sustainable, conflict-free diamonds",
+        "2": "Advancing diamond technology through German engineering",
+        "3": "Making luxury accessible without compromising quality"
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "items": {
+        "sustainability": {
+          "title": "Sustainability",
+          "description": "Creating beautiful diamonds with minimal environmental impact through advanced eco-friendly processes."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Pushing the boundaries of diamond technology with state-of-the-art German engineering and research."
+        },
+        "quality": {
+          "title": "Quality",
+          "description": "Producing diamonds that meet or exceed the highest standards of cut, clarity, color, and carat weight."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "Providing complete clarity about our creation process and diamond certification."
+        },
+        "accessibility": {
+          "title": "Accessibility",
+          "description": "Making exceptional diamonds available at fair prices without compromising on quality."
+        },
+        "ethics": {
+          "title": "Ethics",
+          "description": "Ensuring our diamonds are created responsibly, with respect for both people and planet."
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "years": {
+          "number": "5+",
+          "label": "Years of Innovation"
+        },
+        "diamonds": {
+          "number": "10K+",
+          "label": "Diamonds Created"
+        },
+        "carbon": {
+          "number": "100%",
+          "label": "Carbon Neutral"
+        },
+        "experts": {
+          "number": "30+",
+          "label": "Expert Craftsmen"
+        }
+      }
     }
   },
   "contact": {
@@ -57,15 +119,68 @@
       "ogDescription": "Reach out to our team for professional support and personalized guidance.",
       "keywords": "contact, support, guidance, help, customer service"
     },
+    "hero": {
+      "title": "Get in Touch",
+      "description": "Have questions about our lab-grown diamonds? We're here to help you find the perfect stone for your needs."
+    },
+    "info": {
+      "visit": {
+        "title": "Visit Us",
+        "address": {
+          "street": "123 Diamond Street",
+          "city": "Berlin, Germany 10115"
+        }
+      },
+      "call": {
+        "title": "Call Us",
+        "phone": "+49 (30) 1234-5678",
+        "hours": "Mon-Fri: 9:00 AM - 6:00 PM"
+      },
+      "email": {
+        "title": "Email Us",
+        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+      }
+    },
     "form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send Message",
-      "success": "Thank you for your message. We'll get back to you soon.",
-      "error": "Failed to send your message. Please try again later."
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your.email@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "+49 123 456 7890"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "How can we help?"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us more about your inquiry..."
+      },
+      "submit": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "success": "Thank you for your message. We'll get back to you soon!",
+      "error": {
+        "default": "Failed to send message. Please try again.",
+        "unexpected": "An unexpected error occurred. Please try again."
+      },
+      "validation": {
+        "subject": {
+          "min": "Subject must be at least 5 characters",
+          "max": "Subject must be less than 100 characters"
+        },
+        "message": {
+          "min": "Message must be at least 20 characters",
+          "max": "Message must be less than 1000 characters"
+        }
+      }
     }
   },
   "errors": {
@@ -73,5 +188,99 @@
     "500": "Server error",
     "default": "An error occurred",
     "notFoundMessage": "The page you're looking for doesn't exist. Please check the URL or return to the homepage."
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Lab-Grown Diamonds",
+      "titleHighlight": "Made in Germany",
+      "subtitle": "Sustainable, Ethical, and Affordable Laboratory-Created Diamonds",
+      "cta": {
+        "shop": "Shop Lab-Grown Diamonds",
+        "learn": "Learn About Diamonds"
+      }
+    },
+    "discover": {
+      "title": "Explore Our Lab-Grown Diamond Collections",
+      "description": "Discover our curated selection of sustainable, ethically-produced lab diamonds. Each piece combines German engineering excellence with environmental responsibility.",
+      "categories": {
+        "engagement": {
+          "title": "Engagement Rings",
+          "description": "Ethically sourced engagement rings for your special moment"
+        },
+        "certified": {
+          "title": "Certified Lab. Diamonds",
+          "description": "IGI-certified laboratory created diamonds"
+        },
+        "jewelry": {
+          "title": "Lab. Diamond Jewelry",
+          "description": "Sustainable fine jewelry for every occasion"
+        },
+        "custom": {
+          "title": "Custom Lab. Diamonds",
+          "description": "Personalized lab-grown diamond pieces"
+        }
+      }
+    },
+    "qualities": {
+      "title": "Why Choose Our Lab-Grown Diamonds",
+      "items": {
+        "premium": {
+          "title": "Premium Lab-Grown Diamonds",
+          "description": "Identical physical and chemical properties to mined diamonds"
+        },
+        "sustainable": {
+          "title": "Sustainable Choice",
+          "description": "Environmentally responsible and conflict-free diamonds"
+        },
+        "engineering": {
+          "title": "German Engineering",
+          "description": "State-of-the-art technology for superior quality"
+        },
+        "certified": {
+          "title": "IGI Certified",
+          "description": "Independently certified for quality assurance"
+        }
+      }
+    },
+    "future": {
+      "title": "The Future of Diamond Creation",
+      "description": "Our lab-grown diamonds represent the perfect fusion of German engineering excellence and environmental responsibility. Using cutting-edge technology, we create stunning diamonds that are physically, chemically, and optically identical to mined diamonds - but with a smaller environmental footprint and better value.",
+      "buttonText": "Learn About Our Process"
+    },
+    "sustainable": {
+      "title": "Sustainable Luxury for Modern Times",
+      "description": "Choose lab-grown diamonds for their exceptional quality, ethical sourcing, and environmental benefits. Our diamonds offer the same brilliance and durability as mined diamonds, certified by IGI for absolute peace of mind.",
+      "buttonText": "Shop Lab-Grown Diamonds"
+    },
+    "interaction": {
+      "subtitle": "Try it now",
+      "title": "Experience the Difference",
+      "description": "Experience the brilliance of our lab-grown diamonds firsthand. Our virtual try-on technology lets you see how our pieces look on you.",
+      "cta": {
+        "try": "Try it now",
+        "learn": "Learn more"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions About Lab-Grown Diamonds",
+      "items": {
+        "what": {
+          "question": "What are lab-grown diamonds?",
+          "answer": "Lab-grown diamonds are real diamonds created using advanced technological processes that replicate the natural diamond growing process. They have identical physical, chemical, and optical properties to mined diamonds."
+        },
+        "real": {
+          "question": "Are lab-grown diamonds real diamonds?",
+          "answer": "Yes, lab-grown diamonds are chemically, physically, and optically identical to mined diamonds. They are certified by the same institutions and graded using the same criteria as natural diamonds."
+        },
+        "cost": {
+          "question": "How much do lab-grown diamonds cost?",
+          "answer": "Lab-grown diamonds typically cost 30-40% less than mined diamonds of equivalent quality. This makes them an excellent value while maintaining the same beauty and quality."
+        },
+        "certified": {
+          "question": "Are lab-grown diamonds certified?",
+          "answer": "Yes, our lab-grown diamonds are certified by the International Gemological Institute (IGI), ensuring their quality and authenticity through rigorous testing and grading."
+        }
+      }
+    }
   }
 }
