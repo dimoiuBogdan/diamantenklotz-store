@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.lab-grown-diamonds.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://project-alpha-sable.vercel.app";
 const BATCH_SIZE = 100; // Process products in batches
 
 async function fetchProducts() {

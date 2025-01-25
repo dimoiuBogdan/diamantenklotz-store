@@ -6,7 +6,7 @@ export const jsonLd = {
   name: "Lab-Grown Diamonds GmbH",
   description:
     "Premium lab-grown diamonds crafted with German engineering excellence",
-  url: "https://www.lab-grown-diamonds.com",
+  url: "https://project-alpha-sable.vercel.app",
   telephone: "+49-123-456789",
   address: {
     "@type": "PostalAddress",

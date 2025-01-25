@@ -1,0 +1,77 @@
+{
+  "common": {
+    "meta": {
+      "description": "Your trusted platform for innovative solutions and professional services.",
+      "appName": "Project Alpha",
+      "keywords": "technology, innovation, services, solutions, digital",
+      "author": "Project Alpha Team",
+      "creator": "Project Alpha Ltd",
+      "publisher": "Project Alpha Ltd",
+      "ogTitle": "Project Alpha - Innovative Solutions",
+      "ogDescription": "Discover our innovative solutions and professional services.",
+      "twitterTitle": "Project Alpha - Technology & Innovation",
+      "twitterDescription": "Innovative solutions for your digital challenges."
+    },
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "products": "Products",
+      "blog": "Blog"
+    },
+    "footer": {
+      "rights": "All rights reserved",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
+    },
+    "actions": {
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "save": "Save",
+      "delete": "Delete",
+      "edit": "Edit",
+      "back": "Back"
+    },
+    "validation": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "minLength": "Minimum {min} characters required",
+      "maxLength": "Maximum {max} characters allowed"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "meta": {
+      "description": "Learn more about our mission, values, and the team behind Project Alpha. Discover how we combine innovation with quality.",
+      "keywords": "about us, company, mission, values, team, innovation, quality, technology",
+      "ogTitle": "About Us - Project Alpha",
+      "ogDescription": "Get to know Project Alpha: Our mission, our values, and our commitment to innovation and quality."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "meta": {
+      "description": "Contact our team for professional support and guidance. We're here to help with your inquiries.",
+      "ogTitle": "Contact - Project Alpha",
+      "ogDescription": "Reach out to our team for professional support and personalized guidance.",
+      "keywords": "contact, support, guidance, help, customer service"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you for your message. We'll get back to you soon.",
+      "error": "Failed to send your message. Please try again later."
+    }
+  },
+  "errors": {
+    "404": "Page not found",
+    "500": "Server error",
+    "default": "An error occurred",
+    "notFoundMessage": "The page you're looking for doesn't exist. Please check the URL or return to the homepage."
+  }
+}

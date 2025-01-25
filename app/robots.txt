@@ -1,5 +1,5 @@
 # Lab-Grown Diamonds GmbH - German Engineered Sustainable Diamonds
-# https://www.lab-grown-diamonds.com
+# https://project-alpha-sable.vercel.app
 
 User-agent: *
 Allow: /
@@ -64,8 +64,8 @@ Disallow: /admin/images
 Disallow: /user/images
 
 # Sitemaps
-Sitemap: https://www.lab-grown-diamonds.com/sitemap.xml
-Sitemap: https://www.lab-grown-diamonds.com/products-sitemap.xml
+Sitemap: https://project-alpha-sable.vercel.app/sitemap.xml
+Sitemap: https://project-alpha-sable.vercel.app/products-sitemap.xml
 
 # Host
-Host: https://www.lab-grown-diamonds.com
+Host: https://project-alpha-sable.vercel.app

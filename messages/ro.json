@@ -1,0 +1,77 @@
+{
+  "common": {
+    "meta": {
+      "description": "Platforma ta de încredere pentru soluții inovatoare și servicii profesionale.",
+      "appName": "Project Alpha",
+      "keywords": "tehnologie, inovație, servicii, soluții, digital",
+      "author": "Echipa Project Alpha",
+      "creator": "Project Alpha SRL",
+      "publisher": "Project Alpha SRL",
+      "ogTitle": "Project Alpha - Soluții Inovatoare",
+      "ogDescription": "Descoperă soluțiile noastre inovatoare și serviciile profesionale.",
+      "twitterTitle": "Project Alpha - Tehnologie & Inovație",
+      "twitterDescription": "Soluții inovatoare pentru provocările tale digitale."
+    },
+    "navigation": {
+      "home": "Acasă",
+      "about": "Despre noi",
+      "contact": "Contact",
+      "products": "Produse",
+      "blog": "Blog"
+    },
+    "footer": {
+      "rights": "Toate drepturile rezervate",
+      "privacy": "Politica de confidențialitate",
+      "terms": "Termeni și condiții",
+      "contact": "Contact"
+    },
+    "actions": {
+      "submit": "Trimite",
+      "cancel": "Anulează",
+      "save": "Salvează",
+      "delete": "Șterge",
+      "edit": "Editează",
+      "back": "Înapoi"
+    },
+    "validation": {
+      "required": "Acest câmp este obligatoriu",
+      "email": "Te rugăm să introduci o adresă de email validă",
+      "minLength": "Minim {min} caractere necesare",
+      "maxLength": "Maxim {max} caractere permise"
+    }
+  },
+  "about": {
+    "title": "Despre noi",
+    "meta": {
+      "description": "Află mai multe despre misiunea noastră, valorile și echipa din spatele Project Alpha. Descoperă cum îmbinăm inovația cu calitatea.",
+      "keywords": "despre noi, companie, misiune, valori, echipă, inovație, calitate, tehnologie",
+      "ogTitle": "Despre noi - Project Alpha",
+      "ogDescription": "Cunoaște Project Alpha: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
+    }
+  },
+  "contact": {
+    "title": "Contactează-ne",
+    "meta": {
+      "description": "Contactează echipa noastră pentru suport profesional și îndrumare. Suntem aici să te ajutăm cu orice întrebare.",
+      "ogTitle": "Contact - Project Alpha",
+      "ogDescription": "Ia legătura cu echipa noastră pentru suport profesional și îndrumare personalizată.",
+      "keywords": "contact, suport, îndrumare, ajutor, serviciu clienți"
+    },
+    "form": {
+      "name": "Nume",
+      "email": "Email",
+      "phone": "Telefon",
+      "subject": "Subiect",
+      "message": "Mesaj",
+      "submit": "Trimite mesajul",
+      "success": "Îți mulțumim pentru mesaj. Te vom contacta în curând.",
+      "error": "Nu am putut trimite mesajul tău. Te rugăm să încerci din nou mai târziu."
+    }
+  },
+  "errors": {
+    "404": "Pagina nu a fost găsită",
+    "500": "Eroare de server",
+    "default": "A apărut o eroare",
+    "notFoundMessage": "Pagina pe care o cauți nu există. Te rugăm să verifici URL-ul sau să te întorci la pagina principală."
+  }
+}

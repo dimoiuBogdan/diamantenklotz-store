@@ -1,60 +1,65 @@
 "use client";
 
 import { cn } from "@/app/lib/utils/utils";
+import { Link } from "@/i18n/routing";
 import { Menu, Search, ShoppingCart, User, X } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { NavLink } from "./NavLink";
 import type { IconButton, NavigationItem } from "./navbar.types";
 
-const NAVIGATION_ITEMS: NavigationItem[] = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "Products",
-    href: "/products",
-    sublinks: [
-      { name: "Pure Diamonds", href: "/products/pure-diamonds" },
-      { name: "Diamonds", href: "/products/diamonds" },
-      { name: "Gemstones", href: "/products/gemstones" },
-      { name: "Pearls", href: "/products/pearls" },
-      { name: "Precious Metals", href: "/products/precious-metals" },
-      { name: "Jewelry", href: "/products/jewelry" },
-    ],
-  },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Contact",
-    href: "/contact",
-  },
-];
-
-const ICON_BUTTONS: IconButton[] = [
-  {
-    icon: Search,
-    label: "Search",
-    action: () => console.log("Search clicked"),
-  },
-  {
-    icon: ShoppingCart,
-    label: "Cart",
-    action: () => console.log("Cart clicked"),
-  },
-  {
-    icon: User,
-    label: "Profile",
-    action: () => console.log("Profile clicked"),
-  },
-];
-
 const Navbar = () => {
+  const t = useTranslations("common.navigation");
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
+
+  const NAVIGATION_ITEMS: NavigationItem[] = [
+    {
+      name: t("home"),
+      href: "/",
+    },
+    {
+      name: t("products"),
+      href: "/products",
+      sublinks: [
+        { name: "Pure Diamonds", href: "/products/pure-diamonds" },
+        { name: "Diamonds", href: "/products/diamonds" },
+        { name: "Gemstones", href: "/products/gemstones" },
+        { name: "Pearls", href: "/products/pearls" },
+        { name: "Precious Metals", href: "/products/precious-metals" },
+        { name: "Jewelry", href: "/products/jewelry" },
+      ],
+    },
+    {
+      name: t("about"),
+      href: "/about",
+    },
+    {
+      name: t("contact"),
+      href: "/contact",
+    },
+  ];
+
+  const ICON_BUTTONS: IconButton[] = [
+    {
+      icon: Search,
+      label: "Search",
+      action: () => console.log("Search clicked"),
+    },
+    {
+      icon: ShoppingCart,
+      label: "Cart",
+      action: () => console.log("Cart clicked"),
+    },
+    {
+      icon: User,
+      label: "Profile",
+      action: () => console.log("Profile clicked"),
+    },
+  ];
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -66,8 +71,6 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <nav
@@ -125,6 +128,7 @@ const Navbar = () => {
               </button>
             ))}
           </div>
+          <LanguageSwitcher />
         </div>
       </div>
 
@@ -158,6 +162,7 @@ const Navbar = () => {
               ) : null}
             </div>
           ))}
+
           <div className="border-t border-gray-200 pt-4 flex justify-around">
             {ICON_BUTTONS.map((item) => (
               <button

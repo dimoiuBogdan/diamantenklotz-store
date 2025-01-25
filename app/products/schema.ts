@@ -20,15 +20,15 @@ export const generateProductJsonLd = (product: {
   sku: product.id,
   image: [product.image],
   category: product.category,
-  url: `https://www.lab-grown-diamonds.com/products/${product.category}/${product.id}`,
+  url: `https://project-alpha-sable.vercel.app/products/${product.category}/${product.id}`,
   brand: {
     "@type": "Brand",
-    name: "Lab-Grown Diamonds GmbH",
+    name: "Project Alpha Sable",
     slogan: "German Engineering Meets Sustainable Luxury",
   },
   manufacturer: {
     "@type": "Organization",
-    name: "Lab-Grown Diamonds GmbH",
+    name: "Project Alpha Sable",
     location: {
       "@type": "Place",
       address: {
@@ -46,10 +46,10 @@ export const generateProductJsonLd = (product: {
     priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
       .toISOString()
       .split("T")[0],
-    url: `https://www.lab-grown-diamonds.com/products/${product.category}/${product.id}`,
+    url: `https://project-alpha-sable.vercel.app/products/${product.category}/${product.id}`,
     seller: {
       "@type": "Organization",
-      name: "Lab-Grown Diamonds GmbH",
+      name: "Project Alpha Sable",
     },
   },
   additionalProperty: [

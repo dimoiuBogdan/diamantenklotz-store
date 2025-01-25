@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
 import { headers } from "next/headers";
 import Script from "next/script";
-import AboveNavbar from "./common/components/AboveNavbar/AboveNavbar";
-import CookieConsent from "./common/components/CookieConsent/CookieConsent";
-import Footer from "./common/components/Footer/Footer";
-import Navbar from "./common/components/Navbar/Navbar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -20,7 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 // TODO: Change this with real data
-const SITE_URL = "https://www.lab-grown-diamonds.com";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://project-alpha-sable.vercel.app";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -141,11 +144,7 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
       >
-        <AboveNavbar />
-        <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
-        <CookieConsent />
       </body>
     </html>
   );

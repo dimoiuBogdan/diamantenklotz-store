@@ -1,8 +1,8 @@
 "use client";
 
 import { cn } from "@/app/lib/utils/utils";
+import { Link } from "@/i18n/routing";
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
 import { useState } from "react";
 import { NavigationItem } from "./navbar.types";
 

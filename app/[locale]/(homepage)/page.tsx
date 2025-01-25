@@ -1,16 +1,28 @@
-import type { Metadata } from "next";
-import InfoRow from "../common/components/InfoRow/InfoRow";
+import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
+import { Metadata } from "next";
 import Discover from "./components/Discover";
 import FAQ from "./components/FAQ";
 import Hero from "./components/Hero";
+import InfoRow from "./components/InfoRow";
 import Interaction from "./components/Interaction";
 import QualitiesRow from "./components/QualitiesRow";
 import { jsonLd } from "./schema";
 
-export const metadata: Metadata = {
-  title: "Home",
-  description: "Home page",
-};
+interface HomePageProps {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: HomePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return generatePageMetadata(locale, {
+    alternates: {
+      [locale]: locale === "de" ? "/" : `/${locale}`,
+    },
+  });
+}
 
 const HomePage = () => {
   return (

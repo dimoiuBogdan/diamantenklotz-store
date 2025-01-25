@@ -1,0 +1,77 @@
+{
+  "common": {
+    "meta": {
+      "description": "Ihre vertrauenswürdige Plattform für innovative Lösungen und professionelle Dienstleistungen.",
+      "appName": "Project Alpha",
+      "keywords": "technologie, innovation, dienstleistungen, lösungen, digital",
+      "author": "Project Alpha Team",
+      "creator": "Project Alpha GmbH",
+      "publisher": "Project Alpha GmbH",
+      "ogTitle": "Project Alpha - Innovative Lösungen",
+      "ogDescription": "Entdecken Sie unsere innovativen Lösungen und professionellen Dienstleistungen.",
+      "twitterTitle": "Project Alpha - Technologie & Innovation",
+      "twitterDescription": "Innovative Lösungen für Ihre digitalen Herausforderungen."
+    },
+    "navigation": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "products": "Produkte",
+      "blog": "Blog"
+    },
+    "footer": {
+      "rights": "Alle Rechte vorbehalten",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "contact": "Kontakt"
+    },
+    "actions": {
+      "submit": "Absenden",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "back": "Zurück"
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "minLength": "Mindestens {min} Zeichen erforderlich",
+      "maxLength": "Maximal {max} Zeichen erlaubt"
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "meta": {
+      "description": "Erfahren Sie mehr über unsere Mission, Werte und das Team hinter Project Alpha. Entdecken Sie, wie wir Innovation und Qualität vereinen.",
+      "keywords": "über uns, unternehmen, mission, werte, team, innovation, qualität, technologie",
+      "ogTitle": "Über uns - Project Alpha",
+      "ogDescription": "Lernen Sie Project Alpha kennen: Unsere Mission, unsere Werte und unser Engagement für Innovation und Qualität."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "meta": {
+      "description": "Kontaktieren Sie unser Team für professionelle Unterstützung und Beratung. Wir sind hier, um Ihnen bei Ihren Anliegen zu helfen.",
+      "ogTitle": "Kontakt - Project Alpha",
+      "ogDescription": "Erreichen Sie unser Team für professionelle Unterstützung und individuelle Beratung.",
+      "keywords": "kontakt, support, beratung, hilfe, kundenservice"
+    },
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Vielen Dank für Ihre Nachricht. Wir melden uns in Kürze bei Ihnen.",
+      "error": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+    }
+  },
+  "errors": {
+    "404": "Seite nicht gefunden",
+    "500": "Serverfehler",
+    "default": "Ein Fehler ist aufgetreten",
+    "notFoundMessage": "Die von Ihnen gesuchte Seite existiert nicht. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück."
+  }
+}

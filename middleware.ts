@@ -1,4 +1,6 @@
+import createMiddleware from "next-intl/middleware";
 import { NextResponse, type NextRequest } from "next/server";
+import { routing } from "./i18n/routing";
 
 // Simple in-memory store for rate limiting
 // Note: In production, use Redis or similar for distributed systems
@@ -26,7 +28,40 @@ function getRateLimitInfo(ip: string): { count: number; timestamp: number } {
   return currentLimit;
 }
 
-export function middleware(request: NextRequest) {
+// Create the next-intl middleware
+const intlMiddleware = createMiddleware(routing);
+
+export async function middleware(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
+  // Handle static files and API routes first
+  if (
+    pathname.match(/\.(ico|jpg|jpeg|png|gif|svg|js|css|txt)$/) ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/api/")
+  ) {
+    return handleSecurityHeaders(request);
+  }
+
+  // Check if the pathname needs locale redirect
+  const pathnameIsMissingLocale = routing.locales.every(
+    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  );
+
+  // Redirect to default locale if locale is missing
+  if (pathnameIsMissingLocale) {
+    const defaultLocalePath = `/${routing.defaultLocale}${pathname}`;
+    return NextResponse.redirect(new URL(defaultLocalePath, request.url));
+  }
+
+  // Handle internationalization
+  const response = await intlMiddleware(request);
+
+  // Apply security headers to the response from next-intl middleware
+  return applySecurityHeaders(request, response);
+}
+
+function applySecurityHeaders(request: NextRequest, response: NextResponse) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
     default-src 'self';
@@ -40,28 +75,20 @@ export function middleware(request: NextRequest) {
     form-action 'self';
     frame-ancestors 'none';
     upgrade-insecure-requests;
-`;
-  // Replace newline characters and spaces
+  `;
+
   const contentSecurityPolicyHeaderValue = cspHeader
     .replace(/\s{2,}/g, " ")
     .trim();
 
   const requestHeaders = new Headers(request.headers);
-  // Set nonce in header for access in layout
   requestHeaders.set("x-nonce", nonce);
 
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
-
+  // Apply the headers to the existing response
   response.headers.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue
   );
-
-  const headers = response.headers;
 
   // Rate limiting
   const ip =
@@ -70,7 +97,6 @@ export function middleware(request: NextRequest) {
     "127.0.0.1";
   const rateLimitInfo = getRateLimitInfo(ip);
 
-  // Update rate limit info
   if (rateLimitInfo.count >= MAX_REQUESTS_PER_WINDOW) {
     return new NextResponse("Too Many Requests", {
       status: 429,
@@ -88,14 +114,13 @@ export function middleware(request: NextRequest) {
     timestamp: Date.now(),
   });
 
-  // Add rate limit headers
+  // Add security headers
+  const headers = response.headers;
   headers.set("X-RateLimit-Limit", MAX_REQUESTS_PER_WINDOW.toString());
   headers.set(
     "X-RateLimit-Remaining",
     (MAX_REQUESTS_PER_WINDOW - rateLimitInfo.count - 1).toString()
   );
-
-  // Enhanced Permissions Policy
   headers.set(
     "Permissions-Policy",
     [
@@ -126,7 +151,6 @@ export function middleware(request: NextRequest) {
     ].join(", ")
   );
 
-  // Rest of the security headers
   headers.set(
     "Strict-Transport-Security",
     "max-age=31536000; includeSubDomains; preload"
@@ -138,11 +162,20 @@ export function middleware(request: NextRequest) {
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
   headers.set("Cross-Origin-Resource-Policy", "same-origin");
   headers.set("Cross-Origin-Embedder-Policy", "require-corp");
-
-  // Add security timestamp for cache busting
   headers.set("X-Security-Headers-Timestamp", Date.now().toString());
 
   return response;
+}
+
+function handleSecurityHeaders(request: NextRequest) {
+  return applySecurityHeaders(
+    request,
+    NextResponse.next({
+      request: {
+        headers: new Headers(request.headers),
+      },
+    })
+  );
 }
 
 // Enhanced matcher configuration
@@ -153,5 +186,16 @@ export const config = {
 
     // Include API routes for rate limiting
     "/api/:path*",
+
+    // Enable a redirect to a matching locale at the root
+    "/",
+
+    // Set a cookie to remember the previous locale for
+    // all requests that have a locale prefix
+    "/(de|en|ro)/:path*",
+
+    // Enable redirects that add missing locales
+    // (e.g. `/pathnames` -> `/en/pathnames`)
+    "/((?!_next|_vercel|.*\\..*).*)",
   ],
 };

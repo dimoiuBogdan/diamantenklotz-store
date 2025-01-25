@@ -1,6 +1,6 @@
 "use server";
 
-import { EmailTemplate } from "@/app/contact/components/EmailTemplate";
+import { EmailTemplate } from "@/app/[locale]/contact/components/EmailTemplate";
 import { Resend } from "resend";
 import { z } from "zod";
 

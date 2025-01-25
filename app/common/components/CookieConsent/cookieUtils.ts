@@ -1,4 +1,4 @@
-export const COOKIE_CONSENT_KEY = "lab-grown-diamonds-cookie-consent";
+export const COOKIE_CONSENT_KEY = "project-alpha-sable-cookie-consent";
 export const COOKIE_PREFERENCES_KEY = "cookie-preferences";
 
 export function setCookie(

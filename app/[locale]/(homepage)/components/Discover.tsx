@@ -1,6 +1,6 @@
+import { Link } from "@/i18n/routing";
 import heroImage from "@/public/images/hero.webp";
 import Image from "next/image";
-import Link from "next/link";
 
 const DIAMOND_CATEGORIES = [
   {

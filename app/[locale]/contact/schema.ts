@@ -6,9 +6,9 @@ export const jsonLd = {
   name: "Lab-Grown Diamonds GmbH",
   description:
     "Expert consultation for lab-grown diamonds in Berlin. Visit our showroom or schedule a virtual appointment.",
-  url: "https://www.lab-grown-diamonds.com/contact",
+  url: "https://project-alpha-sable.vercel.app/contact",
   telephone: "+49-123-456789",
-  email: "contact@lab-grown-diamonds.com",
+  email: "contact@project-alpha-sable.vercel.app",
   address: {
     "@type": "PostalAddress",
     streetAddress: "123 Diamond Street",
@@ -40,7 +40,7 @@ export const jsonLd = {
     "@type": "ContactPoint",
     contactType: "customer service",
     telephone: "+49-123-456789",
-    email: "support@lab-grown-diamonds.com",
+    email: "support@project-alpha-sable.vercel.app",
     availableLanguage: ["English", "German"],
   },
   makesOffer: {

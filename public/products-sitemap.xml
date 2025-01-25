@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+    <url>
+      <loc>https://project-alpha-sable.vercel.app/products/round-cut/round-cut-1ct</loc>
+      <lastmod>2025-01-25T00:30:09.351Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+      <image:image>
+        <image:loc>https://project-alpha-sable.vercel.app/images/products/round-cut-1ct.webp</image:loc>
+        <image:title>round cut 1ct</image:title>
+        <image:caption>Lab-grown round cut 1ct</image:caption>
+      </image:image>
+      <xhtml:link 
+        rel="alternate" 
+        hreflang="en-US" 
+        href="https://project-alpha-sable.vercel.app/en-US/products/round-cut/round-cut-1ct"
+      />
+      <xhtml:link 
+        rel="alternate" 
+        hreflang="de-DE" 
+        href="https://project-alpha-sable.vercel.app/de-DE/products/round-cut/round-cut-1ct"
+      />
+    </url>
+    <url>
+      <loc>https://project-alpha-sable.vercel.app/products/princess-cut/princess-cut-1ct</loc>
+      <lastmod>2025-01-25T00:30:09.351Z</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+      <image:image>
+        <image:loc>https://project-alpha-sable.vercel.app/images/products/princess-cut-1ct.webp</image:loc>
+        <image:title>princess cut 1ct</image:title>
+        <image:caption>Lab-grown princess cut 1ct</image:caption>
+      </image:image>
+      <xhtml:link 
+        rel="alternate" 
+        hreflang="en-US" 
+        href="https://project-alpha-sable.vercel.app/en-US/products/princess-cut/princess-cut-1ct"
+      />
+      <xhtml:link 
+        rel="alternate" 
+        hreflang="de-DE" 
+        href="https://project-alpha-sable.vercel.app/de-DE/products/princess-cut/princess-cut-1ct"
+      />
+    </url>
+</urlset>

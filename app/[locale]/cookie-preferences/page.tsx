@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import {
   COOKIE_CATEGORIES,
   COOKIE_CONFIGS,
@@ -9,7 +8,8 @@ import {
   getCookie,
   savePreferences,
   type CookiePreferences,
-} from "../common/components/CookieConsent/cookieUtils";
+} from "@/app/common/components/CookieConsent/cookieUtils";
+import { useEffect, useState } from "react";
 
 export default function CookiePreferencesPage() {
   const [mounted, setMounted] = useState(false);

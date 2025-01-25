@@ -1,5 +1,5 @@
+import { Link } from "@/i18n/routing";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import Link from "next/link";
 
 const FOOTER_LINKS = {
   company: [

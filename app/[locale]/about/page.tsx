@@ -1,50 +1,30 @@
+import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
 import heroImage from "@/public/images/hero.webp";
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { jsonLd } from "./schema";
 
-const SITE_URL = "https://www.lab-grown-diamonds.com";
+interface AboutPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export const metadata: Metadata = {
-  title: "About Us - Pioneering Lab-Grown Diamonds with German Engineering",
-  description:
-    "Discover how we're revolutionizing the diamond industry with sustainable, lab-grown diamonds. Learn about our German engineering process, commitment to sustainability, and ethical practices.",
-  keywords: [
-    "about lab-grown diamonds",
-    "German diamond engineering",
-    "sustainable diamond production",
-    "ethical diamond manufacturing",
-    "diamond technology",
-    "eco-friendly diamonds",
-    "diamond innovation",
-    "German craftsmanship",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}/about`,
-  },
-  openGraph: {
-    title: "About Us - Pioneering Lab-Grown Diamonds with German Engineering",
-    description:
-      "Discover how we're revolutionizing the diamond industry with sustainable, lab-grown diamonds. Learn about our German engineering process and commitment to sustainability.",
-    url: `${SITE_URL}/about`,
-    type: "website",
-    images: [
-      {
-        url: "/images/about-hero.webp",
-        width: 1200,
-        height: 630,
-        alt: "Lab-Grown Diamonds Manufacturing Process",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Us - Pioneering Lab-Grown Diamonds with German Engineering",
-    description:
-      "Discover how we're revolutionizing the diamond industry with sustainable, lab-grown diamonds. Learn about our German engineering process.",
-    images: ["/images/about-hero.webp"],
-  },
-};
+export async function generateMetadata({
+  params,
+}: AboutPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  return generatePageMetadata(locale, {
+    title: t("about.title"),
+    description: t("about.meta.description"),
+    keywords: t("about.meta.keywords"),
+    alternates: {
+      [locale]: locale === "de" ? "/about" : `/${locale}/about`,
+    },
+    ogImage: "/images/about-hero.webp",
+  });
+}
 
 const AboutPage = () => {
   return (

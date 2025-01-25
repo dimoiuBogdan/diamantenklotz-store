@@ -1,7 +1,8 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.lab-grown-diamonds.com",
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://project-alpha-sable.vercel.app",
   generateRobotsTxt: false,
   changefreq: "daily",
   priority: 0.7,

@@ -1,62 +1,29 @@
+import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
 import { Mail, MapPin, Phone } from "lucide-react";
-import type { Metadata } from "next";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import ContactForm from "./components/ContactForm";
 import { jsonLd } from "./schema";
 
-const SITE_URL = "https://www.lab-grown-diamonds.com";
+interface ContactPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-export const metadata: Metadata = {
-  title: "Contact Us - Expert Lab-Grown Diamond Consultation",
-  description:
-    "Get in touch with our diamond experts in Berlin. Schedule a consultation, learn about our lab-grown diamonds, or visit our showroom. Expert guidance for your perfect sustainable diamond.",
-  keywords: [
-    "contact lab-grown diamonds",
-    "diamond consultation",
-    "diamond experts Berlin",
-    "sustainable diamond showroom",
-    "diamond appointment",
-    "ethical diamond consultation",
-    "German diamond manufacturer",
-    "diamond expert advice",
-  ],
-  alternates: {
-    canonical: `${SITE_URL}/contact`,
-  },
-  openGraph: {
-    title: "Contact Us - Expert Lab-Grown Diamond Consultation",
-    description:
-      "Get in touch with our diamond experts in Berlin. Schedule a consultation or visit our showroom for personalized guidance on sustainable diamonds.",
-    url: `${SITE_URL}/contact`,
-    type: "website",
-    images: [
-      {
-        url: "/images/contact-hero.webp",
-        width: 1200,
-        height: 630,
-        alt: "Lab-Grown Diamonds Consultation Center in Berlin",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact Us - Expert Lab-Grown Diamond Consultation",
-    description:
-      "Get in touch with our diamond experts in Berlin. Expert guidance for your perfect sustainable diamond.",
-    images: ["/images/contact-hero.webp"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+export async function generateMetadata({
+  params,
+}: ContactPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
+
+  return generatePageMetadata(locale, {
+    title: t("contact.title"),
+    description: t("contact.meta.description"),
+    keywords: t("contact.meta.keywords"),
+    alternates: {
+      [locale]: locale === "de" ? "/contact" : `/${locale}/contact`,
     },
-  },
-};
+  });
+}
 
 const CONTACT_INFO = [
   {
@@ -72,11 +39,14 @@ const CONTACT_INFO = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@lab-grown-diamonds.com", "support@lab-grown-diamonds.com"],
+    details: [
+      "info@project-alpha-sable.vercel.app",
+      "support@project-alpha-sable.vercel.app",
+    ],
   },
 ];
 
-const ContactPage = () => {
+export default function ContactPage() {
   return (
     <>
       <script
@@ -122,6 +92,4 @@ const ContactPage = () => {
       </div>
     </>
   );
-};
-
-export default ContactPage;
+}
