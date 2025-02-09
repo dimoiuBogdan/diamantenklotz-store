@@ -140,8 +140,8 @@ const Footer = () => {
                 <Link
                   key={social.name}
                   href={social.href}
+                  prefetch={false}
                   className="text-[var(--main-light)] transition-colors hover:text-[var(--main-lighter)]"
-                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
                 >
