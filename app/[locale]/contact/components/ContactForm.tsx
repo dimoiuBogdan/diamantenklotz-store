@@ -3,13 +3,13 @@
 import { sendContactEmail } from "@/app/lib/actions/email.action";
 import { ValidationSchemas, sanitize } from "@/app/lib/utils/validation.utils";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { z } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 
-const ContactForm = async () => {
-  const t = await getTranslations("contact.form");
+const ContactForm = () => {
+  const t = useTranslations("contact.form");
 
   const contactSchema = z.object({
     name: ValidationSchemas.name,
