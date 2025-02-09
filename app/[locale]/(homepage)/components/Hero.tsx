@@ -31,16 +31,16 @@ const Hero = async () => {
           </h2>
           <div className="flex gap-6 justify-center items-center">
             <Link
-              href="/shop/lab-grown-diamonds"
-              className="bg-[var(--main-darker)] text-[var(--main-lighter)] cursor-pointer px-6 font-semibold hover:bg-[var(--main-dark)] transition-colors duration-300 text-lg py-3 rounded-md"
-            >
-              {t("cta.shop")}
-            </Link>
-            <Link
-              href="/about-lab-diamonds"
+              href="/about"
               className="bg-[var(--main-lighter)] text-[var(--main-darker)] cursor-pointer px-6 font-semibold text-lg py-3 rounded-md hover:bg-[var(--main-normal)] hover:text-[var(--main-lighter)] transition-colors duration-300"
             >
               {t("cta.learn")}
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-[var(--main-darker)] text-[var(--main-lighter)] cursor-pointer px-6 font-semibold hover:bg-[var(--main-dark)] transition-colors duration-300 text-lg py-3 rounded-md"
+            >
+              {t("cta.shop")}
             </Link>
           </div>
         </div>
