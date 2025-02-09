@@ -1,5 +1,6 @@
 {
   "common": {
+    "aboveNavbar": "Lab-Grown Diamonds made in Germany",
     "meta": {
       "description": "Your trusted platform for innovative solutions and professional services.",
       "appName": "Project Alpha",
@@ -107,6 +108,43 @@
         "experts": {
           "number": "30+",
           "label": "Expert Craftsmen"
+        }
+      }
+    },
+    "moreAboutUs": {
+      "title": "More About Us",
+      "items": {
+        "selection": {
+          "title": "Laboratory Diamonds – Selection and Quality Criteria",
+          "description": "For our rings and jewelry, we offer both naturally grown and technologically synthesized diamonds. All selected diamonds, regardless of their origin, meet the quality requirements of the H/SI1 classification. Detailed specifications of the available variants can be found directly on the respective product pages. \n Customers with specific requirements regarding purity, color, or other material properties can use our advanced search filter to select synthetic diamonds based on individual criteria. Alternatively, our expert advisors can provide personalized recommendations based on the desired parameters."
+        },
+        "synthesis": {
+          "title": "Laboratory Diamonds – Advanced Synthesis Processes",
+          "description": "Laboratory diamonds are created through controlled technological processes that take place under precise physical and chemical conditions. Two well-established methods are used: Chemical Vapor Deposition (CVD) and High Pressure High Temperature (HPHT). Our product range includes diamonds synthesized using both technologies."
+        },
+        "cvd": {
+          "title": "CVD – Chemical Vapor Deposition",
+          "description": "This process is based on the controlled decomposition of carbon-containing gases in a specialized process chamber. By generating a reactive plasma, individual carbon atoms are released and deposited on a substrate surface under defined conditions. Continuous deposition leads to layer-by-layer growth of crystalline structures with diamond-like properties."
+        },
+        "hpht": {
+          "title": "HPHT – High Pressure High Temperature Synthesis",
+          "description": "In this method, carbon-based raw material is exposed to extreme pressure and temperature conditions. By precisely controlling thermodynamic parameters, an environment is created in which the atomic structure of the raw materials reorganizes, forming highly ordered crystalline structures. This process enables the reproduction of specific material properties optimized for high-performance applications."
+        },
+        "development": {
+          "title": "Development of Laboratory Diamonds",
+          "description": "Whether synthetic, lab-grown, or technologically produced diamonds – their material properties remain constant regardless of their designation. The targeted synthesis of diamonds has been the subject of intensive research for decades, with numerous experimental approaches aimed at reproducing the unique physical and chemical structure of this mineral. \n The first industrially produced diamonds were created in the 1950s using high-energy processes. However, these early synthetic crystals had insufficient purity and structural quality, limiting their use primarily to technical applications in industries such as cutting tools or dental instruments. \n It was not until the advancement of precise process controls and optimized synthesis technologies in the 2010s that high-purity diamond structures were successfully created, making them optically and chemically comparable to natural diamonds. Since then, the demand for these 'modern' lab-grown diamonds has continuously increased, offering new opportunities for the jewelry sector as well as high-tech applications."
+        },
+        "certification": {
+          "title": "Certification and Quality Standards",
+          "description": "Our laboratory diamonds undergo independent quality assessments by internationally recognized testing institutes. Certification is carried out by leading gemological institutions specializing in the analysis and classification of synthetic diamonds. \n A corresponding certificate can be obtained for brilliant-cut diamonds from a defined carat weight of 0.30 ct and for fancy-cut diamonds from 0.50 ct. For stones below these thresholds, optional certification is available at an additional cost. \n Detailed information on individual certification options is available from our expert advisors."
+        },
+        "sustainability": {
+          "title": "Sustainability Aspects of Diamonds",
+          "description": "The environmental impact of diamonds is a complex and often controversial topic involving various ecological, social, and economic factors. While some arguments support the sustainability of synthetic diamonds, others highlight the environmental challenges associated with their production. Similarly, there are debates about the impact of natural diamond mining on the environment and society. \n Rather than taking a one-sided position, we offer both lab-grown and naturally formed diamonds, allowing our customers to make an informed decision based on their individual preferences and values. \n A frequently cited criticism is the high energy consumption required for synthetic diamond production. The necessary high-pressure and plasma processes require significant electricity, especially in chemical vapor deposition (CVD) or high-pressure high-temperature (HPHT) methods. The actual environmental footprint heavily depends on the type of energy sources used – renewable energy can significantly reduce the carbon footprint. \n In contrast, natural diamond mining requires large amounts of water and often leaves ecological traces in mining regions. Extracting diamonds from geological formations is often associated with landscape changes, biodiversity loss, and disruptions to local water supplies. Additionally, social factors play a role, particularly in regions where diamond mining is linked to economic and ethical challenges. \n Ultimately, there is no universally superior choice – the decision depends on personal priorities. We recommend thoroughly considering the respective advantages and disadvantages and making a conscious choice. Our experts are always available to provide detailed information and answer individual questions."
+        },
+        "colored": {
+          "title": "Colored Diamonds – Targeted Adjustment through Precise Material Modification",
+          "description": "Colored diamonds are among the most sought-after and rarest variations of this gemstone. Their exceptional coloration results from complex physical and chemical processes that occur during crystallization under specific geological conditions. The presence of certain trace elements – such as boron for blue diamonds or nitrogen for yellow and orange varieties – can play a role, as can structural changes in the crystal lattice caused by natural radiation exposure or extreme pressure. \n Since these specific conditions are extremely rare in natural formations, colored diamonds command high prices on the market. Their exclusivity and limited availability make them a coveted but expensive choice for jewelry enthusiasts and investors. \n Through modern technological processes, it is now possible to precisely influence the coloration of diamonds and create a wide range of color variations. Various methods are used, including the targeted integration of trace elements into the crystal lattice or the precise modification of the atomic structure through irradiation and high-temperature treatment."
         }
       }
     }
@@ -246,6 +284,114 @@
       "title": "The Future of Diamond Creation",
       "description": "Our lab-grown diamonds represent the perfect fusion of German engineering excellence and environmental responsibility. Using cutting-edge technology, we create stunning diamonds that are physically, chemically, and optically identical to mined diamonds - but with a smaller environmental footprint and better value.",
       "buttonText": "Learn About Our Process"
+    },
+    "comparison": {
+      "title": "Earth Mined vs Lab Grown Diamonds",
+      "properties": "Properties",
+      "earthMined": "Earth Mined",
+      "labGrown": "Lab Grown",
+      "items": {
+        "chemicalComposition": {
+          "label": "Chemical Compositions",
+          "earthMined": "C",
+          "labGrown": "C"
+        },
+        "crystallineStructure": {
+          "label": "Crystalline Structure",
+          "earthMined": "Cubic",
+          "labGrown": "Cubic"
+        },
+        "refractiveIndex": {
+          "label": "Refractive Index",
+          "earthMined": "2.42",
+          "labGrown": "2.42"
+        },
+        "dispersion": {
+          "label": "Dispersion",
+          "earthMined": "0.044",
+          "labGrown": "0.044"
+        },
+        "hardness": {
+          "label": "Hardness",
+          "earthMined": "10",
+          "labGrown": "10"
+        },
+        "density": {
+          "label": "Density",
+          "earthMined": "3.52",
+          "labGrown": "3.52"
+        },
+        "thermalConditions": {
+          "label": "Thermal Conditions",
+          "earthMined": "Excellent",
+          "labGrown": "Excellent"
+        },
+        "intrinsicPurity": {
+          "label": "Intrinsic Purity",
+          "earthMined": "Only 2% are Type IIA",
+          "labGrown": "Rare and purest (100% type IIA)"
+        },
+        "unitOfMeasurement": {
+          "label": "Unit of Measurement",
+          "earthMined": "Carats",
+          "labGrown": "Carats"
+        },
+        "blueFlorescence": {
+          "label": "Blue Florescence",
+          "earthMined": "Strong to None",
+          "labGrown": "Strong to None"
+        },
+        "phosphorescence": {
+          "label": "Phosphorescence",
+          "earthMined": "No",
+          "labGrown": "No"
+        },
+        "isItDiamond": {
+          "label": "Is it a Diamond?",
+          "earthMined": "Yes",
+          "labGrown": "Yes"
+        },
+        "isItSynthetic": {
+          "label": "Is it Synthetic?",
+          "earthMined": "No",
+          "labGrown": "No"
+        },
+        "isItFake": {
+          "label": "Is it Fake?",
+          "earthMined": "No",
+          "labGrown": "No"
+        },
+        "isItEthical": {
+          "label": "Is it Ethical?",
+          "earthMined": "Maybe",
+          "labGrown": "Yes"
+        },
+        "isItEcoConscious": {
+          "label": "Is it Eco-conscious?",
+          "earthMined": "No",
+          "labGrown": "Yes"
+        },
+        "isItArtificial": {
+          "label": "Is it Artificial?",
+          "earthMined": "No",
+          "labGrown": "No"
+        },
+        "isItAffordable": {
+          "label": "Is it Affordable?",
+          "earthMined": "Maybe",
+          "labGrown": "Yes"
+        },
+        "lifeExpectancy": {
+          "label": "Life Expectancy?",
+          "earthMined": "Forever",
+          "labGrown": "Forever"
+        },
+        "isItCertified": {
+          "label": "Is it certified by a lab?",
+          "earthMined": "Yes",
+          "labGrown": "Yes"
+        }
+      }
     },
     "sustainable": {
       "title": "Sustainable Luxury for Modern Times",

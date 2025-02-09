@@ -1,19 +1,18 @@
-"use client";
-
 import {
   DiamondIcon,
   LeafIcon,
   ShieldCheckIcon,
   SparklesIcon,
 } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-const QualitiesRow = () => {
-  const t = useTranslations("home.qualities");
+const QualitiesRow = async () => {
+  const t = await getTranslations("home.qualities");
 
   const DIAMOND_QUALITIES = [
     {
       icon: DiamondIcon,
+
       title: t("items.premium.title"),
       description: t("items.premium.description"),
     },

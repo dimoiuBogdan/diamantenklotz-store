@@ -2,7 +2,7 @@
 
 import { cn } from "@/app/lib/utils/utils";
 import { Link } from "@/i18n/routing";
-import { Menu, Search, ShoppingCart, User, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
@@ -19,18 +19,18 @@ const Navbar = () => {
       name: t("home"),
       href: "/",
     },
-    {
-      name: t("products"),
-      href: "/products",
-      sublinks: [
-        { name: "Pure Diamonds", href: "/products/pure-diamonds" },
-        { name: "Diamonds", href: "/products/diamonds" },
-        { name: "Gemstones", href: "/products/gemstones" },
-        { name: "Pearls", href: "/products/pearls" },
-        { name: "Precious Metals", href: "/products/precious-metals" },
-        { name: "Jewelry", href: "/products/jewelry" },
-      ],
-    },
+    // {
+    //   name: t("products"),
+    //   href: "/products",
+    //   sublinks: [
+    //     { name: "Pure Diamonds", href: "/products/pure-diamonds" },
+    //     { name: "Diamonds", href: "/products/diamonds" },
+    //     { name: "Gemstones", href: "/products/gemstones" },
+    //     { name: "Pearls", href: "/products/pearls" },
+    //     { name: "Precious Metals", href: "/products/precious-metals" },
+    //     { name: "Jewelry", href: "/products/jewelry" },
+    //   ],
+    // },
     {
       name: t("about"),
       href: "/about",
@@ -42,21 +42,21 @@ const Navbar = () => {
   ];
 
   const ICON_BUTTONS: IconButton[] = [
-    {
-      icon: Search,
-      label: "Search",
-      action: () => console.log("Search clicked"),
-    },
-    {
-      icon: ShoppingCart,
-      label: "Cart",
-      action: () => console.log("Cart clicked"),
-    },
-    {
-      icon: User,
-      label: "Profile",
-      action: () => console.log("Profile clicked"),
-    },
+    // {
+    //   icon: Search,
+    //   label: "Search",
+    //   action: () => console.log("Search clicked"),
+    // },
+    // {
+    //   icon: ShoppingCart,
+    //   label: "Cart",
+    //   action: () => console.log("Cart clicked"),
+    // },
+    // {
+    //   icon: User,
+    //   label: "Profile",
+    //   action: () => console.log("Profile clicked"),
+    // },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -80,7 +80,7 @@ const Navbar = () => {
       <div className="mx-auto container">
         <div className="flex h-14 items-center">
           {/* Left Section - Logo */}
-          <div className="hidden md:flex basis-[200px] items-center">
+          <div className="hidden md:flex basis-[225px] items-center">
             <Link href="/" className="text-xl font-bold text-gray-800">
               Logo
             </Link>

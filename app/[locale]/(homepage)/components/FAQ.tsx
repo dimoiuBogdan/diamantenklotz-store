@@ -1,9 +1,7 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-
-const FAQ = () => {
-  const t = useTranslations("home.faq");
+const FAQ = async () => {
+  const t = await getTranslations("home.faq");
 
   const FAQ_ITEMS = [
     {

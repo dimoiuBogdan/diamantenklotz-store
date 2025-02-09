@@ -1,39 +1,40 @@
-"use client";
-
 import { Link } from "@/i18n/routing";
-import heroImage from "@/public/images/hero.webp";
-import { useTranslations } from "next-intl";
+import multipleColoredDiamondsImage from "@/public/images/multiple_colored_diamonds.webp";
+import ringOnCertificateImage from "@/public/images/ring_on_certificate.webp";
+import ringsImage from "@/public/images/rings.webp";
+import shinySingleDiamondImage from "@/public/images/shiny_single_diamond.webp";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-const Discover = () => {
-  const t = useTranslations("home.discover");
+const Discover = async () => {
+  const t = await getTranslations("home.discover");
 
   const DIAMOND_CATEGORIES = [
     {
       title: t("categories.engagement.title"),
       description: t("categories.engagement.description"),
-      image: heroImage,
+      image: ringsImage,
       href: "/shop/lab-grown-engagement-rings",
       alt: "Sustainable lab-grown diamond engagement rings collection",
     },
     {
-      title: t("categories.certified.title"),
-      description: t("categories.certified.description"),
-      image: heroImage,
-      href: "/shop/certified-lab-diamonds",
-      alt: "IGI-certified lab-grown loose diamonds",
-    },
-    {
       title: t("categories.jewelry.title"),
       description: t("categories.jewelry.description"),
-      image: heroImage,
+      image: shinySingleDiamondImage,
       href: "/shop/lab-grown-jewelry",
       alt: "Sustainable lab-created diamond jewelry collection",
     },
     {
+      title: t("categories.certified.title"),
+      description: t("categories.certified.description"),
+      image: ringOnCertificateImage,
+      href: "/shop/certified-lab-diamonds",
+      alt: "IGI-certified lab-grown loose diamonds",
+    },
+    {
       title: t("categories.custom.title"),
       description: t("categories.custom.description"),
-      image: heroImage,
+      image: multipleColoredDiamondsImage,
       href: "/shop/custom-lab-diamonds",
       alt: "Custom-made lab-grown diamond jewelry",
     },
@@ -60,13 +61,13 @@ const Discover = () => {
             className="group rounded-md overflow-hidden h-80 shadow-md relative"
           >
             <Image
-              height={300}
-              width={300}
+              height={100}
+              width={100}
               src={category.image}
               alt={category.alt}
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="h-full w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="p-4 absolute bottom-0 left-0 w-full bg-white/80 backdrop-blur-sm">
+            <div className="p-4 absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm">
               <h3 className="text-lg truncate tracking-wide font-semibold text-[var(--main-darker)]">
                 {category.title}
               </h3>

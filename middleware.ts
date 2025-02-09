@@ -10,24 +10,6 @@ const rateLimit = new Map();
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 100;
 
-function getRateLimitInfo(ip: string): { count: number; timestamp: number } {
-  const now = Date.now();
-  const windowStart = now - RATE_LIMIT_WINDOW;
-
-  // Clean up old entries
-  for (const [key, value] of rateLimit.entries()) {
-    if (value.timestamp < windowStart) {
-      rateLimit.delete(key);
-    }
-  }
-
-  const currentLimit = rateLimit.get(ip) || { count: 0, timestamp: now };
-  if (currentLimit.timestamp < windowStart) {
-    return { count: 0, timestamp: now };
-  }
-  return currentLimit;
-}
-
 // Create the next-intl middleware
 const intlMiddleware = createMiddleware(routing);
 
@@ -90,37 +72,8 @@ function applySecurityHeaders(request: NextRequest, response: NextResponse) {
     contentSecurityPolicyHeaderValue
   );
 
-  // Rate limiting
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0] ||
-    request.headers.get("x-real-ip") ||
-    "127.0.0.1";
-  const rateLimitInfo = getRateLimitInfo(ip);
-
-  if (rateLimitInfo.count >= MAX_REQUESTS_PER_WINDOW) {
-    return new NextResponse("Too Many Requests", {
-      status: 429,
-      headers: {
-        "Retry-After": "60",
-        "X-RateLimit-Limit": MAX_REQUESTS_PER_WINDOW.toString(),
-        "X-RateLimit-Remaining": "0",
-        "X-RateLimit-Reset": (Math.floor(Date.now() / 1000) + 60).toString(),
-      },
-    });
-  }
-
-  rateLimit.set(ip, {
-    count: rateLimitInfo.count + 1,
-    timestamp: Date.now(),
-  });
-
   // Add security headers
   const headers = response.headers;
-  headers.set("X-RateLimit-Limit", MAX_REQUESTS_PER_WINDOW.toString());
-  headers.set(
-    "X-RateLimit-Remaining",
-    (MAX_REQUESTS_PER_WINDOW - rateLimitInfo.count - 1).toString()
-  );
   headers.set(
     "Permissions-Policy",
     [

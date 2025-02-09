@@ -1,5 +1,6 @@
 {
   "common": {
+    "aboveNavbar": "Im Labor gezüchtete Diamanten, hergestellt in Deutschland",
     "meta": {
       "description": "Ihre vertrauenswürdige Plattform für innovative Lösungen und professionelle Dienstleistungen.",
       "appName": "Project Alpha",
@@ -107,6 +108,43 @@
         "experts": {
           "number": "30+",
           "label": "Experten-Handwerker"
+        }
+      }
+    },
+    "moreAboutUs": {
+      "title": "Mehr über uns",
+      "items": {
+        "selection": {
+          "title": "Labor-Diamanten – Auswahl und Qualitätskriterien",
+          "description": "Kunden, die spezifische Anforderungen an Reinheit, Farbe oder andere Materialeigenschaften haben, können mithilfe unseres erweiterten Suchfilters gezielt synthetische Diamanten nach individuellen Kriterien auswählen. Alternativ bieten unsere Fachberater personalisierte Vorschläge basierend auf den gewünschten Parametern an. \n Kunden, die spezifische Anforderungen an Reinheit, Farbe oder andere Materialeigenschaften haben, können mithilfe unseres erweiterten Suchfilters gezielt synthetische Diamanten nach individuellen Kriterien auswählen. Alternativ bieten unsere Fachberater personalisierte Vorschläge basierend auf den gewünschten Parametern an."
+        },
+        "synthesis": {
+          "title": "Labordiamanten – Hochentwickelte Syntheseprozesse",
+          "description": "Kunden, die spezifische Anforderungen an Reinheit, Farbe oder andere Materialeigenschaften haben, können mithilfe unseres erweiterten Suchfilters gezielt synthetische Diamanten nach individuellen Kriterien auswählen. Alternativ bieten unsere Fachberater personalisierte Vorschläge basierend auf den gewünschten Parametern an."
+        },
+        "cvd": {
+          "title": "CVD – Chemische Gasphasenabscheidung",
+          "description": "Dieses Verfahren basiert auf der kontrollierten Zersetzung kohlenstoffhaltiger Gase in einer speziellen Prozesskammer. Durch die Erzeugung eines reaktiven Plasmas werden einzelne Kohlenstoffatome freigesetzt und unter definierten Bedingungen auf einer Substratoberfläche abgeschieden. Die kontinuierliche Deposition führt zu einem schichtweisen Wachstum kristalliner Strukturen mit diamantähnlichen Eigenschaften."
+        },
+        "hpht": {
+          "title": "HPHT – Hochdruck-Hochtemperatur-Synthese",
+          "description": "Hierbei wird kohlenstoffhaltiges Ausgangsmaterial extremen Druck- und Temperaturbedingungen ausgesetzt. Durch gezielte Steuerung thermodynamischer Parameter entsteht eine Umgebung, in der sich die atomare Struktur der Ausgangsstoffe neu organisiert und hochgeordnete kristalline Strukturen gebildet werden. Dieser Prozess ermöglicht die Reproduktion spezifischer Materialeigenschaften, die für Hochleistungsanwendungen optimiert sind."
+        },
+        "development": {
+          "title": "Die Entwicklung der Labordiamanten",
+          "description": "Ob synthetische, im Labor gewachsene oder technologisch erzeugte Diamanten – ihre Materialeigenschaften bleiben unabhängig von der Bezeichnung konstant. Die gezielte Synthese von Diamanten war über Jahrzehnte hinweg Gegenstand intensiver Forschung, mit zahlreichen experimentellen Ansätzen zur Reproduktion der einzigartigen physikalisch-chemischen Struktur dieses Minerals. \n Die ersten industriell hergestellten Diamanten entstanden in den 1950er Jahren durch den Einsatz hochenergetischer Verfahren. Diese frühen synthetischen Kristalle wiesen jedoch eine unzureichende Reinheit und strukturelle Qualität auf, sodass ihr Einsatz primär auf technische Anwendungen in der Industrie, wie die Herstellung von Schneidwerkzeugen oder Dentalinstrumenten, beschränkt blieb. \n Erst mit der Weiterentwicklung präziser Prozesskontrollen und optimierter Synthesetechnologien gelang es in den 2010er Jahren, hochreine Diamantstrukturen zu erzeugen, die optisch und chemisch mit natürlichen Diamanten vergleichbar sind. Seitdem hat sich die Nachfrage nach diesen „modernen“ Labordiamanten kontinuierlich erhöht, da sie neue Möglichkeiten für den Schmucksektor sowie für Hochtechnologieanwendungen bieten."
+        },
+        "certification": {
+          "title": "Zertifizierung und Qualitätsstandards",
+          "description": "Unsere Labor-Diamanten durchlaufen unabhängige Qualitätsbewertungen durch international anerkannte Prüfinstitute. Die Zertifizierung erfolgt durch führende gemmologische Institute, die sich auf die Analyse und Klassifizierung synthetischer Diamanten spezialisiert haben. \n Ein entsprechendes Zertifikat kann für Brillantschliff-Diamanten ab einem definierten Karatgewicht von 0,30 ct und für Fancy-Schliff-Diamanten ab 0,50 ct erhalten werden. Für Steine unterhalb dieser Schwellenwerte ist eine optionale Zertifizierung gegen Aufpreis möglich. \n Detaillierte Informationen zu individuellen Zertifizierungsoptionen erhalten Sie von unseren Experten-Beratern."
+        },
+        "sustainability": {
+          "title": "Nachhaltigkeitsaspekte von Diamanten",
+          "description": "Die Umweltauswirkungen von Diamanten sind ein komplexes und oft kontroverses Thema, das verschiedene ökologische, soziale und wirtschaftliche Faktoren umfasst. Während einige Argumente die Nachhaltigkeit synthetischer Diamanten unterstützen, weisen andere auf die ökologischen Herausforderungen ihrer Produktion hin. Ebenso gibt es Debatten über die Auswirkungen des natürlichen Diamantabbaus auf Umwelt und Gesellschaft. \n Anstatt eine einseitige Position einzunehmen, bieten wir sowohl im Labor gezüchtete als auch natürlich geformte Diamanten an, damit unsere Kunden eine fundierte Entscheidung basierend auf ihren individuellen Präferenzen und Werten treffen können. \n Ein häufig genannter Kritikpunkt ist der hohe Energieverbrauch, der für die synthetische Diamantproduktion erforderlich ist. Die notwendigen Hochdruck- und Plasmaprozesse benötigen erhebliche Mengen an Elektrizität, insbesondere bei der chemischen Gasphasenabscheidung (CVD) oder den Hochdruck-Hochtemperatur-Verfahren (HPHT). Der tatsächliche ökologische Fußabdruck hängt stark von der Art der verwendeten Energiequellen ab – erneuerbare Energien können den CO2-Fußabdruck deutlich reduzieren. \n Im Gegensatz dazu benötigt der natürliche Diamantabbau große Mengen an Wasser und hinterlässt oft ökologische Spuren in den Abbauregionen. Die Gewinnung von Diamanten aus geologischen Formationen ist häufig mit Landschaftsveränderungen, Biodiversitätsverlust und Störungen der lokalen Wasserversorgung verbunden. Zusätzlich spielen soziale Faktoren eine Rolle, insbesondere in Regionen, in denen der Diamantabbau mit wirtschaftlichen und ethischen Herausforderungen verbunden ist. \n Letztendlich gibt es keine universell überlegene Wahl – die Entscheidung hängt von persönlichen Prioritäten ab. Wir empfehlen, die jeweiligen Vor- und Nachteile gründlich abzuwägen und eine bewusste Wahl zu treffen. Unsere Experten stehen jederzeit zur Verfügung, um detaillierte Informationen zu liefern und individuelle Fragen zu beantworten."
+        },
+        "colored": {
+          "title": "Farbige Diamanten – Gezielte Anpassung durch präzise Materialmodifikation",
+          "description": "Farbige Diamanten gehören zu den begehrtesten und seltensten Variationen dieses Edelsteins. Ihre außergewöhnliche Färbung resultiert aus komplexen physikalischen und chemischen Prozessen, die während der Kristallisation unter spezifischen geologischen Bedingungen auftreten. Das Vorhandensein bestimmter Spurenelemente – wie Bor für blaue Diamanten oder Stickstoff für gelbe und orange Varianten – kann eine Rolle spielen, ebenso wie strukturelle Veränderungen im Kristallgitter, die durch natürliche Strahlenexposition oder extremen Druck verursacht werden. \n Da diese spezifischen Bedingungen in natürlichen Formationen äußerst selten sind, erzielen farbige Diamanten hohe Preise auf dem Markt. Ihre Exklusivität und begrenzte Verfügbarkeit machen sie zu einer begehrten, aber teuren Wahl für Schmuckliebhaber und Investoren. \n Durch moderne technologische Prozesse ist es heute möglich, die Färbung von Diamanten präzise zu beeinflussen und eine breite Palette von Farbvariationen zu schaffen. Dabei kommen verschiedene Methoden zum Einsatz, einschließlich der gezielten Integration von Spurenelementen in das Kristallgitter oder der präzisen Modifikation der Atomstruktur durch Bestrahlung und Hochtemperaturbehandlung."
         }
       }
     }
@@ -246,6 +284,114 @@
       "title": "Die Zukunft der Diamantherstellung",
       "description": "Unsere im Labor gezüchteten Diamanten repräsentieren die perfekte Fusion von deutscher Ingenieurskunst und Umweltverantwortung. Mit modernster Technologie erschaffen wir atemberaubende Diamanten, die physikalisch, chemisch und optisch identisch mit abgebauten Diamanten sind - aber mit einem geringeren ökologischen Fußabdruck und besserem Preis-Leistungs-Verhältnis.",
       "buttonText": "Erfahren Sie mehr über unseren Prozess"
+    },
+    "comparison": {
+      "title": "Natürliche vs. Labor-Diamanten",
+      "properties": "Eigenschaften",
+      "earthMined": "Natürliche Diamanten",
+      "labGrown": "Labor-Diamanten",
+      "items": {
+        "chemicalComposition": {
+          "label": "Chemische Zusammensetzung",
+          "earthMined": "C",
+          "labGrown": "C"
+        },
+        "crystallineStructure": {
+          "label": "Kristallstruktur",
+          "earthMined": "Kubisch",
+          "labGrown": "Kubisch"
+        },
+        "refractiveIndex": {
+          "label": "Brechungsindex",
+          "earthMined": "2.42",
+          "labGrown": "2.42"
+        },
+        "dispersion": {
+          "label": "Dispersion",
+          "earthMined": "0.044",
+          "labGrown": "0.044"
+        },
+        "hardness": {
+          "label": "Härte",
+          "earthMined": "10",
+          "labGrown": "10"
+        },
+        "density": {
+          "label": "Dichte",
+          "earthMined": "3.52",
+          "labGrown": "3.52"
+        },
+        "thermalConditions": {
+          "label": "Thermische Eigenschaften",
+          "earthMined": "Ausgezeichnet",
+          "labGrown": "Ausgezeichnet"
+        },
+        "intrinsicPurity": {
+          "label": "Intrinsische Reinheit",
+          "earthMined": "Nur 2% sind Typ IIA",
+          "labGrown": "Selten und reinst (100% Typ IIA)"
+        },
+        "unitOfMeasurement": {
+          "label": "Maßeinheit",
+          "earthMined": "Karat",
+          "labGrown": "Karat"
+        },
+        "blueFlorescence": {
+          "label": "Blaue Fluoreszenz",
+          "earthMined": "Stark bis Keine",
+          "labGrown": "Stark bis Keine"
+        },
+        "phosphorescence": {
+          "label": "Phosphoreszenz",
+          "earthMined": "Nein",
+          "labGrown": "Nein"
+        },
+        "isItDiamond": {
+          "label": "Ist es ein Diamant?",
+          "earthMined": "Ja",
+          "labGrown": "Ja"
+        },
+        "isItSynthetic": {
+          "label": "Ist es synthetisch?",
+          "earthMined": "Nein",
+          "labGrown": "Nein"
+        },
+        "isItFake": {
+          "label": "Ist es eine Fälschung?",
+          "earthMined": "Nein",
+          "labGrown": "Nein"
+        },
+        "isItEthical": {
+          "label": "Ist es ethisch?",
+          "earthMined": "Vielleicht",
+          "labGrown": "Ja"
+        },
+        "isItEcoConscious": {
+          "label": "Ist es umweltbewusst?",
+          "earthMined": "Nein",
+          "labGrown": "Ja"
+        },
+        "isItArtificial": {
+          "label": "Ist es künstlich?",
+          "earthMined": "Nein",
+          "labGrown": "Nein"
+        },
+        "isItAffordable": {
+          "label": "Ist es erschwinglich?",
+          "earthMined": "Vielleicht",
+          "labGrown": "Ja"
+        },
+        "lifeExpectancy": {
+          "label": "Lebensdauer?",
+          "earthMined": "Für immer",
+          "labGrown": "Für immer"
+        },
+        "isItCertified": {
+          "label": "Ist es von einem Labor zertifiziert?",
+          "earthMined": "Ja",
+          "labGrown": "Ja"
+        }
+      }
     },
     "sustainable": {
       "title": "Nachhaltiger Luxus für moderne Zeiten",

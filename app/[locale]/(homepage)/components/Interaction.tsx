@@ -1,9 +1,7 @@
-"use client";
+import { getTranslations } from "next-intl/server";
 
-import { useTranslations } from "next-intl";
-
-const Interaction = () => {
-  const t = useTranslations("home.interaction");
+const Interaction = async () => {
+  const t = await getTranslations("home.interaction");
 
   return (
     <section

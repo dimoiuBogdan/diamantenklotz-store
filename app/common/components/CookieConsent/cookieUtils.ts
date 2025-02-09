@@ -7,6 +7,7 @@ export function setCookie(
   days: number,
   path = "/"
 ) {
+  // 864e5 is the number of milliseconds in a day
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
   document.cookie =
     name +

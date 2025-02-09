@@ -1,21 +1,20 @@
-"use client";
-
 import { sendContactEmail } from "@/app/lib/actions/email.action";
 import { ValidationSchemas, sanitize } from "@/app/lib/utils/validation.utils";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { useState } from "react";
 import { z } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 
-const ContactForm = () => {
-  const t = useTranslations("contact.form");
+const ContactForm = async () => {
+  const t = await getTranslations("contact.form");
 
   const contactSchema = z.object({
     name: ValidationSchemas.name,
     email: ValidationSchemas.email,
     phone: ValidationSchemas.phone,
     subject: z
+
       .string()
       .min(5, t("validation.subject.min"))
       .max(100, t("validation.subject.max"))
@@ -73,7 +72,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mx-auto max-w-3xl rounded-lg bg-white p-8 shadow-sm">
+    <div className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-sm">
       {submitStatus.type && (
         <div
           className={`mb-6 rounded-md p-4 ${
@@ -194,7 +193,7 @@ const ContactForm = () => {
                 as="textarea"
                 id="message"
                 name="message"
-                rows={4}
+                rows={6}
                 className="w-full rounded-md border border-[var(--main-light)] px-4 py-2 focus:border-[var(--main-normal)] focus:outline-none focus:ring-1 focus:ring-[var(--main-normal)]"
                 placeholder={t("message.placeholder")}
               />
@@ -209,7 +208,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full rounded-md bg-[var(--main-darker)] px-6 py-3 text-white transition-colors hover:bg-[var(--main-dark)] disabled:opacity-50"
+              className="w-full rounded-md bg-[var(--main-darker)] px-6 py-3 text-white transition-colors hover:bg-[var(--main-dark)] disabled:opacity-50 cursor-pointer"
             >
               {isSubmitting ? t("submit.sending") : t("submit.send")}
             </button>

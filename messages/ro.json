@@ -1,16 +1,17 @@
 {
   "common": {
+    "aboveNavbar": "Diamante crescute în laborator, fabricate în Germania",
     "meta": {
-      "description": "Platforma ta de încredere pentru soluții inovatoare și servicii profesionale.",
+      "description": "Platforma dvs. de încredere pentru soluții inovatoare și servicii profesionale.",
       "appName": "Project Alpha",
       "keywords": "tehnologie, inovație, servicii, soluții, digital",
       "author": "Echipa Project Alpha",
       "creator": "Project Alpha SRL",
       "publisher": "Project Alpha SRL",
       "ogTitle": "Project Alpha - Soluții Inovatoare",
-      "ogDescription": "Descoperă soluțiile noastre inovatoare și serviciile profesionale.",
+      "ogDescription": "Descoperiți soluțiile noastre inovatoare și serviciile profesionale.",
       "twitterTitle": "Project Alpha - Tehnologie & Inovație",
-      "twitterDescription": "Soluții inovatoare pentru provocările tale digitale."
+      "twitterDescription": "Soluții inovatoare pentru provocările dvs. digitale."
     },
     "navigation": {
       "home": "Acasă",
@@ -35,7 +36,7 @@
     },
     "validation": {
       "required": "Acest câmp este obligatoriu",
-      "email": "Te rugăm să introduci o adresă de email validă",
+      "email": "Vă rugăm să introduceți o adresă de email validă",
       "minLength": "Minim {min} caractere necesare",
       "maxLength": "Maxim {max} caractere permise"
     }
@@ -43,22 +44,22 @@
   "about": {
     "title": "Despre noi",
     "meta": {
-      "description": "Află mai multe despre misiunea noastră, valorile și echipa din spatele Project Alpha. Descoperă cum îmbinăm inovația cu calitatea.",
+      "description": "Aflați mai multe despre misiunea noastră, valorile și echipa din spatele Project Alpha. Descoperiți cum îmbinăm inovația cu calitatea.",
       "keywords": "despre noi, companie, misiune, valori, echipă, inovație, calitate, tehnologie",
       "ogTitle": "Despre noi - Project Alpha",
-      "ogDescription": "Cunoaște Project Alpha: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
+      "ogDescription": "Cunoașteți Project Alpha: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
     },
     "hero": {
       "title": "Pionieri în Viitorul Diamantelor",
-      "description": "Revoluționăm industria diamantelor cu diamante create în laborator, sustenabile și produse etic, care se ridică la nivelul frumuseții și calității pietrelor naturale."
+      "description": "Revoluționăm industria diamantelor cu diamante crescute în laborator, create sustenabil și etic, care egalează frumusețea și calitatea pietrelor naturale."
     },
     "mission": {
       "title": "Misiunea Noastră",
-      "description": "Ne dedicăm să facem diamantele excepționale accesibile, promovând în același timp sustenabilitatea mediului și practicile etice. Diamantele noastre create în laborator cu inginerie germană reprezintă fuziunea perfectă dintre tehnologie și lux.",
+      "description": "Ne dedicăm să facem diamantele excepționale accesibile, promovând în același timp sustenabilitatea mediului și practicile etice. Diamantele noastre crescute în laborator, proiectate în Germania, reprezintă fuziunea perfectă dintre tehnologie și lux.",
       "goals": {
         "1": "Crearea de diamante sustenabile, fără conflicte",
         "2": "Avansarea tehnologiei diamantelor prin inginerie germană",
-        "3": "Facem luxul accesibil fără a compromite calitatea"
+        "3": "Accesibilizarea luxului fără compromisuri de calitate"
       }
     },
     "values": {
@@ -82,7 +83,7 @@
         },
         "accessibility": {
           "title": "Accesibilitate",
-          "description": "Facem diamante excepționale disponibile la prețuri corecte fără a compromite calitatea."
+          "description": "Facem diamantele excepționale disponibile la prețuri corecte fără compromisuri de calitate."
         },
         "ethics": {
           "title": "Etică",
@@ -106,7 +107,44 @@
         },
         "experts": {
           "number": "30+",
-          "label": "Meșteri Experți"
+          "label": "Experți Meșteșugari"
+        }
+      }
+    },
+    "moreAboutUs": {
+      "title": "Mai multe despre noi",
+      "items": {
+        "selection": {
+          "title": "Diamante de Laborator – Criterii de Selecție și Calitate",
+          "description": "Pentru inelele și bijuteriile noastre, oferim atât diamante crescute natural, cât și diamante sintetizate tehnologic. Toate diamantele selectate, indiferent de origine, îndeplinesc cerințele de calitate ale clasificării H/SI1. Specificații detaliate ale variantelor disponibile pot fi găsite direct pe paginile respective ale produselor. \n Clienții cu cerințe specifice privind puritatea, culoarea sau alte proprietăți ale materialului pot utiliza filtrul nostru avansat de căutare pentru a selecta diamante sintetice bazate pe criterii individuale. Alternativ, consilierii noștri experți pot oferi recomandări personalizate bazate pe parametrii doriți."
+        },
+        "synthesis": {
+          "title": "Diamante de Laborator – Procese Avansate de Sinteză",
+          "description": "Diamantele de laborator sunt create prin procese tehnologice controlate care au loc în condiții fizice și chimice precise. Se utilizează două metode bine stabilite: Depunerea Chimică din Fază de Vapori (CVD) și Presiune și Temperatură Înaltă (HPHT). Gama noastră de produse include diamante sintetizate folosind ambele tehnologii."
+        },
+        "cvd": {
+          "title": "CVD – Depunere Chimică din Fază de Vapori",
+          "description": "Acest proces se bazează pe descompunerea controlată a gazelor care conțin carbon într-o cameră de proces specializată. Prin generarea unei plasme reactive, atomii individuali de carbon sunt eliberați și depuși pe o suprafață substrat în condiții definite. Depunerea continuă duce la creșterea strat cu strat a structurilor cristaline cu proprietăți asemănătoare diamantului."
+        },
+        "hpht": {
+          "title": "HPHT – Sinteză la Presiune și Temperatură Înaltă",
+          "description": "În această metodă, materialul brut pe bază de carbon este expus la condiții extreme de presiune și temperatură. Prin controlul precis al parametrilor termodinamici, se creează un mediu în care structura atomică a materiilor prime se reorganizează, formând structuri cristaline înalt ordonate. Acest proces permite reproducerea proprietăților specifice ale materialului optimizate pentru aplicații de înaltă performanță."
+        },
+        "development": {
+          "title": "Dezvoltarea Diamantelor de Laborator",
+          "description": "Fie că sunt sintetice, crescute în laborator sau produse tehnologic – proprietățile lor materiale rămân constante indiferent de denumire. Sinteza țintită a diamantelor a fost subiectul cercetării intensive timp de decenii, cu numeroase abordări experimentale care vizează reproducerea structurii fizice și chimice unice a acestui mineral. \n Primele diamante produse industrial au fost create în anii 1950 folosind procese de înaltă energie. Cu toate acestea, aceste cristale sintetice timpurii aveau o puritate și o calitate structurală insuficiente, limitându-le utilizarea în principal la aplicații tehnice în industrii precum unelte de tăiere sau instrumente dentare. \n Abia odată cu avansarea controalelor precise ale procesului și a tehnologiilor de sinteză optimizate în anii 2010 s-a reușit crearea structurilor de diamant de înaltă puritate, făcându-le comparabile optic și chimic cu diamantele naturale. De atunci, cererea pentru aceste diamante 'moderne' crescute în laborator a crescut continuu, oferind noi oportunități atât pentru sectorul bijuteriilor, cât și pentru aplicații high-tech."
+        },
+        "certification": {
+          "title": "Certificare și Standarde de Calitate",
+          "description": "Diamantele noastre de laborator sunt supuse evaluărilor independente de calitate de către institute de testare recunoscute internațional. Certificarea este efectuată de instituții gemologice de top specializate în analiza și clasificarea diamantelor sintetice. \n Un certificat corespunzător poate fi obținut pentru diamante cu tăietură briliant de la o greutate definită în carate de 0,30 ct și pentru diamante cu tăietură fancy de la 0,50 ct. Pentru pietrele sub aceste praguri, certificarea opțională este disponibilă la un cost suplimentar. \n Informații detaliate despre opțiunile individuale de certificare sunt disponibile de la consilierii noștri experți."
+        },
+        "sustainability": {
+          "title": "Aspecte de Sustenabilitate ale Diamantelor",
+          "description": "Impactul asupra mediului al diamantelor este un subiect complex și adesea controversat care implică diverși factori ecologici, sociali și economici. În timp ce unele argumente susțin sustenabilitatea diamantelor sintetice, altele evidențiază provocările de mediu asociate cu producția lor. În mod similar, există dezbateri despre impactul mineritului natural de diamante asupra mediului și societății. \n În loc să luăm o poziție unilaterală, oferim atât diamante crescute în laborator, cât și diamante formate natural, permițând clienților noștri să ia o decizie informată bazată pe preferințele și valorile lor individuale. \n O critică frecvent citată este consumul ridicat de energie necesar pentru producția de diamante sintetice. Procesele necesare de înaltă presiune și plasmă necesită cantități semnificative de electricitate, în special în metodele de depunere chimică din fază de vapori (CVD) sau presiune și temperatură înaltă (HPHT). Amprenta de mediu reală depinde foarte mult de tipul surselor de energie utilizate – energia regenerabilă poate reduce semnificativ amprenta de carbon. \n În contrast, mineritul natural de diamante necesită cantități mari de apă și adesea lasă urme ecologice în regiunile miniere. Extragerea diamantelor din formațiuni geologice este adesea asociată cu modificări ale peisajului, pierderea biodiversității și perturbări ale aprovizionării locale cu apă. În plus, factorii sociali joacă un rol, în special în regiunile unde mineritul diamantelor este legat de provocări economice și etice. \n În cele din urmă, nu există o alegere universal superioară – decizia depinde de prioritățile personale. Recomandăm să luați în considerare cu atenție avantajele și dezavantajele respective și să faceți o alegere conștientă. Experții noștri sunt întotdeauna disponibili pentru a furniza informații detaliate și a răspunde la întrebări individuale."
+        },
+        "colored": {
+          "title": "Diamante Colorate – Ajustare Țintită prin Modificare Precisă a Materialului",
+          "description": "Diamantele colorate se numără printre cele mai căutate și mai rare variații ale acestei pietre prețioase. Colorația lor excepțională rezultă din procese fizice și chimice complexe care au loc în timpul cristalizării în condiții geologice specifice. Prezența anumitor elemente de urmă – cum ar fi borul pentru diamantele albastre sau azotul pentru varietățile galbene și portocalii – poate juca un rol, la fel ca și modificările structurale în rețeaua cristalină cauzate de expunerea la radiații naturale sau presiune extremă. \n Deoarece aceste condiții specifice sunt extrem de rare în formațiunile naturale, diamantele colorate comandă prețuri ridicate pe piață. Exclusivitatea și disponibilitatea lor limitată le fac o alegere râvnită dar scumpă pentru entuziaștii de bijuterii și investitori. \n Prin procese tehnologice moderne, este acum posibil să influențăm cu precizie colorația diamantelor și să creăm o gamă largă de variații de culoare. Se utilizează diverse metode, inclusiv integrarea țintită a elementelor de urmă în rețeaua cristalină sau modificarea precisă a structurii atomice prin iradiere și tratament la temperatură înaltă."
         }
       }
     }
@@ -246,6 +284,114 @@
       "title": "Viitorul Creării Diamantelor",
       "description": "Diamantele noastre create în laborator reprezintă fuziunea perfectă dintre excelența ingineriei germane și responsabilitatea față de mediu. Folosind tehnologie de ultimă generație, creăm diamante uimitoare care sunt fizic, chimic și optic identice cu diamantele extrase - dar cu un impact mai mic asupra mediului și o valoare mai bună.",
       "buttonText": "Află despre procesul nostru"
+    },
+    "comparison": {
+      "title": "Diamante Naturale vs Diamante Create în Laborator",
+      "properties": "Proprietăți",
+      "earthMined": "Diamante Naturale",
+      "labGrown": "Create în Laborator",
+      "items": {
+        "chemicalComposition": {
+          "label": "Compoziție Chimică",
+          "earthMined": "C",
+          "labGrown": "C"
+        },
+        "crystallineStructure": {
+          "label": "Structură Cristalină",
+          "earthMined": "Cubică",
+          "labGrown": "Cubică"
+        },
+        "refractiveIndex": {
+          "label": "Indice de Refracție",
+          "earthMined": "2.42",
+          "labGrown": "2.42"
+        },
+        "dispersion": {
+          "label": "Dispersie",
+          "earthMined": "0.044",
+          "labGrown": "0.044"
+        },
+        "hardness": {
+          "label": "Duritate",
+          "earthMined": "10",
+          "labGrown": "10"
+        },
+        "density": {
+          "label": "Densitate",
+          "earthMined": "3.52",
+          "labGrown": "3.52"
+        },
+        "thermalConditions": {
+          "label": "Condiții Termice",
+          "earthMined": "Excelente",
+          "labGrown": "Excelente"
+        },
+        "intrinsicPurity": {
+          "label": "Puritate Intrinsecă",
+          "earthMined": "Doar 2% sunt de Tip IIA",
+          "labGrown": "Rare și cele mai pure (100% tip IIA)"
+        },
+        "unitOfMeasurement": {
+          "label": "Unitate de Măsură",
+          "earthMined": "Carate",
+          "labGrown": "Carate"
+        },
+        "blueFlorescence": {
+          "label": "Fluorescență Albastră",
+          "earthMined": "De la Puternică la Nulă",
+          "labGrown": "De la Puternică la Nulă"
+        },
+        "phosphorescence": {
+          "label": "Fosforescență",
+          "earthMined": "Nu",
+          "labGrown": "Nu"
+        },
+        "isItDiamond": {
+          "label": "Este Diamant?",
+          "earthMined": "Da",
+          "labGrown": "Da"
+        },
+        "isItSynthetic": {
+          "label": "Este Sintetic?",
+          "earthMined": "Nu",
+          "labGrown": "Nu"
+        },
+        "isItFake": {
+          "label": "Este Fals?",
+          "earthMined": "Nu",
+          "labGrown": "Nu"
+        },
+        "isItEthical": {
+          "label": "Este Etic?",
+          "earthMined": "Poate",
+          "labGrown": "Da"
+        },
+        "isItEcoConscious": {
+          "label": "Este Eco-responsabil?",
+          "earthMined": "Nu",
+          "labGrown": "Da"
+        },
+        "isItArtificial": {
+          "label": "Este Artificial?",
+          "earthMined": "Nu",
+          "labGrown": "Nu"
+        },
+        "isItAffordable": {
+          "label": "Este Accesibil?",
+          "earthMined": "Poate",
+          "labGrown": "Da"
+        },
+        "lifeExpectancy": {
+          "label": "Durată de Viață?",
+          "earthMined": "Pentru Totdeauna",
+          "labGrown": "Pentru Totdeauna"
+        },
+        "isItCertified": {
+          "label": "Este Certificat de un Laborator?",
+          "earthMined": "Da",
+          "labGrown": "Da"
+        }
+      }
     },
     "sustainable": {
       "title": "Lux Sustenabil pentru Timpurile Moderne",

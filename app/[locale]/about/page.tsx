@@ -1,6 +1,6 @@
 import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
-import heroImage from "@/public/images/hero.webp";
-import { Metadata } from "next";
+import diamondsPileImage from "@/public/images/diamonds_pile.webp";
+import { Metadata, type NextPage } from "next";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { jsonLd } from "./schema";
@@ -26,7 +26,7 @@ export async function generateMetadata({
   });
 }
 
-const AboutPage = async () => {
+const AboutPage: NextPage = async () => {
   const t = await getTranslations("about");
 
   const VALUES = [
@@ -56,6 +56,41 @@ const AboutPage = async () => {
     },
   ];
 
+  const MORE_ABOUT_US = [
+    {
+      title: t("moreAboutUs.items.selection.title"),
+      description: t("moreAboutUs.items.selection.description"),
+    },
+    {
+      title: t("moreAboutUs.items.synthesis.title"),
+      description: t("moreAboutUs.items.synthesis.description"),
+    },
+    {
+      title: t("moreAboutUs.items.cvd.title"),
+      description: t("moreAboutUs.items.cvd.description"),
+    },
+    {
+      title: t("moreAboutUs.items.hpht.title"),
+      description: t("moreAboutUs.items.hpht.description"),
+    },
+    {
+      title: t("moreAboutUs.items.development.title"),
+      description: t("moreAboutUs.items.development.description"),
+    },
+    {
+      title: t("moreAboutUs.items.certification.title"),
+      description: t("moreAboutUs.items.certification.description"),
+    },
+    {
+      title: t("moreAboutUs.items.sustainability.title"),
+      description: t("moreAboutUs.items.sustainability.description"),
+    },
+    {
+      title: t("moreAboutUs.items.colored.title"),
+      description: t("moreAboutUs.items.colored.description"),
+    },
+  ];
+
   const STATS = [
     {
       number: t("stats.items.years.number"),
@@ -81,7 +116,7 @@ const AboutPage = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto py-16">
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-[var(--main-darker)] sm:text-5xl">
@@ -97,7 +132,7 @@ const AboutPage = async () => {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="relative h-[400px] overflow-hidden rounded-lg">
               <Image
-                src={heroImage}
+                src={diamondsPileImage}
                 alt="Lab-grown diamond creation process"
                 fill
                 className="object-cover"
@@ -156,7 +191,7 @@ const AboutPage = async () => {
         </div>
 
         {/* Stats Section */}
-        <div className="rounded-lg bg-[var(--main-darker)] px-8 py-12 text-white">
+        <div className="mb-20 rounded-lg bg-[var(--main-darker)] px-8 py-12 text-white">
           <div className="grid gap-8 text-center sm:grid-cols-2 lg:grid-cols-4">
             {STATS.map((stat) => (
               <div key={stat.label}>
@@ -166,7 +201,31 @@ const AboutPage = async () => {
             ))}
           </div>
         </div>
-      </div>
+
+        {/* More About Us Section */}
+        <div className="mb-20">
+          <h2 className="mb-12 text-center text-3xl font-bold text-[var(--main-darker)]">
+            {t("moreAboutUs.title")}
+          </h2>
+          <div className="grid gap-8 text-justify sm:grid-cols-2">
+            {MORE_ABOUT_US.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <h3 className="mb-3 text-xl font-semibold text-[var(--main-darker)]">
+                  {value.title}
+                </h3>
+                {value.description.split("\n").map((line, index) => (
+                  <p key={index} className="mb-4">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };

@@ -2,6 +2,7 @@ import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import React from "react";
 import ContactForm from "./components/ContactForm";
 import { jsonLd } from "./schema";
 
@@ -58,7 +59,7 @@ const ContactPage = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto py-16">
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-[var(--main-darker)] sm:text-5xl">
@@ -85,17 +86,20 @@ const ContactPage = async () => {
               <div className="space-y-2">
                 {info.details.map((detail: string, idx: number) => (
                   <p key={idx} className="text-gray-600">
-                    {detail}
+                    {detail.split("\n").map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        {index < detail.split("\n").length - 1 && <br />}
+                      </React.Fragment>
+                    ))}
                   </p>
                 ))}
               </div>
             </div>
           ))}
         </section>
-
-        {/* Contact Form */}
         <ContactForm />
-      </div>
+      </section>
     </>
   );
 };
