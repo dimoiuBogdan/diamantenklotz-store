@@ -2,16 +2,16 @@
   "common": {
     "aboveNavbar": "Im Labor gezüchtete Diamanten, hergestellt in Deutschland",
     "meta": {
-      "description": "Ihre vertrauenswürdige Plattform für innovative Lösungen und professionelle Dienstleistungen.",
-      "appName": "Project Alpha",
-      "keywords": "technologie, innovation, dienstleistungen, lösungen, digital",
-      "author": "Project Alpha Team",
-      "creator": "Project Alpha GmbH",
-      "publisher": "Project Alpha GmbH",
-      "ogTitle": "Project Alpha - Innovative Lösungen",
-      "ogDescription": "Entdecken Sie unsere innovativen Lösungen und professionellen Dienstleistungen.",
-      "twitterTitle": "Project Alpha - Technologie & Innovation",
-      "twitterDescription": "Innovative Lösungen für Ihre digitalen Herausforderungen."
+      "description": "Ihre vertrauenswürdige Plattform für lab-grown diamonds, made in Germany",
+      "appName": "DiamantenKlotz",
+      "keywords": "lab-grown diamonds, diamonds, diamonds made in Germany, diamonds made in Germany, diamonds made in Germany",
+      "author": "DiamantenKlotz Team",
+      "creator": "DiamantenKlotz GmbH",
+      "publisher": "DiamantenKlotz GmbH",
+      "ogTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "ogDescription": "Entdecken Sie unsere lab-grown diamonds, made in Germany",
+      "twitterTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "twitterDescription": "Discover our lab-grown diamonds, made in Germany"
     },
     "navigation": {
       "home": "Startseite",
@@ -44,10 +44,10 @@
   "about": {
     "title": "Über uns",
     "meta": {
-      "description": "Erfahren Sie mehr über unsere Mission, Werte und das Team hinter Project Alpha. Entdecken Sie, wie wir Innovation und Qualität vereinen.",
+      "description": "Erfahren Sie mehr über unsere Mission, Werte und das Team hinter DiamantenKlotz. Entdecken Sie, wie wir Innovation und Qualität vereinen.",
       "keywords": "über uns, unternehmen, mission, werte, team, innovation, qualität, technologie",
-      "ogTitle": "Über uns - Project Alpha",
-      "ogDescription": "Lernen Sie Project Alpha kennen: Unsere Mission, unsere Werte und unser Engagement für Innovation und Qualität."
+      "ogTitle": "Über uns - DiamantenKlotz",
+      "ogDescription": "Lernen Sie DiamantenKlotz kennen: Unsere Mission, unsere Werte und unser Engagement für Innovation und Qualität."
     },
     "hero": {
       "title": "Wegbereiter für die Zukunft der Diamanten",
@@ -153,7 +153,7 @@
     "title": "Kontaktieren Sie uns",
     "meta": {
       "description": "Kontaktieren Sie unser Team für professionelle Unterstützung und Beratung. Wir sind hier, um Ihnen bei Ihren Anliegen zu helfen.",
-      "ogTitle": "Kontakt - Project Alpha",
+      "ogTitle": "Kontakt - DiamantenKlotz",
       "ogDescription": "Erreichen Sie unser Team für professionelle Unterstützung und individuelle Beratung.",
       "keywords": "kontakt, support, beratung, hilfe, kundenservice"
     },
@@ -165,18 +165,19 @@
       "visit": {
         "title": "Besuchen Sie uns",
         "address": {
-          "street": "123 Diamond Street",
-          "city": "Berlin, Deutschland 10115"
+          "street": "Friedrichshafener Str. 2",
+          "city": "Gilching, Deutschland 82205"
         }
       },
       "call": {
         "title": "Rufen Sie uns an",
-        "phone": "+49 (30) 1234-5678",
+        "phone": "+49 (8145) 987654321",
         "hours": "Mo-Fr: 9:00 - 18:00 Uhr"
       },
+
       "email": {
         "title": "Schreiben Sie uns",
-        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
       }
     },
     "form": {
@@ -441,7 +442,7 @@
     },
     "preferences": {
       "title": "Cookie-Einstellungen",
-      "description": "Verwalten Sie unten Ihre Cookie-Einstellungen. Einige Cookies sind für die Funktion der Website notwendig und können nicht deaktiviert werden. Weitere Informationen finden Sie in unserer {policy}.",
+      "description": "Verwalten Sie unten Ihre Cookie-Einstellungen. Einige Cookies sind für die Funktion der Website notwendig und können nicht deaktiviert werden. Weitere Informationen finden Sie in unserer Cookie-Richtlinie.",
       "policyLink": "Cookie-Richtlinie",
       "saveButton": "Einstellungen speichern",
       "categories": {

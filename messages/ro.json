@@ -2,16 +2,16 @@
   "common": {
     "aboveNavbar": "Diamante crescute în laborator, fabricate în Germania",
     "meta": {
-      "description": "Platforma dvs. de încredere pentru soluții inovatoare și servicii profesionale.",
-      "appName": "Project Alpha",
-      "keywords": "tehnologie, inovație, servicii, soluții, digital",
-      "author": "Echipa Project Alpha",
-      "creator": "Project Alpha SRL",
-      "publisher": "Project Alpha SRL",
-      "ogTitle": "Project Alpha - Soluții Inovatoare",
-      "ogDescription": "Descoperiți soluțiile noastre inovatoare și serviciile profesionale.",
-      "twitterTitle": "Project Alpha - Tehnologie & Inovație",
-      "twitterDescription": "Soluții inovatoare pentru provocările dvs. digitale."
+      "description": "Platforma dvs. de încredere pentru diamante create în laborator, fabricate în Germania",
+      "appName": "DiamantenKlotz",
+      "keywords": "lab-grown diamonds, diamonds, diamonds made in Germany, diamonds made in Germany, diamonds made in Germany",
+      "author": "Echipa DiamantenKlotz",
+      "creator": "DiamantenKlotz SRL",
+      "publisher": "DiamantenKlotz SRL",
+      "ogTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "ogDescription": "Descoperiți soluțiile noastre pentru diamante create în laborator, fabricate în Germania",
+      "twitterTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "twitterDescription": "Descoperiți soluțiile noastre pentru diamante create în laborator, fabricate în Germania"
     },
     "navigation": {
       "home": "Acasă",
@@ -44,10 +44,10 @@
   "about": {
     "title": "Despre noi",
     "meta": {
-      "description": "Aflați mai multe despre misiunea noastră, valorile și echipa din spatele Project Alpha. Descoperiți cum îmbinăm inovația cu calitatea.",
+      "description": "Aflați mai multe despre misiunea noastră, valorile și echipa din spatele DiamantenKlotz. Descoperiți cum îmbinăm inovația cu calitatea.",
       "keywords": "despre noi, companie, misiune, valori, echipă, inovație, calitate, tehnologie",
-      "ogTitle": "Despre noi - Project Alpha",
-      "ogDescription": "Cunoașteți Project Alpha: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
+      "ogTitle": "Despre noi - DiamantenKlotz",
+      "ogDescription": "Cunoașteți DiamantenKlotz: Misiunea noastră, valorile noastre și angajamentul nostru pentru inovație și calitate."
     },
     "hero": {
       "title": "Pionieri în Viitorul Diamantelor",
@@ -153,7 +153,7 @@
     "title": "Contactează-ne",
     "meta": {
       "description": "Contactează echipa noastră pentru suport profesional și îndrumare. Suntem aici să te ajutăm cu orice întrebare.",
-      "ogTitle": "Contact - Project Alpha",
+      "ogTitle": "Contact - DiamantenKlotz",
       "ogDescription": "Ia legătura cu echipa noastră pentru suport profesional și îndrumare personalizată.",
       "keywords": "contact, suport, îndrumare, ajutor, serviciu clienți"
     },
@@ -165,8 +165,8 @@
       "visit": {
         "title": "Vizitează-ne",
         "address": {
-          "street": "123 Diamond Street",
-          "city": "Berlin, Germania 10115"
+          "street": "Friedrichshafener Str. 2",
+          "city": "Gilching, Germania 82205"
         }
       },
       "call": {
@@ -176,7 +176,7 @@
       },
       "email": {
         "title": "Scrie-ne",
-        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
       }
     },
     "form": {
@@ -441,8 +441,9 @@
     },
     "preferences": {
       "title": "Preferințe Cookie",
-      "description": "Gestionează-ți preferințele pentru cookie-uri mai jos. Unele cookie-uri sunt necesare pentru funcționarea site-ului și nu pot fi dezactivate. Pentru mai multe informații, te rugăm să citești {policy}.",
+      "description": "Gestionează-ți preferințele pentru cookie-uri mai jos. Unele cookie-uri sunt necesare pentru funcționarea site-ului și nu pot fi dezactivate. Pentru mai multe informații, te rugăm să citești Politica de cookie-uri.",
       "policyLink": "Politica de cookie-uri",
+
       "saveButton": "Salvează preferințele",
       "categories": {
         "necessary": {

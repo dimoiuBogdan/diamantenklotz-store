@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 
 const Interaction = async () => {
   const t = await getTranslations("home.interaction");
@@ -6,24 +7,32 @@ const Interaction = async () => {
   return (
     <section
       aria-label="Lab-Grown Diamond Experience"
-      className="flex px-4 sm:px-6 lg:px-8 py-12 items-center justify-center rounded-md bg-[var(--main-dark)] text-white"
+      className="container mx-auto flex flex-col md:flex-row px-4 sm:px-6 lg:px-8 py-8 md:py-12 items-center justify-center gap-8 md:gap-12 rounded-lg bg-[var(--main-dark)] text-white"
     >
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2 text-center md:text-left">
         <p className="uppercase font-bold text-sm text-[var(--main-lighter)] tracking-widest">
           {t("subtitle")}
         </p>
-        <h3 className="text-4xl font-semibold mt-2 mb-6 tracking-wider">
+        <h3 className="text-2xl md:text-4xl font-semibold mt-2 mb-4 md:mb-6 tracking-wider">
           {t("title")}
         </h3>
-        <p className="text-[var(--main-lighter)]">{t("description")}</p>
+        <p className="text-base md:text-lg text-[var(--main-lighter)] max-w-xl mx-auto md:mx-0">
+          {t("description")}
+        </p>
       </div>
-      <div className="w-1/2 flex items-center justify-center gap-x-6">
-        <button className="cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
+      <div className="w-full md:w-1/2 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <Link
+          href="/contact"
+          className="w-full sm:w-auto cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
+        >
           {t("cta.try")}
-        </button>
-        <button className="cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-lg transition-all duration-300 font-medium px-8 py-3 rounded-md">
+        </Link>
+        <Link
+          href="/about"
+          className="w-full sm:w-auto cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
+        >
           {t("cta.learn")}
-        </button>
+        </Link>
       </div>
     </section>
   );

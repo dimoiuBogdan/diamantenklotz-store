@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import {
@@ -11,10 +11,11 @@ import {
   type CookiePreferences,
 } from "./cookieUtils";
 
-export default function CookieConsent() {
-  const t = useTranslations("cookies.banner");
+const CookieConsent = () => {
   const [mounted, setMounted] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
+  const t = useTranslations("cookies.banner");
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
@@ -52,6 +53,7 @@ export default function CookieConsent() {
   // Don't render anything until client-side hydration is complete
   if (!mounted) return null;
   if (!showBanner) return null;
+  if (pathname.includes("cookie-preferences")) return null;
 
   return (
     <div
@@ -93,7 +95,7 @@ export default function CookieConsent() {
           <div className="flex flex-col gap-2 md:flex-row">
             <Link
               href="/cookie-preferences"
-              className="cursor-pointer rounded-md border border-[var(--main-darker)] px-4 py-2 text-sm font-medium text-[var(--main-darker)] hover:bg-[var(--main-lighter)]"
+              className="cursor-pointer rounded-md border text-center border-[var(--main-darker)] px-4 py-2 text-sm font-medium text-[var(--main-darker)] hover:bg-[var(--main-lighter)]"
             >
               {t("customize")}
             </Link>
@@ -114,4 +116,6 @@ export default function CookieConsent() {
       </div>
     </div>
   );
-}
+};
+
+export default CookieConsent;

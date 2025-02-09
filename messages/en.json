@@ -2,16 +2,16 @@
   "common": {
     "aboveNavbar": "Lab-Grown Diamonds made in Germany",
     "meta": {
-      "description": "Your trusted platform for innovative solutions and professional services.",
-      "appName": "Project Alpha",
-      "keywords": "technology, innovation, services, solutions, digital",
-      "author": "Project Alpha Team",
-      "creator": "Project Alpha Ltd",
-      "publisher": "Project Alpha Ltd",
-      "ogTitle": "Project Alpha - Innovative Solutions",
-      "ogDescription": "Discover our innovative solutions and professional services.",
-      "twitterTitle": "Project Alpha - Technology & Innovation",
-      "twitterDescription": "Innovative solutions for your digital challenges."
+      "description": "Your trusted store for lab-grown diamonds, made in Germany",
+      "appName": "DiamantenKlotz",
+      "keywords": "lab-grown diamonds, diamonds, diamonds made in Germany, diamonds made in Germany, diamonds made in Germany",
+      "author": "DiamantenKlotz Team",
+      "creator": "DiamantenKlotz Ltd",
+      "publisher": "DiamantenKlotz Ltd",
+      "ogTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "ogDescription": "Discover our lab-grown diamonds, made in Germany",
+      "twitterTitle": "DiamantenKlotz - Lab-Grown Diamonds",
+      "twitterDescription": "Discover our lab-grown diamonds, made in Germany"
     },
     "navigation": {
       "home": "Home",
@@ -44,10 +44,10 @@
   "about": {
     "title": "About Us",
     "meta": {
-      "description": "Learn more about our mission, values, and the team behind Project Alpha. Discover how we combine innovation with quality.",
+      "description": "Learn more about our mission, values, and the team behind DiamantenKlotz. Discover how we combine innovation with quality.",
       "keywords": "about us, company, mission, values, team, innovation, quality, technology",
-      "ogTitle": "About Us - Project Alpha",
-      "ogDescription": "Get to know Project Alpha: Our mission, our values, and our commitment to innovation and quality."
+      "ogTitle": "About Us - DiamantenKlotz",
+      "ogDescription": "Get to know DiamantenKlotz: Our mission, our values, and our commitment to innovation and quality."
     },
     "hero": {
       "title": "Pioneering the Future of Diamonds",
@@ -153,10 +153,11 @@
     "title": "Contact Us",
     "meta": {
       "description": "Contact our team for professional support and guidance. We're here to help with your inquiries.",
-      "ogTitle": "Contact - Project Alpha",
+      "ogTitle": "Contact - DiamantenKlotz",
       "ogDescription": "Reach out to our team for professional support and personalized guidance.",
       "keywords": "contact, support, guidance, help, customer service"
     },
+
     "hero": {
       "title": "Get in Touch",
       "description": "Have questions about our lab-grown diamonds? We're here to help you find the perfect stone for your needs."
@@ -165,8 +166,8 @@
       "visit": {
         "title": "Visit Us",
         "address": {
-          "street": "123 Diamond Street",
-          "city": "Berlin, Germany 10115"
+          "street": "Friedrichshafener Str. 2",
+          "city": "Gilching, Germany 82205"
         }
       },
       "call": {
@@ -176,7 +177,7 @@
       },
       "email": {
         "title": "Email Us",
-        "addresses": "info@project-alpha-sable.vercel.app\n support@project-alpha-sable.vercel.app"
+        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
       }
     },
     "form": {
@@ -441,7 +442,7 @@
     },
     "preferences": {
       "title": "Cookie Preferences",
-      "description": "Manage your cookie preferences below. Some cookies are necessary for the website to function and cannot be disabled. For more information, please read our {policy}.",
+      "description": "Manage your cookie preferences below. Some cookies are necessary for the website to function and cannot be disabled. For more information, please read our Cookie Policy.",
       "policyLink": "Cookie Policy",
       "saveButton": "Save Preferences",
       "categories": {

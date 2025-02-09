@@ -75,21 +75,21 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="bg-white shadow-md sticky top-0 w-full  mx-auto z-20"
+      className="bg-white shadow-md sticky top-0 w-full mx-auto px-4 lg:px-0 z-20"
     >
       <div className="mx-auto container">
         <div className="flex h-14 items-center">
           {/* Left Section - Logo */}
-          <div className="hidden md:flex basis-[225px] items-center">
+          <div className="hidden md:flex basis-[125px] items-center">
             <Link href="/" className="text-xl font-bold text-gray-800">
-              Logo
+              DiamantenKlotz
             </Link>
           </div>
 
           {/* Mobile Logo and Menu Button */}
           <div className="flex md:hidden justify-between w-full items-center">
             <Link href="/" className="text-xl font-bold text-gray-800">
-              Logo
+              DiamantenKlotz
             </Link>
             <button
               type="button"
@@ -116,7 +116,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section - Icons */}
-          <div className="hidden md:flex basis-[200px] items-center justify-end space-x-4 mr-4">
+          <div className="hidden md:flex basis-[100px] items-center justify-end space-x-4 mr-4">
             {ICON_BUTTONS.map((item) => (
               <button
                 key={item.label}
@@ -134,7 +134,10 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={cn("md:hidden absolute w-full", isOpen ? "block" : "hidden")}
+        className={cn(
+          "md:hidden absolute w-full left-0",
+          isOpen ? "block" : "hidden"
+        )}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg">
           {NAVIGATION_ITEMS.map((item) => (

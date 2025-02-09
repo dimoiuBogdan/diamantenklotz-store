@@ -27,22 +27,23 @@ const SOCIAL_LINKS = [
   {
     name: "Facebook",
     icon: Facebook,
-    href: "https://facebook.com/labgrowndiamonds",
+    href: "https://facebook.com/diamantenklotz",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/labgrowndiamonds",
+    href: "https://instagram.com/diamantenklotz",
   },
+
   {
     name: "Twitter",
     icon: Twitter,
-    href: "https://twitter.com/labgrowndiamonds",
+    href: "https://twitter.com/diamantenklotz",
   },
   {
     name: "Youtube",
     icon: Youtube,
-    href: "https://youtube.com/labgrowndiamonds",
+    href: "https://youtube.com/diamantenklotz",
   },
 ];
 
@@ -57,7 +58,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link href="/" className="text-xl font-bold">
-              Lab-Grown Diamonds
+              DiamantenKlotz
             </Link>
             <p className="text-sm text-[var(--main-light)]">
               Pioneering sustainable luxury with German-engineered lab-grown

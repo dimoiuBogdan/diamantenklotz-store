@@ -82,8 +82,8 @@ export const metadata: Metadata = {
     title: "Lab-Grown Diamonds | Sustainable & Ethical German Engineering",
     description:
       "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry.",
-    site: "@labgrowndiamonds",
-    creator: "@labgrowndiamonds",
+    site: "@diamantenklotz",
+    creator: "@diamantenklotz",
     images: ["/images/twitter-image.jpg"],
   },
   robots: {

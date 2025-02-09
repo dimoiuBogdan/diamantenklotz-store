@@ -1,5 +1,3 @@
-// TODO: Change these with real data
-
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "AboutPage"],
@@ -7,12 +5,12 @@ export const jsonLd = {
   description:
     "Pioneering lab-grown diamonds with German engineering excellence. Sustainable, ethical, and innovative diamond manufacturing.",
   url: "https://project-alpha-sable.vercel.app/about",
-  foundingDate: "2019",
+  foundingDate: "2024",
   foundingLocation: {
     "@type": "Place",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Berlin",
+      addressLocality: "Gilching",
       addressCountry: "DE",
     },
   },
@@ -20,8 +18,8 @@ export const jsonLd = {
     "@type": "GeoCircle",
     geoMidpoint: {
       "@type": "GeoCoordinates",
-      latitude: "52.520008",
-      longitude: "13.404954",
+      latitude: "48.0949",
+      longitude: "11.6064",
     },
   },
   knowsAbout: [

@@ -23,17 +23,18 @@ export const generateProductJsonLd = (product: {
   url: `https://project-alpha-sable.vercel.app/products/${product.category}/${product.id}`,
   brand: {
     "@type": "Brand",
-    name: "Project Alpha Sable",
-    slogan: "German Engineering Meets Sustainable Luxury",
+    name: "DiamantenKlotz",
+    slogan: "German-Engineered Lab-Grown Diamonds",
   },
+
   manufacturer: {
     "@type": "Organization",
-    name: "Project Alpha Sable",
+    name: "DiamantenKlotz",
     location: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Berlin",
+        addressLocality: "Gilching",
         addressCountry: "DE",
       },
     },
@@ -49,7 +50,7 @@ export const generateProductJsonLd = (product: {
     url: `https://project-alpha-sable.vercel.app/products/${product.category}/${product.id}`,
     seller: {
       "@type": "Organization",
-      name: "Project Alpha Sable",
+      name: "DiamantenKlotz",
     },
   },
   additionalProperty: [

@@ -9,7 +9,6 @@ import {
   savePreferences,
   type CookiePreferences,
 } from "@/app/common/components/CookieConsent/cookieUtils";
-import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
@@ -78,16 +77,7 @@ export default function CookiePreferencesPage() {
           {t("title")}
         </h1>
         <p suppressHydrationWarning className="text-[var(--main-dark)]">
-          {t.rich("description", {
-            policy: (chunks) => (
-              <Link
-                href="/cookie-policy"
-                className="text-[var(--main-darker)] underline"
-              >
-                {t("policyLink")}
-              </Link>
-            ),
-          })}
+          {t("description")}
         </p>
       </div>
 

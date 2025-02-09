@@ -37,7 +37,7 @@ const HomePage = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="flex flex-col gap-y-16 pb-16">
+      <main className="flex flex-col gap-y-8 md:gap-y-16">
         <Hero />
         <Discover />
         <QualitiesRow />
@@ -45,13 +45,15 @@ const HomePage = async () => {
           title={t("future.title")}
           description={t("future.description")}
           buttonText={t("future.buttonText")}
+          buttonLink={"/about"}
           image={manWithDiamondImage}
         />
         <InfoRow
           title={t("sustainable.title")}
           description={t("sustainable.description")}
           buttonText={t("sustainable.buttonText")}
-          reverse
+          buttonLink={"/about"}
+          reverse={true}
           image={sustainableImage}
         />
         <Interaction />

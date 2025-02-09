@@ -36,36 +36,33 @@ const Discover = async () => {
   ];
 
   return (
-    <section
-      aria-label="Diamond Collections"
-      className="container mx-auto px-4"
-    >
-      <div className="mb-10">
-        <h2 className="text-center text-[var(--main-darker)] text-3xl font-semibold mb-2">
+    <section aria-label="Diamond Collections" className="container mx-auto">
+      <div className="mb-8 md:mb-10 px-4 md:px-6">
+        <h2 className="text-center text-[var(--main-darker)] text-2xl md:text-3xl font-semibold mb-2 md:mb-3">
           {t("title")}
         </h2>
-        <p className="text-center text-lg text-zinc-600 max-w-2xl mx-auto">
+        <p className="text-center text-base md:text-lg text-zinc-600 max-w-2xl mx-auto">
           {t("description")}
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-6">
         {DIAMOND_CATEGORIES.map((category) => (
           <div
             key={category.title}
-            className="group rounded-md overflow-hidden h-80 shadow-md relative"
+            className="group rounded-lg overflow-hidden h-64 sm:h-72 md:h-80 shadow-md relative hover:shadow-lg transition-shadow duration-300"
           >
             <Image
-              height={100}
-              width={100}
               src={category.image}
               alt={category.alt}
               className="h-full w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              fill
             />
-            <div className="p-4 absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm">
-              <h3 className="text-lg truncate tracking-wide font-semibold text-[var(--main-darker)]">
+            <div className="p-3 md:p-4 absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm">
+              <h3 className="text-base md:text-lg truncate tracking-wide font-semibold text-[var(--main-darker)]">
                 {category.title}
               </h3>
-              <p className="text-[var(--main-dark)] text-sm font-medium truncate">
+              <p className="text-[var(--main-dark)] text-sm md:text-base font-medium line-clamp-2 h-11">
                 {category.description}
               </p>
             </div>
