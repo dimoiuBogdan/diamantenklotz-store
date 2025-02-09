@@ -1,3 +1,5 @@
+"use client";
+
 import { sendContactEmail } from "@/app/lib/actions/email.action";
 import { ValidationSchemas, sanitize } from "@/app/lib/utils/validation.utils";
 import { ErrorMessage, Field, Form, Formik } from "formik";
