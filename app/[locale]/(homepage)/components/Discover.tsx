@@ -1,4 +1,3 @@
-import { Link } from "@/i18n/routing";
 import multipleColoredDiamondsImage from "@/public/images/multiple_colored_diamonds.webp";
 import ringOnCertificateImage from "@/public/images/ring_on_certificate.webp";
 import ringsImage from "@/public/images/rings.webp";
@@ -14,28 +13,24 @@ const Discover = async () => {
       title: t("categories.engagement.title"),
       description: t("categories.engagement.description"),
       image: ringsImage,
-      href: "/shop/lab-grown-engagement-rings",
       alt: "Sustainable lab-grown diamond engagement rings collection",
     },
     {
       title: t("categories.jewelry.title"),
       description: t("categories.jewelry.description"),
       image: shinySingleDiamondImage,
-      href: "/shop/lab-grown-jewelry",
       alt: "Sustainable lab-created diamond jewelry collection",
     },
     {
       title: t("categories.certified.title"),
       description: t("categories.certified.description"),
       image: ringOnCertificateImage,
-      href: "/shop/certified-lab-diamonds",
       alt: "IGI-certified lab-grown loose diamonds",
     },
     {
       title: t("categories.custom.title"),
       description: t("categories.custom.description"),
       image: multipleColoredDiamondsImage,
-      href: "/shop/custom-lab-diamonds",
       alt: "Custom-made lab-grown diamond jewelry",
     },
   ];
@@ -55,8 +50,7 @@ const Discover = async () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {DIAMOND_CATEGORIES.map((category) => (
-          <Link
-            href={category.href}
+          <div
             key={category.title}
             className="group rounded-md overflow-hidden h-80 shadow-md relative"
           >
@@ -75,7 +69,7 @@ const Discover = async () => {
                 {category.description}
               </p>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </section>
