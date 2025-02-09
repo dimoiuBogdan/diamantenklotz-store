@@ -16,7 +16,6 @@ const ContactForm = () => {
     email: ValidationSchemas.email,
     phone: ValidationSchemas.phone,
     subject: z
-
       .string()
       .min(5, t("validation.subject.min"))
       .max(100, t("validation.subject.max"))
