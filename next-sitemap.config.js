@@ -31,18 +31,9 @@ const config = {
         "/products": { priority: 0.9, changefreq: "daily" },
         "/about": { priority: 0.8, changefreq: "monthly" },
         "/contact": { priority: 0.8, changefreq: "monthly" },
-        "/technology": { priority: 0.8, changefreq: "weekly" },
-        "/sustainability": { priority: 0.8, changefreq: "weekly" },
-        "/engineering": { priority: 0.8, changefreq: "weekly" },
       },
       startsWith: {
         "/products/": { priority: 0.9, changefreq: "daily" },
-        "/blog/": { priority: 0.8, changefreq: "weekly" },
-        "/guide/": { priority: 0.7, changefreq: "monthly" },
-      },
-      contains: {
-        certification: { priority: 0.8, changefreq: "monthly" },
-        compare: { priority: 0.7, changefreq: "weekly" },
       },
     };
 
@@ -63,7 +54,7 @@ const config = {
       };
 
     // Get language code from path
-    const langMatch = path.match(/^\/(en-US|de-DE)/);
+    const langMatch = path.match(/^\/(en|de)/);
     const langCode = langMatch ? langMatch[1] : null;
     const pathWithoutLang = langCode ? path.replace(`/${langCode}`, "") : path;
 
@@ -74,12 +65,13 @@ const config = {
         hreflang: "x-default",
       },
       {
-        href: `${config.siteUrl}/en-US${pathWithoutLang}`,
-        hreflang: "en-US",
+        href: `${config.siteUrl}/en${pathWithoutLang}`,
+        hreflang: "en",
       },
+
       {
-        href: `${config.siteUrl}/de-DE${pathWithoutLang}`,
-        hreflang: "de-DE",
+        href: `${config.siteUrl}/de${pathWithoutLang}`,
+        hreflang: "de",
       },
     ];
 
