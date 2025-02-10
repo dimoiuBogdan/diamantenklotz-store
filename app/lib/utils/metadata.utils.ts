@@ -1,3 +1,4 @@
+import { Locale } from "@/config/i18n.config";
 import { routing } from "@/i18n/routing";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -18,18 +19,27 @@ export async function generatePageMetadata(
 ): Promise<Metadata> {
   const t = await getTranslations({ locale });
 
-  // Generate language alternates
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  // Generate language alternates and determine canonical URL
   const alternates: { [key: string]: string } = {};
+  const pathWithoutLocale = options.alternates
+    ? Object.values(options.alternates)[0]
+    : "/";
+  const canonicalLocale: Locale = "en";
+  const canonicalPath = `/${canonicalLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
+  const canonicalUrl = `${baseUrl}${canonicalPath}`;
+
   routing.locales.forEach((loc) => {
-    alternates[loc] = loc === "de" ? "/" : `/${loc}`;
+    const path =
+      loc === "de" ? pathWithoutLocale : `/${loc}${pathWithoutLocale}`;
+    alternates[loc] = `${baseUrl}${path}`;
   });
 
   // Override alternates if provided
   if (options.alternates) {
     Object.assign(alternates, options.alternates);
   }
-
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
   const defaultKeywords = [
     "lab-grown diamonds",
@@ -100,7 +110,7 @@ export async function generatePageMetadata(
       },
     },
     alternates: {
-      canonical: "/",
+      canonical: canonicalUrl,
       languages: alternates,
     },
     openGraph: {

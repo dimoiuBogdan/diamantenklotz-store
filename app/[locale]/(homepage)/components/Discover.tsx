@@ -55,9 +55,9 @@ const Discover = async () => {
               src={category.image}
               alt={category.alt}
               className="h-full w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              fill
+              priority
             />
+
             <div className="p-3 md:p-4 absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm">
               <h3 className="text-base md:text-lg truncate tracking-wide font-semibold text-[var(--main-darker)]">
                 {category.title}
