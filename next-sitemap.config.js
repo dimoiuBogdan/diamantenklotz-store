@@ -40,8 +40,8 @@ const config = {
     const startsWithMatch = Object.entries(pathPatterns.startsWith).find(
       ([key]) => path.startsWith(key)
     )?.[1];
-    const containsMatch = Object.entries(pathPatterns.contains).find(([key]) =>
-      path.includes(key)
+    const containsMatch = Object.entries(pathPatterns.contains)?.find(([key]) =>
+      path?.includes(key)
     )?.[1];
 
     const matchedPattern = exactMatch ||

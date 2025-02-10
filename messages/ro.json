@@ -24,7 +24,33 @@
       "rights": "Toate drepturile rezervate",
       "privacy": "Politica de confidențialitate",
       "terms": "Termeni și condiții",
-      "contact": "Contact"
+      "contact": "Contact",
+      "company": {
+        "title": "Companie",
+        "aboutUs": "Despre noi",
+        "ourTechnology": "Tehnologia noastră",
+        "sustainability": "Sustenabilitate",
+        "germanEngineering": "Inginerie germană"
+      },
+      "diamonds": {
+        "title": "Diamantele noastre",
+        "labGrownProcess": "Proces de creștere în laborator",
+        "diamondGuide": "Ghid diamante",
+        "certification": "Certificare",
+        "compareNaturalVsLab": "Comparație natural vs laborator"
+      },
+      "support": {
+        "title": "Asistență clienți",
+        "contactUs": "Contactează-ne",
+        "shippingReturns": "Livrare și returnări",
+        "privacyPolicy": "Politica de confidențialitate",
+        "cookiePreferences": "Preferințe cookie",
+        "faq": "Întrebări frecvente"
+      },
+      "description": "Pionieri în luxul sustenabil cu diamante create în laborator prin inginerie germană. Creăm pietre excepționale care sunt atât etice, cât și responsabile față de mediu.",
+      "madeInGermany": "Fabricat în Germania 🇩🇪",
+      "carbonNeutral": "100% Neutru în carbon ♻️",
+      "copyright": "© {year} DiamantenKlotz. Toate drepturile rezervate."
     },
     "actions": {
       "submit": "Trimite",
@@ -230,7 +256,7 @@
   "home": {
     "hero": {
       "title": "Diamante Premium Create în Laborator",
-      "titleHighlight": "Made in Germany",
+      "titleHighlight": "Produse în Germania",
       "subtitle": "Diamante sustenabile, etice și accesibile create în laborator",
       "cta": {
         "shop": "Contactează-ne",

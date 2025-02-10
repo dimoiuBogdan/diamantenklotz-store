@@ -1,27 +1,46 @@
 import { Link } from "@/i18n/routing";
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+type FooterTranslationKey =
+  | "company.aboutUs"
+  | "company.ourTechnology"
+  | "company.sustainability"
+  | "company.germanEngineering"
+  | "diamonds.labGrownProcess"
+  | "diamonds.diamondGuide"
+  | "diamonds.certification"
+  | "diamonds.compareNaturalVsLab"
+  | "support.contactUs"
+  | "support.shippingReturns"
+  | "support.privacyPolicy"
+  | "support.cookiePreferences"
+  | "support.faq";
 
 const FOOTER_LINKS = {
   company: [
-    { name: "About Us", href: "/about" },
-    { name: "Our Technology", href: "/about" },
-    { name: "Sustainability", href: "/about" },
-    { name: "German Engineering", href: "/about" },
+    { name: "company.aboutUs" as const, href: "/about" },
+    { name: "company.ourTechnology" as const, href: "/about" },
+    { name: "company.sustainability" as const, href: "/about" },
+    { name: "company.germanEngineering" as const, href: "/about" },
   ],
   diamonds: [
-    { name: "Lab-Grown Process", href: "/about" },
-    { name: "Diamond Guide", href: "/about" },
-    { name: "Certification", href: "/about" },
-    { name: "Compare Natural vs Lab", href: "/#comparison-table" },
+    { name: "diamonds.labGrownProcess" as const, href: "/about" },
+    { name: "diamonds.diamondGuide" as const, href: "/about" },
+    { name: "diamonds.certification" as const, href: "/about" },
+    {
+      name: "diamonds.compareNaturalVsLab" as const,
+      href: "/#comparison-table",
+    },
   ],
   support: [
-    { name: "Contact Us", href: "/contact" },
-    { name: "Shipping & Returns", href: "/shipping" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
-    { name: "Cookie Preferences", href: "/cookie-preferences" },
-    { name: "FAQ", href: "/faq" },
+    { name: "support.contactUs" as const, href: "/contact" },
+    { name: "support.shippingReturns" as const, href: "/shipping" },
+    { name: "support.privacyPolicy" as const, href: "/privacy-policy" },
+    { name: "support.cookiePreferences" as const, href: "/cookie-preferences" },
+    { name: "support.faq" as const, href: "/#faq" },
   ],
-};
+} as const;
 
 const SOCIAL_LINKS = [
   {
@@ -34,7 +53,6 @@ const SOCIAL_LINKS = [
     icon: Instagram,
     href: "https://instagram.com/diamantenklotz",
   },
-
   {
     name: "Twitter",
     icon: Twitter,
@@ -48,6 +66,7 @@ const SOCIAL_LINKS = [
 ];
 
 const Footer = () => {
+  const t = useTranslations("common.footer");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -61,23 +80,21 @@ const Footer = () => {
               DiamantenKlotz
             </Link>
             <p className="text-sm text-[var(--main-light)]">
-              Pioneering sustainable luxury with German-engineered lab-grown
-              diamonds. Creating exceptional stones that are both ethical and
-              environmentally conscious.
+              {t("description")}
             </p>
             <div className="pt-4">
               <p className="text-sm text-[var(--main-light)]">
-                Made in Germany 🇩🇪
+                {t("madeInGermany")}
               </p>
               <p className="text-sm text-[var(--main-light)]">
-                100% Carbon Neutral ♻️
+                {t("carbonNeutral")}
               </p>
             </div>
           </div>
 
           {/* Company Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Company</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("company.title")}</h3>
             <ul className="space-y-2">
               {FOOTER_LINKS.company.map((link) => (
                 <li key={link.name}>
@@ -85,7 +102,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-sm text-[var(--main-light)] transition-colors hover:text-[var(--main-lighter)]"
                   >
-                    {link.name}
+                    {t(link.name)}
                   </Link>
                 </li>
               ))}
@@ -94,7 +111,9 @@ const Footer = () => {
 
           {/* Diamonds Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Our Diamonds</h3>
+            <h3 className="mb-4 text-lg font-semibold">
+              {t("diamonds.title")}
+            </h3>
             <ul className="space-y-2">
               {FOOTER_LINKS.diamonds.map((link) => (
                 <li key={link.name}>
@@ -102,7 +121,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-sm text-[var(--main-light)] transition-colors hover:text-[var(--main-lighter)]"
                   >
-                    {link.name}
+                    {t(link.name)}
                   </Link>
                 </li>
               ))}
@@ -111,7 +130,7 @@ const Footer = () => {
 
           {/* Support Links */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Customer Care</h3>
+            <h3 className="mb-4 text-lg font-semibold">{t("support.title")}</h3>
             <ul className="space-y-2">
               {FOOTER_LINKS.support.map((link) => (
                 <li key={link.name}>
@@ -119,7 +138,7 @@ const Footer = () => {
                     href={link.href}
                     className="text-sm text-[var(--main-light)] transition-colors hover:text-[var(--main-lighter)]"
                   >
-                    {link.name}
+                    {t(link.name)}
                   </Link>
                 </li>
               ))}
@@ -132,7 +151,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             {/* Copyright */}
             <p className="text-sm text-[var(--main-light)]">
-              © {currentYear} DiamantenKlotz. All rights reserved.
+              {t("copyright", { year: currentYear })}
             </p>
 
             {/* Social Links */}

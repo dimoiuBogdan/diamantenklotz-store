@@ -24,7 +24,33 @@
       "rights": "All rights reserved",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
-      "contact": "Contact"
+      "contact": "Contact",
+      "company": {
+        "title": "Company",
+        "aboutUs": "About Us",
+        "ourTechnology": "Our Technology",
+        "sustainability": "Sustainability",
+        "germanEngineering": "German Engineering"
+      },
+      "diamonds": {
+        "title": "Our Diamonds",
+        "labGrownProcess": "Lab-Grown Process",
+        "diamondGuide": "Diamond Guide",
+        "certification": "Certification",
+        "compareNaturalVsLab": "Compare Natural vs Lab"
+      },
+      "support": {
+        "title": "Customer Care",
+        "contactUs": "Contact Us",
+        "shippingReturns": "Shipping & Returns",
+        "privacyPolicy": "Privacy Policy",
+        "cookiePreferences": "Cookie Preferences",
+        "faq": "FAQ"
+      },
+      "description": "Pioneering sustainable luxury with German-engineered lab-grown diamonds. Creating exceptional stones that are both ethical and environmentally conscious.",
+      "madeInGermany": "Made in Germany 🇩🇪",
+      "carbonNeutral": "100% Carbon Neutral ♻️",
+      "copyright": "© {year} DiamantenKlotz. All rights reserved."
     },
     "actions": {
       "submit": "Submit",

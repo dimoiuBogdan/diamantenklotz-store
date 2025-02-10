@@ -23,13 +23,13 @@ const Interaction = async () => {
       <div className="w-full md:w-1/2 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <Link
           href="/contact"
-          className="w-full sm:w-auto cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
+          className="w-full text-center sm:w-auto cursor-pointer bg-[var(--main-normal)] border-2 border-[var(--main-normal)] text-white hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
         >
           {t("cta.try")}
         </Link>
         <Link
           href="/about"
-          className="w-full sm:w-auto cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
+          className="w-full text-center sm:w-auto cursor-pointer border-2 border-[var(--main-normal)] text-white hover:bg-[var(--main-light)] hover:text-[var(--main-dark)] text-base md:text-lg transition-all duration-300 font-medium px-6 md:px-8 py-3 rounded-md"
         >
           {t("cta.learn")}
         </Link>

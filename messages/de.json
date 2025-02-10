@@ -9,9 +9,9 @@
       "creator": "DiamantenKlotz GmbH",
       "publisher": "DiamantenKlotz GmbH",
       "ogTitle": "DiamantenKlotz - Lab-Grown Diamonds",
-      "ogDescription": "Entdecken Sie unsere lab-grown diamonds, made in Germany",
+      "ogDescription": "Entdecken Sie unsere lab-grown diamonds, hergestellt in Deutschland",
       "twitterTitle": "DiamantenKlotz - Lab-Grown Diamonds",
-      "twitterDescription": "Discover our lab-grown diamonds, made in Germany"
+      "twitterDescription": "Entdecken Sie unsere lab-grown diamonds, hergestellt in Deutschland"
     },
     "navigation": {
       "home": "Startseite",
@@ -24,7 +24,33 @@
       "rights": "Alle Rechte vorbehalten",
       "privacy": "Datenschutz",
       "terms": "AGB",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "company": {
+        "title": "Unternehmen",
+        "aboutUs": "Über uns",
+        "ourTechnology": "Unsere Technologie",
+        "sustainability": "Nachhaltigkeit",
+        "germanEngineering": "Deutsche Ingenieurskunst"
+      },
+      "diamonds": {
+        "title": "Unsere Diamanten",
+        "labGrownProcess": "Labor-Wachstumsprozess",
+        "diamondGuide": "Diamanten-Guide",
+        "certification": "Zertifizierung",
+        "compareNaturalVsLab": "Vergleich Natürlich vs. Labor"
+      },
+      "support": {
+        "title": "Kundenservice",
+        "contactUs": "Kontaktieren Sie uns",
+        "shippingReturns": "Versand & Rückgabe",
+        "privacyPolicy": "Datenschutz",
+        "cookiePreferences": "Cookie-Einstellungen",
+        "faq": "Häufige Fragen"
+      },
+      "description": "Wegweisend für nachhaltigen Luxus mit im Labor gezüchteten Diamanten deutscher Ingenieurskunst. Wir erschaffen außergewöhnliche Steine, die sowohl ethisch als auch umweltbewusst sind.",
+      "madeInGermany": "Hergestellt in Deutschland 🇩🇪",
+      "carbonNeutral": "100% CO2-neutral ♻️",
+      "copyright": "© {year} DiamantenKlotz. Alle Rechte vorbehalten."
     },
     "actions": {
       "submit": "Absenden",
@@ -132,8 +158,9 @@
         },
         "development": {
           "title": "Die Entwicklung der Labordiamanten",
-          "description": "Ob synthetische, im Labor gewachsene oder technologisch erzeugte Diamanten – ihre Materialeigenschaften bleiben unabhängig von der Bezeichnung konstant. Die gezielte Synthese von Diamanten war über Jahrzehnte hinweg Gegenstand intensiver Forschung, mit zahlreichen experimentellen Ansätzen zur Reproduktion der einzigartigen physikalisch-chemischen Struktur dieses Minerals. \n Die ersten industriell hergestellten Diamanten entstanden in den 1950er Jahren durch den Einsatz hochenergetischer Verfahren. Diese frühen synthetischen Kristalle wiesen jedoch eine unzureichende Reinheit und strukturelle Qualität auf, sodass ihr Einsatz primär auf technische Anwendungen in der Industrie, wie die Herstellung von Schneidwerkzeugen oder Dentalinstrumenten, beschränkt blieb. \n Erst mit der Weiterentwicklung präziser Prozesskontrollen und optimierter Synthesetechnologien gelang es in den 2010er Jahren, hochreine Diamantstrukturen zu erzeugen, die optisch und chemisch mit natürlichen Diamanten vergleichbar sind. Seitdem hat sich die Nachfrage nach diesen „modernen“ Labordiamanten kontinuierlich erhöht, da sie neue Möglichkeiten für den Schmucksektor sowie für Hochtechnologieanwendungen bieten."
+          "description": "Ob synthetische, im Labor gewachsene oder technologisch erzeugte Diamanten – ihre Materialeigenschaften bleiben unabhängig von der Bezeichnung konstant. Die gezielte Synthese von Diamanten war über Jahrzehnte hinweg Gegenstand intensiver Forschung, mit zahlreichen experimentellen Ansätzen zur Reproduktion der einzigartigen physikalisch-chemischen Struktur dieses Minerals. \n Die ersten industriell hergestellten Diamanten entstanden in den 1950er Jahren durch den Einsatz hochenergetischer Verfahren. Diese frühen synthetischen Kristalle wiesen jedoch eine unzureichende Reinheit und strukturelle Qualität auf, sodass ihr Einsatz primär auf technische Anwendungen in der Industrie, wie die Herstellung von Schneidwerkzeugen oder Dentalinstrumenten, beschränkt blieb. \n Erst mit der Weiterentwicklung präziser Prozesskontrollen und optimierter Synthesetechnologien gelang es in den 2010er Jahren, hochreine Diamantstrukturen zu erzeugen, die optisch und chemisch mit natürlichen Diamanten vergleichbar sind. Seitdem hat sich die Nachfrage nach diesen 'modernen' Labordiamanten kontinuierlich erhöht, da sie neue Möglichkeiten für den Schmucksektor sowie für Hochtechnologieanwendungen bieten."
         },
+
         "certification": {
           "title": "Zertifizierung und Qualitätsstandards",
           "description": "Unsere Labor-Diamanten durchlaufen unabhängige Qualitätsbewertungen durch international anerkannte Prüfinstitute. Die Zertifizierung erfolgt durch führende gemmologische Institute, die sich auf die Analyse und Klassifizierung synthetischer Diamanten spezialisiert haben. \n Ein entsprechendes Zertifikat kann für Brillantschliff-Diamanten ab einem definierten Karatgewicht von 0,30 ct und für Fancy-Schliff-Diamanten ab 0,50 ct erhalten werden. Für Steine unterhalb dieser Schwellenwerte ist eine optionale Zertifizierung gegen Aufpreis möglich. \n Detaillierte Informationen zu individuellen Zertifizierungsoptionen erhalten Sie von unseren Experten-Beratern."
@@ -231,7 +258,7 @@
   "home": {
     "hero": {
       "title": "Premium Labor-Diamanten",
-      "titleHighlight": "Made in Germany",
+      "titleHighlight": "Hergestellt in Deutschland",
       "subtitle": "Nachhaltige, ethische und erschwingliche im Labor geschaffene Diamanten",
       "cta": {
         "shop": "Kontaktieren Sie uns",

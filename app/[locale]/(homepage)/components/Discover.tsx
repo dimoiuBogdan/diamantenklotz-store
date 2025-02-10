@@ -49,20 +49,19 @@ const Discover = async () => {
         {DIAMOND_CATEGORIES.map((category) => (
           <div
             key={category.title}
-            className="group rounded-lg overflow-hidden h-64 sm:h-72 md:h-80 shadow-md relative hover:shadow-lg transition-shadow duration-300"
+            className="group rounded-lg overflow-hidden h-72 md:h-80 shadow-md relative hover:shadow-lg transition-shadow duration-300"
           >
             <Image
               src={category.image}
               alt={category.alt}
-              className="h-full w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               priority
             />
-
             <div className="p-3 md:p-4 absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm">
               <h3 className="text-base md:text-lg truncate tracking-wide font-semibold text-[var(--main-darker)]">
                 {category.title}
               </h3>
-              <p className="text-[var(--main-dark)] text-sm md:text-base font-medium line-clamp-2 h-11">
+              <p className="text-[var(--main-dark)] text-sm md:text-base font-medium truncate">
                 {category.description}
               </p>
             </div>
