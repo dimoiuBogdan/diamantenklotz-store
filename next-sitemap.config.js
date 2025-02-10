@@ -1,8 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://project-alpha-sable.vercel.app",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.com",
   generateRobotsTxt: false,
   changefreq: "daily",
   priority: 0.7,
