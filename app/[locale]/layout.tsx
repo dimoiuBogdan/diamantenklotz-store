@@ -38,7 +38,7 @@ async function getMetadata(locale: Locale): Promise<Metadata> {
       process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
     ),
     title: {
-      template: `%s | ${t("common.navigation.home")}`,
+      template: `%s`,
       default: t("common.navigation.home"),
     },
     description: t("common.meta.description"),
