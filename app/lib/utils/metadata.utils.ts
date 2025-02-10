@@ -83,12 +83,12 @@ export async function generatePageMetadata(
     metadataBase: new URL(baseUrl),
     title: options.title
       ? {
-          template: `%s | DiamantenKlotz - Lab-Grown Diamond Experts`,
-          default: `${options.title} | DiamantenKlotz - Lab-Grown Diamond Experts`,
+          template: `%s | DiamantenKlotz - Premium Lab-Grown Diamonds`,
+          default: `${options.title} | DiamantenKlotz - Premium Lab-Grown Diamonds`,
         }
       : {
-          template: `%s | DiamantenKlotz - Lab-Grown Diamond Experts`,
-          default: `DiamantenKlotz - Premium Lab-Grown Diamonds | Sustainable & Ethical Jewelry`,
+          template: `%s | DiamantenKlotz - Premium Lab-Grown Diamonds`,
+          default: `DiamantenKlotz - Premium Lab-Grown Diamonds`,
         },
     description:
       options.description ||

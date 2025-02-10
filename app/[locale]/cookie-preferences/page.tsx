@@ -70,12 +70,12 @@ export default function CookiePreferencesPage() {
       className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
     >
       <div className="mb-8">
-        <h1
+        <div
           suppressHydrationWarning
           className="mb-4 text-3xl font-bold text-[var(--main-darker)]"
         >
-          {t("title")}
-        </h1>
+          <h1>{t("title")}</h1>
+        </div>
         <p suppressHydrationWarning className="text-[var(--main-dark)]">
           {t("description")}
         </p>

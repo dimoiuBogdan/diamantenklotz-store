@@ -27,8 +27,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Lab-Grown Diamonds | Sustainable & Ethical German Engineering",
-    template: "%s | Lab-Grown Diamonds",
+    default: "DiamantenKlotz | Premium Lab-Grown Diamonds",
+    template: "%s | DiamantenKlotz",
   },
   description:
     "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry with expert craftsmanship.",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "conflict-free diamonds",
     "affordable luxury diamonds",
   ],
-  authors: [{ name: "Lab-Grown Diamonds GmbH", url: SITE_URL }],
-  creator: "Lab-Grown Diamonds GmbH",
-  publisher: "Lab-Grown Diamonds GmbH",
+  authors: [{ name: "DiamantenKlotz", url: SITE_URL }],
+  creator: "DiamantenKlotz",
+  publisher: "DiamantenKlotz",
   formatDetection: {
     email: false,
     address: false,
@@ -60,11 +60,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Lab-Grown Diamonds | Sustainable & Ethical German Engineering",
+    title: "DiamantenKlotz | Premium Lab-Grown Diamonds",
     description:
       "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry.",
     url: SITE_URL,
-    siteName: "Lab-Grown Diamonds",
+    siteName: "DiamantenKlotz",
     locale: "en_US",
     type: "website",
     images: [
@@ -72,13 +72,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Lab-Grown Diamonds Showcase",
+        alt: "DiamantenKlotz Showcase",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lab-Grown Diamonds | Sustainable & Ethical German Engineering",
+    title: "DiamantenKlotz | Premium Lab-Grown Diamonds",
     description:
       "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry.",
     site: "@diamantenklotz",

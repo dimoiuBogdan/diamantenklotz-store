@@ -1,7 +1,7 @@
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["Organization", "AboutPage"],
-  name: "Lab-Grown Diamonds GmbH",
+  name: "DiamantenKlotz",
   description:
     "Pioneering lab-grown diamonds with German engineering excellence. Sustainable, ethical, and innovative diamond manufacturing.",
   url: "https://diamantenklotz.com/about",
