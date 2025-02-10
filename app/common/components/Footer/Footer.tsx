@@ -4,15 +4,15 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 const FOOTER_LINKS = {
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Our Technology", href: "/technology" },
-    { name: "Sustainability", href: "/sustainability" },
-    { name: "German Engineering", href: "/engineering" },
+    { name: "Our Technology", href: "/about" },
+    { name: "Sustainability", href: "/about" },
+    { name: "German Engineering", href: "/about" },
   ],
   diamonds: [
-    { name: "Lab-Grown Process", href: "/process" },
-    { name: "Diamond Guide", href: "/guide" },
-    { name: "Certification", href: "/certification" },
-    { name: "Compare Natural vs Lab", href: "/compare" },
+    { name: "Lab-Grown Process", href: "/about" },
+    { name: "Diamond Guide", href: "/about" },
+    { name: "Certification", href: "/about" },
+    { name: "Compare Natural vs Lab", href: "/#comparison-table" },
   ],
   support: [
     { name: "Contact Us", href: "/contact" },
@@ -132,11 +132,11 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
             {/* Copyright */}
             <p className="text-sm text-[var(--main-light)]">
-              © {currentYear} Lab-Grown Diamonds GmbH. All rights reserved.
+              © {currentYear} DiamantenKlotz. All rights reserved.
             </p>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {SOCIAL_LINKS.map((social) => (
                 <Link
                   key={social.name}
@@ -149,7 +149,7 @@ const Footer = () => {
                   <social.icon className="h-5 w-5" />
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

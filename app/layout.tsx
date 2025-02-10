@@ -15,9 +15,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// TODO: Change this with real data
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://project-alpha-sable.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.com";
 
 export const viewport: Viewport = {
   width: "device-width",

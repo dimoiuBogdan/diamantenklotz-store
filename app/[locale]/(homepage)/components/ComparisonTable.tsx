@@ -27,7 +27,7 @@ const ComparisonTable = async () => {
   ] as const;
 
   return (
-    <section>
+    <section id="comparison-table">
       {/* Comparison Section */}
       <h2 className="mb-12 text-center text-3xl font-bold text-[var(--main-darker)]">
         {t("title")}

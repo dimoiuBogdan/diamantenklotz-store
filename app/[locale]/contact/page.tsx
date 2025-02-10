@@ -59,7 +59,7 @@ const ContactPage = async () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="mx-auto py-16">
+      <section className="mx-auto px-4 md:px-6 py-16">
         {/* Hero Section */}
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-[var(--main-darker)] sm:text-5xl">

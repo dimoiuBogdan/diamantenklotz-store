@@ -1,11 +1,12 @@
-# Lab-Grown Diamonds GmbH - German Engineered Sustainable Diamonds
-# https://project-alpha-sable.vercel.app
+# DiamantenKlotz - German Engineered Sustainable Diamonds
+# https://diamantenklotz.com
 
 User-agent: *
 Allow: /
 Allow: /about
 Allow: /contact
 Allow: /products
+
 Allow: /blog
 Allow: /technology
 Allow: /sustainability
@@ -64,8 +65,8 @@ Disallow: /admin/images
 Disallow: /user/images
 
 # Sitemaps
-Sitemap: https://project-alpha-sable.vercel.app/sitemap.xml
-Sitemap: https://project-alpha-sable.vercel.app/products-sitemap.xml
+Sitemap: https://diamantenklotz.com/sitemap.xml
+Sitemap: https://diamantenklotz.com/products-sitemap.xml
 
 # Host
-Host: https://project-alpha-sable.vercel.app
+Host: https://diamantenklotz.com
