@@ -31,8 +31,7 @@ export async function generatePageMetadata(
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
   routing.locales.forEach((loc) => {
-    const path =
-      loc === "de" ? pathWithoutLocale : `/${loc}${pathWithoutLocale}`;
+    const path = pathWithoutLocale;
     alternates[loc] = `${baseUrl}${path}`;
   });
 
