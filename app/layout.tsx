@@ -101,14 +101,14 @@ export const metadata: Metadata = {
   category: "Jewelry & Diamonds",
   classification: "Sustainable Luxury",
   other: {
-    "google-site-verification": "YOUR_VERIFICATION_CODE",
-    "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
-    "facebook-domain-verification": "YOUR_FB_VERIFICATION_CODE",
+    "google-site-verification": "YOUR_VERIFICATION_CODE", // TODO: Add this
+    "msvalidate.01": "YOUR_BING_VERIFICATION_CODE", // TODO: Add this
+    "facebook-domain-verification": "YOUR_FB_VERIFICATION_CODE", // TODO: Add this
   },
   verification: {
-    google: "YOUR_VERIFICATION_CODE",
-    yandex: "YOUR_VERIFICATION_CODE",
-    me: ["YOUR_PERSONAL_WEBSITE"],
+    google: "YOUR_VERIFICATION_CODE", // TODO: Add this
+    yandex: "YOUR_VERIFICATION_CODE", // TODO: Add this
+    me: ["YOUR_PERSONAL_WEBSITE"], // TODO: Add this
   },
 };
 

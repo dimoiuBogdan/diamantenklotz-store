@@ -1,5 +1,6 @@
 import { Locale } from "@/config/i18n.config";
 import { routing } from "@/i18n/routing";
+import { PostHogProvider } from "@/providers/ph-provider";
 import { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import {
@@ -8,11 +9,12 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import { notFound } from "next/navigation";
-import type { JSX } from "react";
+import { type JSX } from "react";
 import AboveNavbar from "../common/components/AboveNavbar/AboveNavbar";
 import CookieConsent from "../common/components/CookieConsent/CookieConsent";
 import Footer from "../common/components/Footer/Footer";
 import Navbar from "../common/components/Navbar/Navbar";
+import PageViewComponent from "../common/components/Posthog/PageViewComponent";
 
 type LocaleLayoutProps = Readonly<{
   children: React.ReactNode;
@@ -117,12 +119,15 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale as Locale}>
-      <AboveNavbar />
-      <Navbar />
-      <main className="flex-1 min-h-screen">{children}</main>
-      <Footer />
-      <CookieConsent />
-    </NextIntlClientProvider>
+    <PostHogProvider>
+      <NextIntlClientProvider messages={messages} locale={locale as Locale}>
+        <AboveNavbar />
+        <Navbar />
+        <PageViewComponent />
+        <main className="flex-1 min-h-screen">{children}</main>
+        <Footer />
+        <CookieConsent />
+      </NextIntlClientProvider>
+    </PostHogProvider>
   );
 }
