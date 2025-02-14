@@ -65,21 +65,9 @@ export default function CookiePreferencesPage() {
   if (!mounted) return null;
 
   return (
-    <div
-      suppressHydrationWarning
-      className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
-    >
-      <div className="mb-8">
-        <div
-          suppressHydrationWarning
-          className="mb-4 text-3xl font-bold text-[var(--main-darker)]"
-        >
-          <h1>{t("title")}</h1>
-        </div>
-        <p suppressHydrationWarning className="text-[var(--main-dark)]">
-          {t("description")}
-        </p>
-      </div>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-3xl font-bold mb-6 text-gray-900">{t("title")}</h1>
+      <p className="text-gray-600 mb-8">{t("description")}</p>
 
       <div className="space-y-6">
         {(

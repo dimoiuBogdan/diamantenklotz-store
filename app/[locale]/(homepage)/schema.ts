@@ -35,9 +35,17 @@ export const jsonLd = {
 
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], // TODO: Change this with real data
-    opens: "09:00", // TODO: Change this with real data
-    closes: "18:00", // TODO: Change this with real data
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "09:00",
+    closes: "18:00",
   },
   sameAs: [
     "https://www.facebook.com/diamantenklotz", // TODO: Change this with real data
@@ -61,7 +69,7 @@ export const jsonLd = {
     lowPrice: "500",
     description:
       "Wide range of lab-grown diamonds from engagement rings to fine jewelry",
-    availability: "https://schema.org/InStock",
+    availability: "https://schema.org/InStock", // TODO: Change this with real data
   },
   makesOffer: [
     {

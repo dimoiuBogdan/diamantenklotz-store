@@ -7,18 +7,6 @@ Allow: /about
 Allow: /contact
 Allow: /products
 
-Allow: /blog
-Allow: /technology
-Allow: /sustainability
-Allow: /engineering
-Allow: /process
-Allow: /guide
-Allow: /certification
-Allow: /compare
-Allow: /care
-Allow: /shipping
-Allow: /faq
-Allow: /images
 Allow: /sitemap.xml
 
 # Protect sensitive areas

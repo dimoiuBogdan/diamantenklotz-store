@@ -78,7 +78,7 @@ const CookieConsent = () => {
           </div>
           <div className="flex flex-col gap-2 md:flex-row">
             <Link
-              href="/cookie-policy"
+              href="/cookie-preferences"
               className="text-[var(--main-darker)] underline"
             >
               {t("cookieLink")}

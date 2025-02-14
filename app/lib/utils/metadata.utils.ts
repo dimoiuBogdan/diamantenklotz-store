@@ -11,6 +11,7 @@ interface GenerateMetadataOptions {
   noIndex?: boolean;
   alternates?: { [key: string]: string };
   productSchema?: any;
+  canonicalPath?: string;
 }
 
 export async function generatePageMetadata(
@@ -23,15 +24,25 @@ export async function generatePageMetadata(
 
   // Generate language alternates and determine canonical URL
   const alternates: { [key: string]: string } = {};
+
+  // Determine the path without locale
   const pathWithoutLocale = options.alternates
     ? Object.values(options.alternates)[0]
     : "/";
+
+  // Set canonical URL - prioritize explicit canonical path if provided
   const canonicalLocale: Locale = "en";
-  const canonicalPath = `/${canonicalLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
+  const canonicalPath =
+    options.canonicalPath ||
+    `/${canonicalLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`;
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
+  // Generate language alternates
   routing.locales.forEach((loc) => {
-    const path = pathWithoutLocale;
+    const path =
+      loc === canonicalLocale
+        ? pathWithoutLocale
+        : `/${loc}${pathWithoutLocale}`;
     alternates[loc] = `${baseUrl}${path}`;
   });
 
@@ -155,11 +166,11 @@ export async function generatePageMetadata(
       telephone: false,
     },
     verification: {
-      google: "your-google-site-verification",
-      yandex: "your-yandex-verification",
-      yahoo: "your-yahoo-verification",
+      google: "your-google-site-verification", // TODO: Change this with real data
+      yandex: "your-yandex-verification", // TODO: Change this with real data
+      yahoo: "your-yahoo-verification", // TODO: Change this with real data
       other: {
-        "msvalidate.01": "your-bing-verification",
+        "msvalidate.01": "your-bing-verification", // TODO: Change this with real data
       },
     },
     category: "jewelry",
