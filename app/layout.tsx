@@ -1,3 +1,5 @@
+import SuspendedPostHogPageView from "@/app/common/components/Posthog/PageViewComponent";
+import { PostHogProvider } from "@/providers/ph-provider";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Head from "next/head";
@@ -143,7 +145,10 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen flex-col`}
       >
-        <main className="flex-1">{children}</main>
+        <PostHogProvider>
+          <SuspendedPostHogPageView />
+          <main className="flex-1">{children}</main>
+        </PostHogProvider>
       </body>
     </html>
   );
