@@ -3,7 +3,6 @@ import manWithDiamondImage from "@/public/images/man_with_diamond.webp";
 import sustainableImage from "@/public/images/susteinability.webp";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { PostHog } from "posthog-node";
 import ComparisonTable from "./components/ComparisonTable";
 import Discover from "./components/Discover";
 import FAQ from "./components/FAQ";
@@ -29,17 +28,8 @@ export async function generateMetadata({
   });
 }
 
-const posthog = new PostHog(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
-  host: process.env.NEXT_PUBLIC_POSTHOG_HOST!,
-});
-
 const HomePage = async () => {
   const t = await getTranslations("home");
-
-  posthog.capture({
-    distinctId: "homepage",
-    event: "Homepage loaded",
-  });
 
   return (
     <>
