@@ -21,11 +21,11 @@ export const NavLink = ({ item }: NavLinkProps) => {
     >
       <div className="flex items-center">
         <Link
-          href={item.href}
           className={cn(
             "text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center gap-1",
             isHovered && "text-gray-900"
           )}
+          {...item}
         >
           {item.name}
           {"sublinks" in item ? (

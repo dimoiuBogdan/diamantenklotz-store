@@ -33,15 +33,19 @@ const config = {
       startsWith: {
         "/products/": { priority: 0.9, changefreq: "daily" },
       },
+      contains: {}, // Add empty contains object
     };
 
     // Find the matching pattern
     const exactMatch = pathPatterns.exact[path];
-    const startsWithMatch = Object.entries(pathPatterns.startsWith).find(
-      ([key]) => path.startsWith(key)
+
+    // Safely handle Object.entries with optional chaining and null coalescing
+    const startsWithMatch = Object.entries(pathPatterns.startsWith ?? {}).find(
+      ([key]) => path?.startsWith(key)
     )?.[1];
-    const containsMatch = Object.entries(pathPatterns.contains)?.find(([key]) =>
-      path?.includes(key)
+
+    const containsMatch = Object.entries(pathPatterns.contains ?? {}).find(
+      ([key]) => path?.includes(key)
     )?.[1];
 
     const matchedPattern = exactMatch ||

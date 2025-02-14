@@ -120,7 +120,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages} locale={locale as Locale}>
       <AboveNavbar />
       <Navbar />
-      {children}
+      <main className="flex-1 min-h-screen">{children}</main>
       <Footer />
       <CookieConsent />
     </NextIntlClientProvider>

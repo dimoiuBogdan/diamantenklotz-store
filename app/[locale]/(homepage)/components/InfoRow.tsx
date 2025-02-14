@@ -1,5 +1,5 @@
+import { Link } from "@/i18n/routing";
 import Image, { type StaticImageData } from "next/image";
-import Link from "next/link";
 
 type Props = {
   title: string;

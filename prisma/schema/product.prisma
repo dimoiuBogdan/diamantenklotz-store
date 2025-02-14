@@ -1,0 +1,91 @@
+model Product {
+    id          Int      @id @default(autoincrement())
+    amt         Float
+    createdAt   DateTime @default(now())
+    description String
+    goldLoss    Float
+    isFeatured  Boolean  @default(false)
+    itemNumber  String
+    metalId     Int
+    name        String
+    size        Int
+    slug        String
+    stock       Int
+    styleCode   String
+    updatedAt   DateTime @updatedAt
+    categoryId  Int
+
+    ProductImage ProductImage[]
+    Stone        Stone[]
+    Labour       Labour         @relation(fields: [labourId], references: [id])
+    Diamond      Diamond[]
+    Metal        Metal          @relation(fields: [metalId], references: [id])
+    labourId     Int
+}
+
+model Labour {
+    id   Int   @id @default(autoincrement())
+    amt  Float
+    rate Float
+
+    Product Product[]
+}
+
+model Metal {
+    id    Int    @id @default(autoincrement())
+    amt   Float
+    grWt  Float
+    name  String
+    netWt Float
+    qly   String
+    rate  Float
+
+    Product Product[]
+}
+
+model ProductImage {
+    id        Int    @id @default(autoincrement())
+    imageUrl  String
+    productId Int
+
+    Product Product @relation(fields: [productId], references: [id])
+}
+
+model ProductCategory {
+    id   Int    @id @default(autoincrement())
+    name String
+}
+
+model Stone {
+    id        Int    @id @default(autoincrement())
+    amt       Int
+    code      String
+    pcs       Int
+    productId Int
+    rate      Int
+    wts       Float
+
+    Product Product @relation(fields: [productId], references: [id])
+}
+
+model Diamond {
+    id            Int     @id @default(autoincrement())
+    amt           Int
+    batchNo       String
+    certificateNo String?
+    clarity       String
+    color         String
+    gSize         String?
+    mm            String?
+    pcs           Int
+    pointer       Float
+    productId     Int
+    rate          Int
+    raw           String
+    shape         String
+    sizeName      String?
+    totDiaAmt     Int
+    wts           Float
+
+    Product Product @relation(fields: [productId], references: [id])
+}

@@ -5,10 +5,19 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   experimental: {
+    inlineCss: true,
+    reactCompiler: true,
     staleTimes: {
       dynamic: 30,
       static: 180,
     },
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "**",
+      },
+    ],
   },
   headers: async () => {
     return [
