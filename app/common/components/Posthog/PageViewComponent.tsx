@@ -11,35 +11,33 @@ function PostHogPageView() {
   const posthog = usePostHog();
 
   useEffect(() => {
-    if (pathname && posthog) {
-      let url = window.origin + pathname;
-      if (searchParams.toString()) {
-        url = url + `?${searchParams.toString()}`;
-      }
+    let url = window.origin + pathname;
+    if (searchParams.toString()) {
+      url = url + `?${searchParams.toString()}`;
+    }
 
-      // Capture page view with additional properties
-      posthog.capture("$pageview", {
+    // Capture page view with additional properties
+    posthog.capture("$pageview", {
+      $current_url: url,
+      path: pathname,
+      search: searchParams.toString(),
+      referrer: document.referrer,
+      title: document.title,
+    });
+
+    // Add leave event listener
+    const handleLeave = () => {
+      posthog.capture("$pageleave", {
         $current_url: url,
         path: pathname,
-        search: searchParams.toString(),
-        referrer: document.referrer,
-        title: document.title,
       });
+    };
 
-      // Add leave event listener
-      const handleLeave = () => {
-        posthog.capture("$pageleave", {
-          $current_url: url,
-          path: pathname,
-        });
-      };
+    window.addEventListener("beforeunload", handleLeave);
 
-      window.addEventListener("beforeunload", handleLeave);
-
-      return () => {
-        window.removeEventListener("beforeunload", handleLeave);
-      };
-    }
+    return () => {
+      window.removeEventListener("beforeunload", handleLeave);
+    };
   }, [pathname, searchParams, posthog]);
 
   return null;
