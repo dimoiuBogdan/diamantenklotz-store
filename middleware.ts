@@ -46,7 +46,6 @@ export async function middleware(request: NextRequest) {
 function applySecurityHeaders(request: NextRequest, response: NextResponse) {
   const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
   const cspHeader = `
-    default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
     connect-src 'self';
     style-src 'self' 'unsafe-inline';
@@ -55,7 +54,7 @@ function applySecurityHeaders(request: NextRequest, response: NextResponse) {
     object-src 'none';
     base-uri 'self';
     form-action 'self';
-    frame-ancestors 'none';
+    frame-ancestors 'self';
     upgrade-insecure-requests;
   `;
 
@@ -66,13 +65,11 @@ function applySecurityHeaders(request: NextRequest, response: NextResponse) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
 
-  // Apply the headers to the existing response
   response.headers.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue
   );
 
-  // Add security headers
   const headers = response.headers;
   headers.set(
     "Permissions-Policy",
@@ -114,7 +111,6 @@ function applySecurityHeaders(request: NextRequest, response: NextResponse) {
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Cross-Origin-Opener-Policy", "same-origin");
   headers.set("Cross-Origin-Resource-Policy", "same-origin");
-  headers.set("Cross-Origin-Embedder-Policy", "require-corp");
   headers.set("X-Security-Headers-Timestamp", Date.now().toString());
 
   return response;
