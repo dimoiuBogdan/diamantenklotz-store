@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.jpg", // TODO: Change this with real data
         width: 1200,
         height: 630,
         alt: "DiamantenKlotz Showcase",
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
       "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry.",
     site: "@diamantenklotz",
     creator: "@diamantenklotz",
-    images: ["/images/twitter-image.jpg"],
+    images: ["/images/twitter-image.jpg"], // TODO: Change this with real data
   },
   robots: {
     index: true,

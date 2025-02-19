@@ -1,3 +1,4 @@
+import { CONTACT } from "@/app/common/constants";
 import { Locale } from "@/config/i18n.config";
 import { routing } from "@/i18n/routing";
 import { Metadata } from "next";
@@ -182,8 +183,8 @@ export async function generatePageMetadata(
       "business:contact_data:locality": "Gilching",
       "business:contact_data:postal_code": "82205",
       "business:contact_data:country_name": "Germany",
-      "business:contact_data:email": "contact@diamantenklotz.com", // TODO: Change this with real data
-      "business:contact_data:phone_number": "+49-123-456789", // TODO: Change this with real data
+      "business:contact_data:email": CONTACT.EMAIL,
+      "business:contact_data:phone_number": CONTACT.PHONE,
     },
   };
 }

@@ -19,21 +19,7 @@ async function fetchProducts() {
   // });
 
   // Mock data for example
-  return [
-    {
-      id: "round-cut-1ct",
-      category: "round-cut",
-      updatedAt: new Date(),
-      images: [{ url: "/images/products/round-cut-1ct.webp" }],
-    },
-    {
-      id: "princess-cut-1ct",
-      category: "princess-cut",
-      updatedAt: new Date(),
-      images: [{ url: "/images/products/princess-cut-1ct.webp" }],
-    },
-    // Add more products...
-  ];
+  return [];
 }
 
 async function generateSitemapXML(products) {

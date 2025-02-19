@@ -197,12 +197,12 @@
       },
       "call": {
         "title": "Sună-ne",
-        "phone": "+49 (30) 1234-5678",
+        "phone": "+49 89 12 22 37 801",
         "hours": "Luni-Vineri: 9:00 - 18:00"
       },
       "email": {
         "title": "Scrie-ne",
-        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
+        "addresses": "info@diamantenklotz.de"
       }
     },
     "form": {
@@ -259,7 +259,7 @@
       "titleHighlight": "Produse în Germania",
       "subtitle": "Diamante sustenabile, etice și accesibile create în laborator",
       "cta": {
-        "shop": "Contactează-ne",
+        "shop": "Cumpără acum",
         "learn": "Află despre Diamante"
       }
     },
@@ -422,7 +422,7 @@
     "sustainable": {
       "title": "Lux Sustenabil pentru Timpurile Moderne",
       "description": "Alege diamantele create în laborator pentru calitatea lor excepțională, sursa etică și beneficiile pentru mediu. Diamantele noastre oferă aceeași strălucire și durabilitate ca diamantele extrase, certificate de IGI pentru liniștea ta deplină.",
-      "buttonText": "Descoperă Diamantele DiamantenKlotz"
+      "buttonText": "Descoperă bijuteriile noastre"
     },
     "interaction": {
       "subtitle": "Încearcă acum",
@@ -492,6 +492,50 @@
       "cookie": {
         "duration": "Durată: {value}"
       }
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Colecție de Diamante și Bijuterii Crescute în Laborator",
+      "description": "Explorați colecția noastră excepțională de diamante crescute în laborator și bijuterii fine sustenabile. Diamante perfect create științific, cu certificare. Programați o consultație astăzi."
+    },
+    "header": {
+      "title": "Diamante și Bijuterii Fine Crescute în Laborator",
+      "mainDescription": "Experimentați viitorul luxului cu colecția noastră excepțională de diamante crescute în laborator. Identice chimic și optic cu diamantele naturale, pietrele noastre sunt create folosind tehnologie de ultimă generație care replică procesul natural, rezultând în pietre prețioase uimitoare, atât etice cât și sustenabile."
+    },
+    "benefits": {
+      "title": "De ce să Alegeți Diamantele Noastre Crescute în Laborator?",
+      "quality": {
+        "title": "💎 Calitate Superioară",
+        "description": "Diamante de tip IIa - cea mai pură formă disponibilă. Certificate pentru claritate, tăietură și greutate excepțională de către institute gemologice de renume."
+      },
+      "sustainable": {
+        "title": "🌱 Alegere Sustenabilă",
+        "description": "Producție 100% ecologică fără impact asupra mineritului. Proces de fabricație certificat neutru din punct de vedere al emisiilor de carbon."
+      },
+      "value": {
+        "title": "✨ Valoare Mai Bună",
+        "description": "Valoare cu 20-40% mai bună decât diamantele naturale. Calitate premium, pietre certificate cu transparență totală în prețuri."
+      }
+    },
+    "contact": {
+      "title": "Achiziție și Consultație",
+      "description": "Doriți să explorați colecția noastră de diamante crescute în laborator? Gemologii noștri certificați sunt disponibili pentru consultații personalizate pentru a vă ajuta să găsiți piesa perfectă. Contactați-ne prin oricare dintre aceste canale:",
+      "options": {
+        "title": "Opțiuni de Contact",
+        "email": "Email",
+        "phone": "Telefon"
+      },
+      "actions": {
+        "title": "Acțiuni Rapide",
+        "schedule": "Programează o Consultație",
+        "request": "Solicită Informații",
+        "download": "Descărcă Catalogul"
+      }
+    },
+    "catalog": {
+      "title": "Catalog de Bijuterii cu Diamante Crescute în Laborator",
+      "description": "Explorați colecția noastră extinsă de bijuterii fine cu diamante certificate crescute în laborator. De la inele de logodnă la piese statement, descoperiți design-uri atemporale create cu diamante sustenabile."
     }
   }
 }

@@ -1,158 +1,205 @@
-import { Button } from "@/app/common/components/ShadCN/CNButton";
-import {
-  getProductCategories,
-  getProducts,
-} from "@/app/lib/actions/product.action";
-import { cn } from "@/app/lib/utils/utils";
+import { CONTACT } from "@/app/common/constants";
+import { generatePageMetadata } from "@/app/lib/utils/metadata.utils";
 import { Link } from "@/i18n/routing";
-import { ProductCard } from "./components/ProductCard";
+import { DownloadIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { Metadata, type NextPage } from "next";
+import { getTranslations } from "next-intl/server";
+import PDFFrame from "./components/PDFFrame";
+import { jsonLd } from "./schema";
 
-const PRICE_RANGES = [
-  {
-    name: "All",
-    value: "all",
-  },
-  {
-    name: "$1 - $500",
-    value: "1-500",
-  },
+interface ProductsPageProps {
+  params: Promise<{ locale: string }>;
+}
 
-  {
-    name: "$500 - $1000",
-    value: "500-1000",
-  },
+export async function generateMetadata({
+  params,
+}: ProductsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
 
-  {
-    name: "$1000 - $2000",
-    value: "1000-2000",
-  },
-  {
-    name: "More than $2000",
-    value: "2000-",
-  },
-];
-
-const ProductsPage = async (props: {
-  searchParams: Promise<{
-    query?: string;
-    category?: number;
-    page?: number;
-    price?: string;
-  }>;
-}) => {
-  const { query, category, page = 1, price = "all" } = await props.searchParams;
-
-  const categoryId = category ? Number(category) : undefined;
-
-  const { data: products, success: productsSuccess } = await getProducts({
-    category: categoryId,
-    price,
-    page: Number(page),
+  return generatePageMetadata(locale, {
+    title: t("products.meta.title"),
+    description: t("products.meta.description"),
+    alternates: {
+      [locale]: locale === "en" ? "/products" : `/${locale}/products`,
+    },
+    productSchema: jsonLd,
   });
+}
 
-  if (!productsSuccess) {
-    return <div>Error loading products</div>;
-  }
-
-  const { data: categories, success: categoriesSuccess } =
-    await getProductCategories();
-
-  if (!categoriesSuccess) {
-    return <div>Error loading categories</div>;
-  }
-
-  const hasAppliedFilters = !!categoryId || price !== "all" || !!query;
-
-  const getFilterUrl = (categoryId?: number, price?: string, page?: number) => {
-    const params = {
-      query: query || "",
-      category: categoryId,
-      page: page || "1",
-      price: price || "",
-    };
-
-    let url = "/products?";
-
-    Object.entries(params).forEach(([key, value]) => {
-      if (value) {
-        url += `${key}=${value}&`;
-      }
-    });
-
-    return url;
-  };
+const ProductsPage: NextPage = async () => {
+  const t = await getTranslations("products");
 
   return (
-    <main className="container mx-auto px-4 py-8">
-      <div className="grid md:grid-cols-5 md:gap-5">
-        <div>
-          <div className="text-xl mb-2 mt-3">Category</div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="container mx-auto px-4 py-8" role="main">
+        <div className="space-y-12">
+          {/* Header Section */}
+          <header
+            className="text-center space-y-6 max-w-4xl mx-auto"
+            aria-labelledby="main-heading"
+          >
+            <h1 id="main-heading" className="text-4xl font-bold text-gray-900">
+              {t("header.title")}
+            </h1>
+            <div className="space-y-4">
+              <p className="text-xl text-gray-600 leading-relaxed">
+                {t("header.mainDescription")}
+              </p>
+            </div>
+          </header>
 
-          <div className="space-y-1 flex flex-col">
-            <Link
-              href={getFilterUrl(undefined, price, page)}
-              className={cn(
-                "hover:text-primary transition-colors duration-300",
-                !categoryId ? "font-medium" : ""
-              )}
+          {/* Key Benefits Section */}
+          <section
+            className="bg-gradient-to-br from-[var(--main-lightest)] to-[var(--main-lighter)] rounded-xl p-8 shadow-sm"
+            aria-labelledby="benefits-heading"
+          >
+            <h2
+              id="benefits-heading"
+              className="text-2xl font-semibold text-gray-900 mb-6"
             >
-              All
-            </Link>
-            {categories?.map(({ name: c, id: cId }) => (
-              <Link
-                href={getFilterUrl(cId, price, page)}
-                key={cId}
-                className={cn(
-                  "hover:text-primary transition-colors duration-300",
-                  cId === categoryId ? "font-medium" : ""
-                )}
-              >
-                {c}
-              </Link>
-            ))}
-          </div>
-          <div className="text-xl mb-2 mt-3">Price</div>
-          <div className="space-y-1 flex flex-col">
-            {PRICE_RANGES.map(({ name, value }) => (
-              <Link
-                href={getFilterUrl(categoryId, value, page)}
-                key={value}
-                className={cn(
-                  "hover:text-primary transition-colors duration-300",
-                  value === price ? "font-medium" : ""
-                )}
-              >
-                {name}
-              </Link>
-            ))}
-          </div>
-          {hasAppliedFilters && (
-            <Button variant="secondary" className="w-full mt-4" asChild>
-              <Link href="/products">Clear filters</Link>
-            </Button>
-          )}
-        </div>
-        <div className="md:col-span-4 space-y-4">
-          <div className="flex-between flex-col md:flex-row my-4">
-            <div className="flex items-center justify-between w-full">
-              <div>
-                {query ? `Search results for "${query}"` : "All products"} (
-                {products?.length})
+              {t("benefits.title")}
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <article className="space-y-2">
+                <h3 className="font-medium text-gray-900">
+                  {t("benefits.quality.title")}
+                </h3>
+                <p className="text-gray-600">
+                  {t("benefits.quality.description")}
+                </p>
+              </article>
+              <article className="space-y-2">
+                <h3 className="font-medium text-gray-900">
+                  {t("benefits.sustainable.title")}
+                </h3>
+                <p className="text-gray-600">
+                  {t("benefits.sustainable.description")}
+                </p>
+              </article>
+              <article className="space-y-2">
+                <h3 className="font-medium text-gray-900">
+                  {t("benefits.value.title")}
+                </h3>
+                <p className="text-gray-600">
+                  {t("benefits.value.description")}
+                </p>
+              </article>
+            </div>
+          </section>
+
+          {/* Contact Information Section */}
+          <section
+            className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
+            aria-labelledby="contact-heading"
+          >
+            <h2
+              id="contact-heading"
+              className="text-2xl font-semibold text-gray-900 mb-4"
+            >
+              {t("contact.title")}
+            </h2>
+            <p className="text-gray-600 mb-6">{t("contact.description")}</p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h3 className="font-medium text-gray-900">
+                  {t("contact.options.title")}:
+                </h3>
+                <ul className="space-y-3" role="list">
+                  <li className="flex items-center text-gray-700">
+                    <MailIcon
+                      className="w-5 h-5 mr-3 text-[var(--main-normal)]"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      {t("contact.options.email")}:{" "}
+                      <Link
+                        href={`mailto:${CONTACT.EMAIL}`}
+                        className="text-[var(--main-normal)] hover:underline"
+                        rel="nofollow"
+                      >
+                        {CONTACT.EMAIL}
+                      </Link>
+                    </span>
+                  </li>
+                  <li className="flex items-center text-gray-700">
+                    <PhoneIcon
+                      className="w-5 h-5 mr-3 text-[var(--main-normal)]"
+                      aria-hidden="true"
+                    />
+                    <span>
+                      {t("contact.options.phone")}:{" "}
+                      <Link
+                        href={`tel:${CONTACT.PHONE}`}
+                        className="text-[var(--main-normal)] hover:underline"
+                        rel="nofollow"
+                      >
+                        {CONTACT.PHONE}
+                      </Link>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="font-medium text-gray-900">
+                  {t("contact.actions.title")}:
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center justify-center gap-4">
+                    <Link
+                      href={`tel:${CONTACT.PHONE}`}
+                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[var(--main-normal)] hover:bg-[var(--main-darker)] w-full transition-colors"
+                      rel="nofollow"
+                    >
+                      {t("contact.actions.schedule")}
+                    </Link>
+                    <Link
+                      href="/contact#form"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 rounded-md shadow-sm text-base font-medium text-gray-700 bg-white hover:bg-gray-50 w-full transition-colors"
+                    >
+                      {t("contact.actions.request")}
+                    </Link>
+                  </div>
+                  <Link
+                    href="https://73bfl9rv91.ufs.sh/f/73SeL1XmOVTgCIUrfRYXp3aiVuh5Mdn1v0IeG8rEWLc6mySk"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[var(--main-dark)] hover:bg-[var(--main-darker)] w-full transition-colors"
+                    rel="nofollow"
+                  >
+                    <DownloadIcon className="w-4 h-4 mr-2" />
+                    {t("contact.actions.download")}
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {products?.length ? (
-              products?.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))
-            ) : (
-              <div className="col-span-full text-center">No products found</div>
-            )}
-          </div>
+          </section>
+
+          {/* Documentation Section */}
+          <section
+            id="documentation"
+            className="space-y-6"
+            aria-labelledby="catalog-heading"
+          >
+            <h2
+              id="catalog-heading"
+              className="text-2xl font-semibold text-gray-900"
+            >
+              {t("catalog.title")}
+            </h2>
+            <p className="text-gray-600 mb-4">{t("catalog.description")}</p>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <PDFFrame />
+            </div>
+          </section>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

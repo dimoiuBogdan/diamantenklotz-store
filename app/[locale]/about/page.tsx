@@ -22,7 +22,7 @@ export async function generateMetadata({
     alternates: {
       [locale]: locale === "de" ? "/about" : `/${locale}/about`,
     },
-    ogImage: "/images/about-hero.webp",
+    ogImage: "/images/about-hero.webp", // TODO: Change this with real data
   });
 }
 

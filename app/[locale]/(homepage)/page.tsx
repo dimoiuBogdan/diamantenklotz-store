@@ -10,7 +10,6 @@ import Hero from "./components/Hero";
 import InfoRow from "./components/InfoRow";
 import { default as Interaction } from "./components/Interaction";
 import QualitiesRow from "./components/QualitiesRow";
-import Test from "./components/test";
 import { jsonLd } from "./schema";
 
 interface HomePageProps {
@@ -53,14 +52,13 @@ const HomePage = async () => {
           title={t("sustainable.title")}
           description={t("sustainable.description")}
           buttonText={t("sustainable.buttonText")}
-          buttonLink={"/about"}
+          buttonLink={"/products"}
           reverse={true}
           image={sustainableImage}
         />
         <Interaction />
         <ComparisonTable />
         <FAQ />
-        <Test />
       </main>
     </>
   );

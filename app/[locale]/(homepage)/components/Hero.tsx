@@ -38,7 +38,7 @@ const Hero = async () => {
               {t("cta.learn")}
             </Link>
             <Link
-              href="/contact"
+              href="/products"
               className="bg-[var(--main-darker)] text-[var(--main-lighter)] w-full sm:w-auto cursor-pointer px-6 font-semibold hover:bg-[var(--main-dark)] transition-colors duration-300 text-base md:text-lg py-3 rounded-md"
             >
               {t("cta.shop")}

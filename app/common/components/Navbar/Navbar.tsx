@@ -21,7 +21,7 @@ const Navbar = () => {
     },
     {
       name: t("products"),
-      href: "https://73bfl9rv91.ufs.sh/f/73SeL1XmOVTgCIUrfRYXp3aiVuh5Mdn1v0IeG8rEWLc6mySk",
+      href: "/products",
       // sublinks: [
       //   { name: "Pure Diamonds", href: "/products/pure-diamonds" },
       //   { name: "Diamonds", href: "/products/diamonds" },
@@ -30,9 +30,6 @@ const Navbar = () => {
       //   { name: "Precious Metals", href: "/products/precious-metals" },
       //   { name: "Jewelry", href: "/products/jewelry" },
       // ],
-      download: true,
-      target: "_blank",
-      rel: "noopener noreferrer",
     },
     {
       name: t("about"),

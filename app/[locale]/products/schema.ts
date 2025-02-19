@@ -1,5 +1,7 @@
 // TODO: Change these with real data
 
+import { CONTACT } from "@/app/common/constants";
+
 export const generateProductJsonLd = (product: {
   id: string;
   name: string;
@@ -114,3 +116,24 @@ export const generateProductJsonLd = (product: {
     },
   },
 });
+
+export const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "JewelryStore",
+  name: "Lab-Grown Diamonds & Fine Jewelry",
+  description:
+    "Exceptional collection of lab-grown diamonds and sustainable fine jewelry.",
+  image: "/images/store-front.jpg", // TODO: Change this with real data
+  priceRange: "$$",
+  telephone: CONTACT.PHONE,
+  email: CONTACT.EMAIL,
+  areaServed: "Worldwide",
+  offers: {
+    "@type": "Offer",
+    itemOffered: {
+      "@type": "Product",
+      name: "Lab-Grown Diamonds",
+      description: "Ethically sourced, certified lab-grown diamonds",
+    },
+  },
+};

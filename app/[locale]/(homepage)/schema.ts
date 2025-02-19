@@ -1,4 +1,4 @@
-// TODO: Change these with real data
+import { CONTACT } from "@/app/common/constants";
 
 export const jsonLd = {
   "@context": "https://schema.org",
@@ -7,10 +7,10 @@ export const jsonLd = {
   alternateName: "DiamantenKlotz Lab-Grown Diamonds",
   description:
     "Premium lab-grown diamonds crafted with cutting-edge technology and German engineering excellence. Sustainable, ethical, and environmentally conscious diamond creation for modern jewelry.",
-  url: "https://diamantenklotz.com", // TODO: Change this with real data
-  telephone: "+49-123-456789", // TODO: Change this with real data
-  email: "contact@diamantenklotz.com", // TODO: Change this with real data
-  foundingDate: "2024", // TODO: Change this with real data
+  url: CONTACT.URL,
+  telephone: CONTACT.PHONE,
+  email: CONTACT.EMAIL,
+  foundingDate: "2024",
   foundingLocation: {
     "@type": "Place",
     address: {

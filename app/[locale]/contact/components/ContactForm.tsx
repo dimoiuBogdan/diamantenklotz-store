@@ -73,7 +73,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="mx-auto max-w-4xl rounded-lg bg-white p-4 md:p-8 shadow-sm">
+    <div
+      id="form"
+      className="mx-auto max-w-4xl rounded-lg bg-white p-4 md:p-8 shadow-sm"
+    >
       {submitStatus.type && (
         <div
           className={`mb-6 rounded-md p-4 ${

@@ -1,3 +1,5 @@
+import { CONTACT } from "@/app/common/constants";
+
 export const jsonLd = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "JewelryStore"],
@@ -5,8 +7,8 @@ export const jsonLd = {
   description:
     "Expert consultation for lab-grown diamonds in Germany. Visit our showroom or schedule a virtual appointment.",
   url: "https://diamantenklotz.com/contact",
-  telephone: "+49-123-456789",
-  email: "contact@diamantenklotz.com",
+  telephone: CONTACT.PHONE,
+  email: CONTACT.EMAIL,
   address: {
     "@type": "PostalAddress",
     streetAddress: "Friedrichshafener Str. 2",
@@ -39,8 +41,8 @@ export const jsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    telephone: "+49-123-456789", // TODO: Change this with real data
-    email: "support@diamantenklotz.com", // TODO: Change this with real data
+    telephone: CONTACT.PHONE,
+    email: CONTACT.EMAIL,
     availableLanguage: ["English", "German"],
   },
   makesOffer: {

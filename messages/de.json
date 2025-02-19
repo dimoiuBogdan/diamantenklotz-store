@@ -198,13 +198,13 @@
       },
       "call": {
         "title": "Rufen Sie uns an",
-        "phone": "+49 (8145) 987654321",
+        "phone": "+49 89 12 22 37 801",
         "hours": "Mo-Fr: 9:00 - 18:00 Uhr"
       },
 
       "email": {
         "title": "Schreiben Sie uns",
-        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
+        "addresses": "info@diamantenklotz.de"
       }
     },
     "form": {
@@ -261,7 +261,7 @@
       "titleHighlight": "Hergestellt in Deutschland",
       "subtitle": "Nachhaltige, ethische und erschwingliche im Labor geschaffene Diamanten",
       "cta": {
-        "shop": "Kontaktieren Sie uns",
+        "shop": "Jetzt shoppen",
         "learn": "Über Diamanten lernen"
       }
     },
@@ -424,7 +424,7 @@
     "sustainable": {
       "title": "Nachhaltiger Luxus für moderne Zeiten",
       "description": "Entscheiden Sie sich für im Labor gezüchtete Diamanten aufgrund ihrer außergewöhnlichen Qualität, ethischen Beschaffung und Umweltvorteile. Unsere Diamanten bieten den gleichen Glanz und die gleiche Haltbarkeit wie abgebaute Diamanten, zertifiziert vom IGI für absolute Sicherheit.",
-      "buttonText": "Lab-Grown Diamanten entdecken"
+      "buttonText": "Unsere Kollektion entdecken"
     },
     "interaction": {
       "subtitle": "Jetzt ausprobieren",
@@ -493,6 +493,50 @@
       "cookie": {
         "duration": "Dauer: {value}"
       }
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Labor-Diamanten & Schmuck-Kollektion",
+      "description": "Entdecken Sie unsere außergewöhnliche Kollektion von im Labor gezüchteten Diamanten und nachhaltigem Schmuck. Wissenschaftlich perfekte, zertifizierte Diamanten. Vereinbaren Sie heute eine Beratung."
+    },
+    "header": {
+      "title": "Labor-Diamanten & Edel-Schmuck",
+      "mainDescription": "Erleben Sie die Zukunft des Luxus mit unserer außergewöhnlichen Kollektion von im Labor gezüchteten Diamanten. Chemisch und optisch identisch mit natürlichen Diamanten, werden unsere Steine mit modernster Technologie hergestellt, die den natürlichen Prozess nachbildet und zu atemberaubenden Edelsteinen führt, die sowohl ethisch als auch nachhaltig sind."
+    },
+    "benefits": {
+      "title": "Warum unsere Labor-Diamanten wählen?",
+      "quality": {
+        "title": "💎 Überragende Qualität",
+        "description": "Typ IIa Diamanten - die reinste verfügbare Form. Zertifiziert für außergewöhnliche Reinheit, Schliff und Karat von führenden gemmologischen Instituten."
+      },
+      "sustainable": {
+        "title": "🌱 Nachhaltige Wahl",
+        "description": "100% umweltbewusste Produktion ohne Bergbau-Auswirkungen. CO2-neutraler Herstellungsprozess mit Zertifizierung."
+      },
+      "value": {
+        "title": "✨ Besserer Wert",
+        "description": "20-40% besserer Wert als natürliche Diamanten. Premium-Qualität, zertifizierte Steine mit voller Preistransparenz."
+      }
+    },
+    "contact": {
+      "title": "Kauf & Beratung",
+      "description": "Bereit, unsere Labor-Diamanten-Kollektion zu erkunden? Unsere zertifizierten Gemmologen stehen für persönliche Beratungen zur Verfügung, um Ihnen bei der Suche nach dem perfekten Stück zu helfen. Kontaktieren Sie uns über einen dieser Kanäle:",
+      "options": {
+        "title": "Kontaktmöglichkeiten",
+        "email": "E-Mail",
+        "phone": "Telefon"
+      },
+      "actions": {
+        "title": "Schnelle Aktionen",
+        "schedule": "Beratung Vereinbaren",
+        "request": "Informationen Anfordern",
+        "download": "Katalog herunterladen"
+      }
+    },
+    "catalog": {
+      "title": "Labor-Diamanten Schmuck-Katalog",
+      "description": "Durchstöbern Sie unsere umfangreiche Kollektion an Schmuck mit zertifizierten Labor-Diamanten. Von Verlobungsringen bis hin zu Statement-Stücken entdecken Sie zeitlose Designs, gefertigt mit nachhaltigen Diamanten."
     }
   }
 }

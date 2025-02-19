@@ -198,12 +198,12 @@
       },
       "call": {
         "title": "Call Us",
-        "phone": "+49 (30) 1234-5678",
+        "phone": "+49 89 12 22 37 801",
         "hours": "Mon-Fri: 9:00 AM - 6:00 PM"
       },
       "email": {
         "title": "Email Us",
-        "addresses": "info@diamantenklotz.com\n support@diamantenklotz.com"
+        "addresses": "info@diamantenklotz.com"
       }
     },
     "form": {
@@ -260,7 +260,7 @@
       "titleHighlight": "Made in Germany",
       "subtitle": "Sustainable, Ethical, and Affordable Laboratory-Created Diamonds",
       "cta": {
-        "shop": "Contact Us",
+        "shop": "Shop Now",
         "learn": "Learn About Diamonds"
       }
     },
@@ -423,7 +423,7 @@
     "sustainable": {
       "title": "Sustainable Luxury for Modern Times",
       "description": "Choose lab-grown diamonds for their exceptional quality, ethical sourcing, and environmental benefits. Our diamonds offer the same brilliance and durability as mined diamonds, certified by IGI for absolute peace of mind.",
-      "buttonText": "Shop Lab-Grown Diamonds"
+      "buttonText": "Shop our collection"
     },
     "interaction": {
       "subtitle": "Try it now",
@@ -492,6 +492,50 @@
       "cookie": {
         "duration": "Duration: {value}"
       }
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Lab-Grown Diamonds & Jewelry Collection",
+      "description": "Explore our exceptional collection of lab-grown diamonds and sustainable fine jewelry. Ethically sourced, scientifically perfect diamonds with certification. Book a consultation today."
+    },
+    "header": {
+      "title": "Lab-Grown Diamonds & Fine Jewelry",
+      "mainDescription": "Experience the future of luxury with our exceptional collection of lab-grown diamonds. Chemically and optically identical to mined diamonds, our stones are created using cutting-edge technology that replicates nature's process, resulting in stunning gems that are both ethical and sustainable."
+    },
+    "benefits": {
+      "title": "Why Choose Our Lab-Grown Diamonds?",
+      "quality": {
+        "title": "💎 Superior Quality",
+        "description": "Type IIa diamonds - the purest form available. Certified for exceptional clarity, cut, and carat weight by leading gemological institutes."
+      },
+      "sustainable": {
+        "title": "🌱 Sustainable Choice",
+        "description": "100% environmentally conscious production with zero mining impact. Certified carbon-neutral manufacturing process."
+      },
+      "value": {
+        "title": "✨ Better Value",
+        "description": "20-40% better value than mined diamonds. Premium quality, certified stones with full transparency in pricing."
+      }
+    },
+    "contact": {
+      "title": "Purchase & Consultation",
+      "description": "Ready to explore our lab-grown diamond collection? Our certified gemologists are available for personal consultations to help you find your perfect piece. Contact us through any of these channels:",
+      "options": {
+        "title": "Contact Options",
+        "email": "Email",
+        "phone": "Phone"
+      },
+      "actions": {
+        "title": "Quick Actions",
+        "schedule": "Schedule a Consultation",
+        "request": "Request Information",
+        "download": "Download our catalog"
+      }
+    },
+    "catalog": {
+      "title": "Lab-Grown Diamonds Jewelry Catalog",
+      "description": "Browse our extensive collection of fine jewelry featuring certified lab-grown diamonds. From engagement rings to statement pieces, discover timeless designs crafted with sustainable diamonds."
     }
   }
 }
