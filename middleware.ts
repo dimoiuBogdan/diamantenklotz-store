@@ -36,22 +36,21 @@ export async function middleware(request: NextRequest) {
   // Check if the current path is a SEO path
   const isSeoPath = SEO_PATHS.some((path) => pathname === path);
 
-  // If it's a SEO path, don't enforce locale prefix
+  // If it's a SEO path, bypass the locale handling completely
   if (isSeoPath) {
-    // Set default locale for SEO paths without redirecting
-    request.nextUrl.pathname = `/${routing.defaultLocale}${pathname}`;
-    return intlMiddleware(request);
+    return NextResponse.next();
   }
 
-  // Check if the pathname needs locale redirect for non-SEO paths
-  const pathnameIsMissingLocale = routing.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
+  // For unknown pages, redirect to the 404 page with the default locale
+  if (!isSeoPath && !pathname.startsWith(`/${routing.defaultLocale}`)) {
+    const segments = pathname.split("/").filter(Boolean);
+    const isLocalePresent = routing.locales.includes(segments[0] as any);
 
-  // Redirect to default locale if locale is missing for non-SEO paths
-  if (pathnameIsMissingLocale && !isSeoPath) {
-    const defaultLocalePath = `/${routing.defaultLocale}${pathname}`;
-    return NextResponse.redirect(new URL(defaultLocalePath, request.url));
+    if (!isLocalePresent) {
+      return NextResponse.redirect(
+        new URL(`/${routing.defaultLocale}${pathname}`, request.url)
+      );
+    }
   }
 
   // Handle internationalization
