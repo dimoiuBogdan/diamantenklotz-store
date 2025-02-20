@@ -22,7 +22,7 @@ export const generateProductJsonLd = (product: {
   sku: product.id,
   image: [product.image],
   category: product.category,
-  url: `https://diamantenklotz.com/products/${product.category}/${product.id}`,
+  url: `https://diamantenklotz.de/products/${product.category}/${product.id}`,
   brand: {
     "@type": "Brand",
     name: "DiamantenKlotz",
@@ -49,7 +49,7 @@ export const generateProductJsonLd = (product: {
     priceValidUntil: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
       .toISOString()
       .split("T")[0],
-    url: `https://diamantenklotz.com/products/${product.category}/${product.id}`,
+    url: `https://diamantenklotz.de/products/${product.category}/${product.id}`,
     seller: {
       "@type": "Organization",
       name: "DiamantenKlotz",

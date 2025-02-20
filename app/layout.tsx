@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.de";
 
 export const viewport: Viewport = {
   width: "device-width",

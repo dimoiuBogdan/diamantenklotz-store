@@ -4,7 +4,7 @@ export const jsonLd = {
   name: "DiamantenKlotz | Premium Lab-Grown Diamonds",
   description:
     "Discover premium lab-grown diamonds crafted with German engineering. Sustainable, ethical, and affordable diamond jewelry.",
-  url: "https://diamantenklotz.com/about",
+  url: "https://diamantenklotz.de/about",
   foundingDate: "2024",
   foundingLocation: {
     "@type": "Place",

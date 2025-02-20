@@ -52,8 +52,6 @@ export default function LanguageSwitcher() {
           <DropdownMenuItem
             key={loc}
             onClick={() => {
-              console.log("clicked", loc);
-
               switchLocale(loc);
             }}
             className={cn(

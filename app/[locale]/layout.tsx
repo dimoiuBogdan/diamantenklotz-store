@@ -35,7 +35,7 @@ async function getMetadata(locale: Locale): Promise<Metadata> {
 
   return {
     metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+      process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.de"
     ),
     title: {
       template: `%s`,

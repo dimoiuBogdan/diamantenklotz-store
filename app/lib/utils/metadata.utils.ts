@@ -21,7 +21,8 @@ export async function generatePageMetadata(
 ): Promise<Metadata> {
   const t = await getTranslations({ locale });
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.de";
 
   // Generate language alternates and determine canonical URL
   const alternates: { [key: string]: string } = {};

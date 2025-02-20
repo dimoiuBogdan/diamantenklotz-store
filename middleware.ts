@@ -10,6 +10,14 @@ const rateLimit = new Map();
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
 const MAX_REQUESTS_PER_WINDOW = 100;
 
+// SEO-related paths that should not have locale prefixes
+const SEO_PATHS = [
+  "/sitemap.xml",
+  "/robots.txt",
+  "/sitemap-0.xml",
+  "/products-sitemap.xml",
+];
+
 // Create the next-intl middleware
 const intlMiddleware = createMiddleware(routing);
 
@@ -25,13 +33,23 @@ export async function middleware(request: NextRequest) {
     return handleSecurityHeaders(request);
   }
 
-  // Check if the pathname needs locale redirect
+  // Check if the current path is a SEO path
+  const isSeoPath = SEO_PATHS.some((path) => pathname === path);
+
+  // If it's a SEO path, don't enforce locale prefix
+  if (isSeoPath) {
+    // Set default locale for SEO paths without redirecting
+    request.nextUrl.pathname = `/${routing.defaultLocale}${pathname}`;
+    return intlMiddleware(request);
+  }
+
+  // Check if the pathname needs locale redirect for non-SEO paths
   const pathnameIsMissingLocale = routing.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
-  // Redirect to default locale if locale is missing
-  if (pathnameIsMissingLocale) {
+  // Redirect to default locale if locale is missing for non-SEO paths
+  if (pathnameIsMissingLocale && !isSeoPath) {
     const defaultLocalePath = `/${routing.defaultLocale}${pathname}`;
     return NextResponse.redirect(new URL(defaultLocalePath, request.url));
   }

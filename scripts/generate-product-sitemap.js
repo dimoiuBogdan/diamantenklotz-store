@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://diamantenklotz.de";
 const BATCH_SIZE = 100; // Process products in batches
 
 async function fetchProducts() {
