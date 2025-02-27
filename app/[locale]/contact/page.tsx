@@ -21,7 +21,9 @@ export async function generateMetadata({
     description: t("contact.meta.description"),
     keywords: t("contact.meta.keywords"),
     alternates: {
-      [locale]: locale === "de" ? "/contact" : `/${locale}/contact`,
+      en: "/en/contact",
+      de: "/de/contact",
+      ro: "/ro/contact",
     },
   });
 }

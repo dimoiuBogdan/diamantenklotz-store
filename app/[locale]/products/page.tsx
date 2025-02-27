@@ -21,7 +21,9 @@ export async function generateMetadata({
     title: t("products.meta.title"),
     description: t("products.meta.description"),
     alternates: {
-      [locale]: locale === "en" ? "/products" : `/${locale}/products`,
+      en: "/en/products",
+      de: "/de/products",
+      ro: "/ro/products",
     },
     productSchema: jsonLd,
   });

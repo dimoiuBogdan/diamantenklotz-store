@@ -6,7 +6,7 @@ export const jsonLd = {
   name: "DiamantenKlotz | Premium Lab-Grown Diamonds",
   description:
     "Expert consultation for lab-grown diamonds in Germany. Visit our showroom or schedule a virtual appointment.",
-  url: "https://diamantenklotz.de/contact",
+  url: "https://diamantenklotz.de/de/contact",
   telephone: CONTACT.PHONE,
   email: CONTACT.EMAIL,
   address: {

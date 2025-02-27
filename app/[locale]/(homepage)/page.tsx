@@ -23,7 +23,9 @@ export async function generateMetadata({
 
   return generatePageMetadata(locale, {
     alternates: {
-      [locale]: locale === "de" ? "/" : `/${locale}`,
+      en: "/en",
+      de: "/de",
+      ro: "/ro",
     },
   });
 }

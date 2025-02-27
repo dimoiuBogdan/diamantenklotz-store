@@ -20,7 +20,9 @@ export async function generateMetadata({
     description: t("about.meta.description"),
     keywords: t("about.meta.keywords"),
     alternates: {
-      [locale]: locale === "de" ? "/about" : `/${locale}/about`,
+      en: "/en/about",
+      de: "/de/about",
+      ro: "/ro/about",
     },
     ogImage: "/images/about-hero.webp", // TODO: Change this with real data
   });
